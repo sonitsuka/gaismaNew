@@ -253,7 +253,7 @@ export default function NeonNoirMockup() {
 
               <div className="group relative aspect-square bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/mirrorsOfCosmic.jpg"
+                  src="/mirrorsOfCosmic.jpg"
                   alt="Mirrors Of The Cosmic Cinema"
                   width={400}
                   height={400}
@@ -463,7 +463,7 @@ export default function NeonNoirMockup() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative aspect-[3/4] bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/aboutMe.jpg"
+                  src="/aboutMe.jpg"
                   alt="Gaisma profile pic"
                   fill
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"

@@ -155,62 +155,7 @@ export default function CurationPage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-              Curated <span className="text-indigo-500">Playlists</span>
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-indigo-500 to-transparent"></span>
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {playlists.map((playlist) => (
-                <div key={playlist.id} className="bg-gray-900 rounded-lg overflow-hidden group">
-                  <div className="relative aspect-square">
-                    <Image
-                      src={playlist.image || "/placeholder.svg"}
-                      alt={playlist.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100`}
-                    ></div>
-                    <div className={`absolute bottom-0 left-0 w-full h-1 bg-${playlist.color}-500`}></div>
-
-                    <div className="absolute inset-0 flex flex-col justify-end p-4">
-                      <span className={`text-${playlist.color}-500 text-sm mb-1`}>{playlist.platform}</span>
-                      <h3 className="font-bold text-white group-hover:text-indigo-400 transition-colors">
-                        {playlist.title}
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div className="p-4">
-                    <p className="text-white/70 text-sm mb-4">{playlist.description}</p>
-                    <a
-                      href={playlist.link}
-                      className={`text-${playlist.color}-500 hover:text-${playlist.color}-400 text-sm flex items-center`}
-                    >
-                      Listen to playlist
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 ml-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          
         </div>
       </div>
     </div>

@@ -25,8 +25,8 @@ export default function VideosPage() {
         </div>
 
         <div className="absolute inset-0 flex items-center z-30">
-          <div className="container mx-auto px-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
+          <div className="container mx-auto px-4 md:px-8">
+            <h1 className="text-3xl md:text-6xl font-bold text-white">
               <span className="text-green-500">Videos</span>
             </h1>
           </div>

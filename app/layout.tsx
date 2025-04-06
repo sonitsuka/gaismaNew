@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Gaisma | Alisa Scetinina: Music and Performance Art Portfolio",
   description:
     "Gaisma Music Artist Page: Art resembles symbiosis of technology and human energy, that unifies in lucid dance.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -21,17 +21,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white min-h-screen flex flex-col`}>
-        <div className="flex flex-grow">
-          <SideNavigation />
-          <main className="flex-grow ml-16 md:ml-20">{children}</main>
-        </div>
+      <body className={`${inter.className} bg-black text-white min-h-screen`}>
+        {/* Side Navigation (ends above the footer) */}
+        <SideNavigation />
+        
+        {/* Main Content (with padding at the bottom for the footer) */}
+        <main className="ml-16 md:ml-20 pb-16">
+          {children}
+        </main>
+        
+        {/* Footer (full width) */}
         <Footer />
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'

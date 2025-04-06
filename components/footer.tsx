@@ -2,15 +2,15 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer id="footer-section" className="bg-black/90 backdrop-blur-md border-t border-white/10 w-full">
-      <div className="container mx-auto px-4 py-6">
-        <div className="icons-footer flex flex-col md:flex-row justify-between items-center gap-4">
+    <footer id="footer-section" className="bg-black/90 backdrop-blur-md border-t border-white/10 fixed bottom-0 left-0 w-full h-[50px]">
+      <div className="container mx-auto px-4 h-full">
+        <div className="flex items-center justify-between h-full">
           {/* Social Icons */}
-          <div className="social mb-3 flex flex-wrap justify-center gap-4">
-            <a href="mailto:gaisma@posteo.de" className="text-white/60 hover:text-white transition-colors">
+          <div className="social flex flex-wrap items-center gap-2">
+            <a href="mailto:gaisma@posteo.de" className="text-gray-300 hover:text-gray-100 transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -26,11 +26,11 @@ export default function Footer() {
               href="https://www.instagram.com/__gaisma__/"
               target="_blank"
               rel="noreferrer"
-              className="text-white/60 hover:text-pink-500 transition-colors"
+              className="text-pink-500 hover:text-pink-300 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -47,11 +47,11 @@ export default function Footer() {
               href="https://www.facebook.com/gaisma.lovin"
               target="_blank"
               rel="noreferrer"
-              className="text-white/60 hover:text-blue-500 transition-colors"
+              className="text-blue-500 hover:text-blue-300 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -66,11 +66,11 @@ export default function Footer() {
               href="https://soundcloud.com/gaisma"
               target="_blank"
               rel="noreferrer"
-              className="text-white/60 hover:text-orange-500 transition-colors"
+              className="text-orange-500 hover:text-orange-300 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -89,11 +89,11 @@ export default function Footer() {
               href="https://open.spotify.com/artist/01EmU1Segbe63mUG2eyJ58"
               target="_blank"
               rel="noreferrer"
-              className="text-white/60 hover:text-green-500 transition-colors"
+              className="text-green-500 hover:text-green-300 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -109,11 +109,11 @@ export default function Footer() {
               href="https://gaisma.bandcamp.com/music"
               target="_blank"
               rel="noreferrer"
-              className="text-white/60 hover:text-blue-400 transition-colors"
+              className="text-blue-400 hover:text-blue-200 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -129,11 +129,11 @@ export default function Footer() {
               href="https://www.youtube.com/channel/UC4xlthzyUhxk7mI1pCV7W6w"
               target="_blank"
               rel="noreferrer"
-              className="text-white/60 hover:text-red-500 transition-colors"
+              className="text-red-500 hover:text-red-300 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
+                className="w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -145,56 +145,31 @@ export default function Footer() {
                 <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
               </svg>
             </a>
-            <a
-              href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L&ab_channel=LobbyRadio"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white/60 hover:text-purple-500 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+          </div>
+
+          {/* School Logo and Copyright */}
+          <div className="flex items-center gap-2">
+            <p className="text-white/60 text-xs hidden md:block">Gaisma &copy; 2023</p>
+            <span className="text-white/40 mx-1 hidden md:block">|</span>
+            <div className="flex items-center gap-1">
+              <p className="text-white/60 text-xs">Member of</p>
+              <a
+                href="https://www.produktionszentrum.de/mitglieder-portraets/alisa-scetinina/"
+                target="_blank"
+                rel="noreferrer"
               >
-                <path d="M12 12m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0"></path>
-                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                <path d="M12 7l0 -4"></path>
-                <path d="M12 21l0 -4"></path>
-                <path d="M7 12l-4 0"></path>
-                <path d="M21 12l-4 0"></path>
-              </svg>
-            </a>
+                <Image
+                  src="/pz_tanz_logo.jpg"
+                  alt="pz tanz logo"
+                  width={70}
+                  height={25}
+                  className="border border-white/20 rounded"
+                />
+              </a>
+            </div>
           </div>
-
-          {/* School Logo */}
-          <div className="school-logo flex flex-col items-center">
-            <p className="school-text text-white/60 text-sm mb-2">Member of</p>
-            <a
-              href="https://www.produktionszentrum.de/mitglieder-portraets/alisa-scetinina/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                src="/images/pz_tanz_logo.jpg"
-                alt="pz tanz logo"
-                width={120}
-                height={40}
-                className="border border-white/20 rounded"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className="copyright text-center mt-6">
-          <p className="text-white/60 text-sm">Gaisma &copy; 2023</p>
         </div>
       </div>
     </footer>
   )
 }
-

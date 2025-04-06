@@ -9,13 +9,14 @@ export default function Home() {
       <div className="relative w-full h-screen overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
-          <Image
-            src="/placeholder.svg?height=1080&width=1920"
-            alt="Hero background"
-            fill
-            className="object-cover opacity-40"
-          />
-
+          <video
+            autoPlay
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-40"
+          >
+            <source src="/gaisma-Matze-short.mp4" type="video/mp4" />
+          </video>
           {/* Neon Grid Lines */}
           <div className="absolute inset-0 z-20 opacity-20">
             <div className="w-full h-px bg-pink-500 absolute top-1/4"></div>
@@ -32,12 +33,14 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center z-30">
           <div className="relative w-full max-w-md aspect-[9/16] md:max-w-lg">
             <div className="absolute inset-0 bg-black rounded-lg overflow-hidden border border-pink-500/50 shadow-[0_0_15px_rgba(236,72,153,0.3)]">
-              <Image
-                src="/placeholder.svg?height=1920&width=1080"
-                alt="Video thumbnail"
-                fill
-                className="object-cover opacity-80"
-              />
+            <video
+            autoPlay
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-40"
+          >
+            <source src="/gaisma-Matze-short.mp4" type="video/mp4" />
+          </video>
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
             </div>
 
@@ -81,9 +84,6 @@ export default function Home() {
 
         {/* Title Overlay */}
         <div className="absolute top-1/4 left-8 md:left-16 z-30 max-w-md">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white">
-            <span className="text-pink-500">GAISMA</span>
-          </h1>
           <p className="text-lg text-white/70 mb-6 max-w-sm">
             Art resembles symbiosis of technology and human energy, that unifies in lucid dance.
           </p>
@@ -246,7 +246,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative aspect-[3/4] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/placeholder.svg?height=600&width=400"
+                src="/aboutMe.jpg?height=600&width=400"
                 alt="Gaisma profile pic"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"

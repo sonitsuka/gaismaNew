@@ -17,9 +17,8 @@ export default function SideNavigation() {
   ]
 
   return (
-    <div className="fixed top-0 left-0 bottom-0 w-16 md:w-20 bg-black/90 backdrop-blur-md z-50 border-r border-white/20 flex flex-col items-center justify-between py-8">
-      <div className="flex-grow"></div> {/* Spacer to replace the removed logo */}
-      <nav className="flex flex-col items-center space-y-8">
+    <div className="fixed top-0 left-0 h-[calc(100vh-50px)] w-16 md:w-20 bg-black/90 backdrop-blur-md z-50 border-r border-white/20 flex flex-col py-8">
+      <nav className="flex flex-col items-center space-y-8 mt-4">
         {navItems.map((item) => {
           const isActive = pathname === item.path
 
@@ -35,7 +34,7 @@ export default function SideNavigation() {
               <span className="text-xs uppercase tracking-wider hidden md:block">{item.name[0]}</span>
               <span className="text-xs uppercase tracking-wider block md:hidden">{item.name[0]}</span>
               <span
-                className="absolute left-full ml-2 px-2 py-1 bg-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block"
+                className="absolute left-full ml-2 px-2 py-1 bg-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block z-50"
                 style={{ color: item.color }}
               >
                 {item.name}
@@ -50,24 +49,9 @@ export default function SideNavigation() {
           )
         })}
       </nav>
-      <div className="mt-8">
-        <a href="mailto:gaisma@posteo.de" className="text-white/60 hover:text-white transition-colors">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </a>
+      <div className="mt-auto mb-4">
+        
       </div>
     </div>
   )
 }
-

@@ -101,7 +101,7 @@ export default function MusicPage() {
             >
               <div className="relative aspect-square bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/notMyCupOfTea.jpeg"
+                  src="notMyCupOfTea.jpeg"
                   alt="Not My Cup Of Tea"
                   width={300}
                   height={300}
@@ -130,7 +130,7 @@ export default function MusicPage() {
             >
               <div className="relative aspect-square bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/empathy.jpg"
+                  src="/empathy.jpg"
                   alt="Empathy"
                   width={300}
                   height={300}
@@ -157,7 +157,7 @@ export default function MusicPage() {
             >
               <div className="relative aspect-square bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/monarchy.jpg"
+                  src="/monarchy.jpg"
                   alt="Monarchy"
                   width={300}
                   height={300}
@@ -194,7 +194,7 @@ export default function MusicPage() {
             >
               <div className="relative aspect-square bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/sceti.png"
+                  src="/sceti.png"
                   alt="Feel Alive"
                   width={300}
                   height={300}

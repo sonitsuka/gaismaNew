@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function AboutPage() {
   return (
     <div className="bg-black text-white min-h-screen">
-      <div className="relative w-full h-64 md:h-80 overflow-hidden">
+      <div className="relative w-full h-40 md:h-80 overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
           <Image
@@ -13,19 +13,19 @@ export default function AboutPage() {
             className="object-cover opacity-40"
           />
 
-          {/* Neon Grid Lines */}
-          <div className="absolute inset-0 z-20 opacity-20">
-            <div className="w-full h-px bg-orange-500 absolute top-1/3"></div>
-            <div className="w-full h-px bg-orange-500 absolute top-2/3"></div>
+          {/* Neon Grid Lines - Less visible on mobile */}
+          <div className="absolute inset-0 z-20 opacity-10 md:opacity-20">
+            <div className="w-full h-px bg-orange-500 absolute top-1/2 md:top-1/3"></div>
+            <div className="hidden md:block w-full h-px bg-orange-500 absolute top-2/3"></div>
 
-            <div className="h-full w-px bg-orange-500 absolute left-1/3"></div>
-            <div className="h-full w-px bg-orange-500 absolute left-2/3"></div>
+            <div className="h-full w-px bg-orange-500 absolute left-1/2 md:left-1/3"></div>
+            <div className="hidden md:block h-full w-px bg-orange-500 absolute left-2/3"></div>
           </div>
         </div>
 
         <div className="absolute inset-0 flex items-center z-30">
-          <div className="container mx-auto px-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
+          <div className="container mx-auto px-4 md:px-8">
+            <h1 className="text-3xl md:text-6xl font-bold text-white">
               About <span className="text-orange-500">Me</span>
             </h1>
           </div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="relative">
             <div className="relative aspect-[3/4] bg-black border border-white/10 overflow-hidden">
-              <Image src="/images/aboutMe.jpg" alt="Gaisma profile pic" fill className="object-cover" />
+              <Image src="aboutMe.jpg" alt="Gaisma profile pic" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             </div>
 
