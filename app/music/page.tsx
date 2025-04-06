@@ -45,7 +45,7 @@ export default function MusicPage() {
             <a href="https://artists.landr.com/055855682215" target="_blank" className="group" rel="noreferrer">
               <div className="relative aspect-square bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/gaisma_dexterEP.jpg"
+                  src="/gaisma_dexterEP.jpg"
                   alt="Motherland (prod. by Dexter)"
                   width={300}
                   height={300}
@@ -72,7 +72,7 @@ export default function MusicPage() {
             >
               <div className="relative aspect-square bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/images/mirrorsOfCosmic.jpg"
+                  src="/mirrorsOfCosmic.jpg"
                   alt="Mirrors Of The Cosmic Cinema"
                   width={300}
                   height={300}
