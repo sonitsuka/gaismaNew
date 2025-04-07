@@ -1,15 +1,35 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Play, Volume2 } from "lucide-react"
+import VideoPlayer from "@/components/video-player"
 
 export default function Home() {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Hero Video */}
-      <div className="relative w-full h-screen overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
+      <div className="relative w-full h-[90vh] overflow-hidden">
+        {/* Y2K Futuristic Background Elements */}
+        {/* Y2K Futuristic Background Elements */}
+        <div className="absolute inset-0 z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-fuchsia-900/30 to-purple-900/30"></div>
+
+          {/* Holographic Grid Lines */}
+          <div className="absolute inset-0 z-20">
+            <div className="w-full h-px bg-gradient-to-r from-cyan-500/70 via-fuchsia-500/70 to-cyan-500/70 absolute top-1/4 animate-pulse"></div>
+            <div className="w-full h-px bg-gradient-to-r from-fuchsia-500/70 via-cyan-500/70 to-fuchsia-500/70 absolute top-2/4 animate-pulse"></div>
+            <div className="w-full h-px bg-gradient-to-r from-cyan-500/70 via-fuchsia-500/70 to-cyan-500/70 absolute top-3/4 animate-pulse"></div>
+
+            <div className="h-full w-px bg-gradient-to-b from-fuchsia-500/70 via-cyan-500/70 to-fuchsia-500/70 absolute left-1/4 animate-pulse"></div>
+            <div className="h-full w-px bg-gradient-to-b from-cyan-500/70 via-fuchsia-500/70 to-cyan-500/70 absolute left-2/4 animate-pulse"></div>
+            <div className="h-full w-px bg-gradient-to-b from-fuchsia-500/70 via-cyan-500/70 to-fuchsia-500/70 absolute left-3/4 animate-pulse"></div>
+          </div>
+
+          {/* Prismatic Light Effects */}
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 via-fuchsia-500/20 to-purple-500/20 rounded-full blur-3xl animate-slow-pulse"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 via-fuchsia-500/20 to-cyan-500/20 rounded-full blur-3xl animate-slow-pulse delay-1000"></div>
+
           <video
+            id="background-video"
             autoPlay
             loop
             muted
@@ -18,78 +38,24 @@ export default function Home() {
           >
             <source src="/gaisma-Matze-short.mp4" type="video/mp4" />
           </video>
-          {/* Neon Grid Lines */}
-          <div className="absolute inset-0 z-20 opacity-20">
-            <div className="w-full h-px bg-pink-500 absolute top-1/4"></div>
-            <div className="w-full h-px bg-blue-500 absolute top-2/4"></div>
-            <div className="w-full h-px bg-pink-500 absolute top-3/4"></div>
-
-            <div className="h-full w-px bg-blue-500 absolute left-1/4"></div>
-            <div className="h-full w-px bg-pink-500 absolute left-2/4"></div>
-            <div className="h-full w-px bg-blue-500 absolute left-3/4"></div>
-          </div>
         </div>
 
         {/* Video Player (Centered) */}
         <div className="absolute inset-0 flex items-center justify-center z-30">
           <div className="relative w-full max-w-md aspect-[9/16] md:max-w-lg">
-            <div className="absolute inset-0 bg-black rounded-lg overflow-hidden border border-pink-500/50 shadow-[0_0_15px_rgba(236,72,153,0.3)]">
-            <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-40"
-          >
-            <source src="/gaisma-Matze-short.mp4" type="video/mp4" />
-          </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
-            </div>
-
-            {/* Video Controls */}
-            <div className="absolute bottom-4 left-4 right-4">
-              {/* Progress Bar */}
-              <div className="w-full h-1 bg-white/20 rounded-full mb-4 overflow-hidden">
-                <div className="h-full w-1/3 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full"></div>
-              </div>
-
-              <div className="flex justify-between items-center">
-                <button className="w-12 h-12 rounded-full bg-black/50 border border-pink-500/50 flex items-center justify-center shadow-[0_0_10px_rgba(236,72,153,0.3)]">
-                  <Play className="w-6 h-6 text-pink-500 fill-pink-500" />
-                </button>
-
-                <div className="flex space-x-3">
-                  <button className="w-10 h-10 rounded-full bg-black/50 border border-blue-500/50 flex items-center justify-center shadow-[0_0_10px_rgba(59,130,246,0.3)]">
-                    <Volume2 className="w-5 h-5 text-blue-500" />
-                  </button>
-                  <button className="w-10 h-10 rounded-full bg-black/50 border border-blue-500/50 flex items-center justify-center shadow-[0_0_10px_rgba(59,130,246,0.3)]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-blue-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+            <div className="absolute inset-0 rounded-lg overflow-hidden border border-fuchsia-500/50 shadow-[0_0_25px_rgba(219,39,119,0.4)] bg-black/20 backdrop-blur-sm">
+              <VideoPlayer videoSrc="/gaisma-Matze-short.mp4" />
             </div>
           </div>
         </div>
 
         {/* Title Overlay */}
         <div className="absolute top-1/4 left-8 md:left-16 z-30 max-w-md">
-          <p className="text-lg text-white/70 mb-6 max-w-sm">
+          
+          <p className="text-lg text-white mb-6 max-w-sm drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
             Art resembles symbiosis of technology and human energy, that unifies in lucid dance.
           </p>
-          <button className="bg-transparent border border-pink-500 text-pink-500 hover:bg-pink-500/10 px-6 py-3 rounded-sm text-sm uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(236,72,153,0.3)]">
+          <button className="bg-transparent backdrop-blur-sm border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 px-6 py-3 rounded-sm text-sm uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(219,39,119,0.3)] hover:shadow-[0_0_20px_rgba(219,39,119,0.5)]">
             Explore
           </button>
         </div>
