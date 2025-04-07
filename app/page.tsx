@@ -11,6 +11,7 @@ export default function Home() {
           <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
           <video
             autoPlay
+            loop
             muted
             playsInline
             className="w-full h-full object-cover opacity-40"
@@ -35,6 +36,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black rounded-lg overflow-hidden border border-pink-500/50 shadow-[0_0_15px_rgba(236,72,153,0.3)]">
             <video
             autoPlay
+            loop
             muted
             playsInline
             className="w-full h-full object-cover opacity-40"
