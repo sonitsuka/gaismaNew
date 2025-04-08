@@ -51,7 +51,8 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
     // Set crossorigin to anonymous to prevent CORS issues
     video.crossOrigin = "anonymous"
 
-    // Try to autoplay the video
+    // Try to autoplay the video & muted
+    video.muted = true
     video.play().catch((error) => {
       console.log("Autoplay prevented:", error)
     })
@@ -124,7 +125,7 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
 
   return (
     <div ref={videoContainerRef} className="relative w-full h-full">
-      <video ref={videoRef} className="w-full h-full object-cover" playsInline>
+      <video ref={videoRef} className="w-full h-full object-cover" playsInline muted>
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

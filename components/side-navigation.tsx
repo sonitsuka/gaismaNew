@@ -13,9 +13,9 @@ export default function SideNavigation() {
     { name: "Music", path: "/music", color: "#ffcc33", icon: Music },
     { name: "Videos", path: "/videos", color: "#33cc66", icon: Video },
     { name: "Performance", path: "/performance", color: "#3399ff", icon: Film }, // Film icon for performance art/dance/cinema
-    { name: "Curation", path: "/curation", color: "#9966ff", icon: Palette }, // Palette icon for art/painting
+    { name: "Curation", path: "/curation", color: "#9966ff", icon: Palette }, 
     { name: "Press", path: "/press", color: "#cc33ff", icon: Newspaper },
-    { name: "Kontakt", path: "mailto:gaisma@posteo.de", color: "#00cccc", icon: Mail, isExternal: true }, // Email contact
+    { name: "Contact", path: "mailto:gaisma@posteo.de", color: "#00cccc", icon: Mail, isExternal: true }, 
   ]
 
   return (

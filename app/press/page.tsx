@@ -1,49 +1,46 @@
 import Image from "next/image"
+import { ExternalLink } from "lucide-react"
 
 export default function PressPage() {
-  // Sample data - would come from a CMS in a real implementation
-  const pressItems = [
+  // Press articles data
+  const pressArticles = [
     {
-      id: 1,
-      title: "Gaisma Pushes Boundaries with New Album",
-      publication: "Electronic Sound Magazine",
-      date: "November 2023",
-      excerpt:
-        "The artist's latest release demonstrates a mastery of both sonic and visual elements, creating an immersive experience that transcends traditional music consumption.",
-      link: "#",
+      title: "LIFT STUTTGARTMAGAZIN Playtime mit Gaisma Interview",
+      date: "September 28, 2023",
+      url: "https://www.lift-online.de/lift-aktuell/playtime-mit-gaisma/",
     },
     {
-      id: 2,
-      title: "Interview: The Visual World of Gaisma",
-      publication: "Resident Advisor",
-      date: "September 2023",
-      excerpt:
-        "We sat down with the artist to discuss the intricate relationship between sound and visuals in their work, and how technology shapes their creative process.",
-      link: "#",
+      title: "Al-Tiba9 Contemporary Art - Alisa Scetinina Performace music body",
+      date: "April 12, 2023",
+      url: "https://www.altiba9.com/artist-interviews/alisa-scetinina-performace-music-body",
     },
     {
-      id: 3,
-      title: "Festival Highlight: Gaisma's Prismatic Performance",
-      publication: "DJ Mag",
-      date: "July 2023",
-      excerpt:
-        "The standout performance of this year's festival combined cutting-edge visuals with pulsating electronic soundscapes.",
-      link: "#",
+      title: "LKZ - Vor dem Literaturmuseum in Marbach: Ein Klangspielplatz unter Strom",
+      date: "September 26, 2022",
+      url: "https://www.lkz.de/lokales_artikel,-vor-dem-literaturmuseum-in-marbach-ein-klangspielplatz-unter-strom-_arid,703510.html",
     },
-  ]
-
-  const photos = [
-    { id: 1, src: "/placeholder.svg?height=800&width=1200", alt: "Live performance at Berghain" },
-    { id: 2, src: "/placeholder.svg?height=800&width=1200", alt: "Studio session" },
-    { id: 3, src: "/placeholder.svg?height=800&width=1200", alt: "Festival appearance" },
-    { id: 4, src: "/placeholder.svg?height=800&width=1200", alt: "Album artwork" },
-    { id: 5, src: "/placeholder.svg?height=800&width=1200", alt: "Behind the scenes" },
-    { id: 6, src: "/placeholder.svg?height=800&width=1200", alt: "Visual installation" },
+    {
+      title: "dmcworld magazine - BACK TO MINE WITH SCETI",
+      date: "August 27, 2021",
+      url: "http://www.dmcworld.net/back-to-mine/back-to-mine-with-sceti/",
+    },
+    {
+      title:
+        "como las grecas - An interview with SCETI: their debut on the Exlove label with a fantastic four-track synthesized disco EP",
+      date: "August 2, 2021",
+      url: "https://www.comolasgrecas.com/en/an-interview-with-sceti/",
+    },
+    {
+      title: "WOMAN OF MUSIC - ALISA SCETININA",
+      date: "May, 2019",
+      url: "https://womenofmusic.de/member_reader/alisa-pgeboren-in-lettland-hat-sich-alisa-scetinina-seit-ihrer-kindheit-mit-musik-und-lettischem-tanz-besch%C3%A4ftigt-w%C3%A4hrend-ihres-.html",
+    },
   ]
 
   return (
     <div className="bg-black text-white min-h-screen">
-      <div className="relative w-full h-64 md:h-80 overflow-hidden">
+      {/* Responsive header - reduced height on mobile */}
+      <div className="relative w-full h-32 sm:h-40 md:h-60 lg:h-80 overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
           <Image
@@ -53,80 +50,49 @@ export default function PressPage() {
             className="object-cover opacity-40"
           />
 
-          {/* Neon Grid Lines */}
-          <div className="absolute inset-0 z-20 opacity-20">
-            <div className="w-full h-px bg-purple-500 absolute top-1/3"></div>
-            <div className="w-full h-px bg-purple-500 absolute top-2/3"></div>
-
-            <div className="h-full w-px bg-purple-500 absolute left-1/3"></div>
-            <div className="h-full w-px bg-purple-500 absolute left-2/3"></div>
+          {/* Neon Grid Lines - Less visible and simplified on mobile */}
+          <div className="absolute inset-0 z-20 opacity-10 md:opacity-20">
+            <div className="w-full h-px bg-pink-500 absolute top-1/2"></div>
+            <div className="hidden sm:block w-full h-px bg-pink-500 absolute top-2/3"></div>
+            <div className="h-full w-px bg-pink-500 absolute left-1/2"></div>
+            <div className="hidden sm:block h-full w-px bg-pink-500 absolute left-2/3"></div>
           </div>
         </div>
 
+        {/* Title - better positioned and sized for mobile */}
         <div className="absolute inset-0 flex items-center z-30">
-            <div className="container mx-auto px-4 md:px-8">
-              <h1 className="text-3xl md:text-6xl font-bold text-white">
-              <span className="text-purple-500">Press</span>
+          <div className="container mx-auto px-4 md:px-8">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white">
+              <span className="text-pink-500">Interviews & Press</span>
             </h1>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-8 py-12">
-        <div className="space-y-16">
-          <section>
-            <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-              Press <span className="text-purple-500">Coverage</span>
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-purple-500 to-transparent"></span>
-            </h2>
-            <div className="space-y-8">
-              {pressItems.map((item) => (
-                <div key={item.id} className="bg-gray-900 rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <div className="flex justify-between text-sm text-gray-400 mb-4">
-                    <span>{item.publication}</span>
-                    <span>{item.date}</span>
-                  </div>
-                  <p className="mb-4">{item.excerpt}</p>
-                  <a href={item.link} className="text-purple-400 hover:text-purple-300 inline-flex items-center">
-                    Read full article
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 ml-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+      {/* Content - improved padding for mobile */}
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
+        <div className="space-y-4 md:space-y-6">
+          {pressArticles.map((article, index) => (
+            <a
+              key={index}
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-gray-900/50 hover:bg-gray-800/50 rounded-lg p-4 sm:p-6 transition-colors border border-gray-800 hover:border-pink-500/30"
+            >
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-medium text-white group-hover:text-pink-500 flex items-center">
+                    {article.title}
+                    <ExternalLink className="ml-2 h-4 w-4 text-pink-500 opacity-70" />
+                  </h3>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-              Photo <span className="text-purple-500">Gallery</span>
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-purple-500 to-transparent"></span>
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {photos.map((photo) => (
-                <div key={photo.id} className="aspect-square overflow-hidden rounded-lg">
-                  <Image
-                    src={photo.src || "/placeholder.svg"}
-                    alt={photo.alt}
-                    width={1200}
-                    height={800}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
+                <div className="text-sm text-pink-500">{article.date}</div>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </div>
   )
 }
-
