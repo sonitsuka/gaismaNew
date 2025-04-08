@@ -53,7 +53,7 @@ export default function Home() {
         <div className="absolute top-1/4 left-8 md:left-16 z-30 max-w-md">
           
           <p className="text-lg text-white mb-6 max-w-sm drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
-            Art resembles symbiosis of technology and human energy, that unifies in lucid dance.
+            In times of unpredictability and chaos one thing that we can always be certain of is that the power and growth behind our personality lies in our own hands.
           </p>
           <button className="bg-transparent backdrop-blur-sm border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 px-6 py-3 rounded-sm text-sm uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(219,39,119,0.3)] hover:shadow-[0_0_20px_rgba(219,39,119,0.5)]">
             Explore
@@ -149,10 +149,10 @@ export default function Home() {
 
         <div>
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            Upcoming <span className="text-blue-500">Performances</span>
+            Upcoming <span className="text-blue-500">Shows</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
           </h2>
-
+          {/* comment out tmporaly 
           <div className="grid gap-4">
             <div className="bg-black border border-white/10 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
               <div>
@@ -202,6 +202,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          */}
         </div>
 
         {/* About Section Preview */}
