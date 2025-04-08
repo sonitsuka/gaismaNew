@@ -1,10 +1,101 @@
 import Image from "next/image"
-import { Play } from "lucide-react"
+import VideoPreviewCard from "@/components/video-preview-card"
 
 export default function PerformancePage() {
+  // Performance videos data
+  const performanceVideos = [
+    {
+      category: "Performance",
+      videos: [
+        {
+          title: "TUSK _Performance STJ Design Fashion Show Opening - Gaisma",
+          thumbnail: "/images/TUSK _Performance.png",
+          url: "https://vimeo.com/user50616907",
+          credits: `Performance - Alisa Scetinina (Gaisma)
+Live Music and Visuals - Issueswithmysleep (Maximilian Luz)
+Make up - Tamara Kokalj
+Hair - Mladen Durdevic
+Curation - Reiner Bock
+Camera - Peter Heizmann
+Post Production / Colorgrading - Roman Brauch`,
+        },
+        {
+          title: "Emotional Traffic - Alisa Scetinina",
+          thumbnail: "https://img.youtube.com/vi/h98Q9zuAS54/0.jpg",
+          url: "https://youtu.be/h98Q9zuAS54",
+          videoId: "h98Q9zuAS54",
+          credits: "Founded by the city of Stuttgart, Pop - Büro and Kunstverein Wagenhalle",
+        },
+        {
+          title: "Retaken Heart - Azimuth Art and Dance Ansamble",
+          thumbnail: "https://img.youtube.com/vi/UVqem5Be9VI/0.jpg",
+          url: "https://youtu.be/UVqem5Be9VI",
+          videoId: "UVqem5Be9VI",
+          credits: "Director - Gonçalo Cruzinha\nPerformed at Gedok Galerie und Landesmuseum Württemberg",
+        },
+        {
+          title: "Intact - Noverre - Young Choreographers Of Stuttgart Ballet 2017",
+          thumbnail: "https://img.youtube.com/vi/GIh38PjyJnQ/0.jpg",
+          url: "https://youtu.be/GIh38PjyJnQ",
+          videoId: "GIh38PjyJnQ",
+          credits:
+            "Choreography: Alisa Scetinina\nComposer - Alisa Scetinina\nDancers: Shaked Heller & Alisa Scetinina\nLight & Costume Concept - Alisa Scetinina",
+        },
+      ],
+    },
+    {
+      category: "Art & Film",
+      videos: [
+        {
+          title: "ISRA - Journey Through The Night - Art House Short Film",
+          thumbnail: "/images/ISRA-perfomance.png",
+          url: "https://vimeo.com/639004437",
+          videoId: "639004437",
+          credits:
+            "Direction/Production Manager - Reiner Bocka\nCostume Designer - Stjepan Cuka\nChoreography, Performance - Alisa Scetinina\nMusic - Maximilian Luz and Ellie Fords\nCamera - Peter Heizmann, Brian Zajak\nPost Production, Color Grading - Roman Brauch",
+        },
+        {
+          title: "Alisa - filmed by Simon Pfister in Bavarian State Opera",
+          thumbnail: "/images/alisa-perfomance.png",
+          url: "https://vimeo.com/216516573",
+          videoId: "216516573",
+          credits: "Director - Donna Mae Burrows\nCamera - Simon Pfister\nDancer - Alisa Scetinina",
+        },
+      ],
+    },
+    {
+      category: "Played a Role",
+      videos: [
+        {
+          title: "Yung Obama & NoTypeBeats - GOLD",
+          thumbnail: "https://img.youtube.com/vi/FPfuKAegXqo/0.jpg",
+          url: "https://www.youtube.com/watch?v=FPfuKAegXqo",
+          videoId: "FPfuKAegXqo",
+          credits: "Music - Yung Obama & NoTypeBeats\nEsy Studios\nCamera & Postproduction - Rakete Visuals",
+        },
+        {
+          title: "Levin Goes Lightly - Geschichten (official)",
+          thumbnail: "https://img.youtube.com/vi/mK-petdPykc/0.jpg",
+          url: "https://youtu.be/mK-petdPykc",
+          videoId: "mK-petdPykc",
+          credits:
+            "Music & Text - Levin Stadler\nDirected by Nicolas Ohnesorge\nStarring: Alena Hermes, Alisa Scetinina\nColor Grading: Harry Delgas",
+        },
+        {
+          title: "Image -Kampagne 2017",
+          thumbnail: "https://img.youtube.com/vi/WGnBRZOx59o/0.jpg",
+          url: "https://www.youtube.com/watch?v=WGnBRZOx59o",
+          videoId: "WGnBRZOx59o",
+          credits: "Commercial for Generali Versicherung Österreich",
+        },
+      ],
+    },
+  ]
+
   return (
     <div className="bg-black text-white min-h-screen">
-      <div className="relative w-full h-64 md:h-80 overflow-hidden">
+      {/* Responsive header - reduced height on mobile */}
+      <div className="relative w-full h-32 sm:h-40 md:h-60 lg:h-80 overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
           <Image
@@ -14,254 +105,54 @@ export default function PerformancePage() {
             className="object-cover opacity-40"
           />
 
-          {/* Neon Grid Lines */}
-          <div className="absolute inset-0 z-20 opacity-20">
-            <div className="w-full h-px bg-blue-500 absolute top-1/3"></div>
-            <div className="w-full h-px bg-blue-500 absolute top-2/3"></div>
-
-            <div className="h-full w-px bg-blue-500 absolute left-1/3"></div>
-            <div className="h-full w-px bg-blue-500 absolute left-2/3"></div>
+          {/* Neon Grid Lines - Less visible and simplified on mobile */}
+          <div className="absolute inset-0 z-20 opacity-10 md:opacity-20">
+            <div className="w-full h-px bg-blue-500 absolute top-1/2"></div>
+            <div className="hidden sm:block w-full h-px bg-blue-500 absolute top-2/3"></div>
+            <div className="h-full w-px bg-blue-500 absolute left-1/2"></div>
+            <div className="hidden sm:block h-full w-px bg-blue-500 absolute left-2/3"></div>
           </div>
         </div>
 
+        {/* Title - better positioned and sized for mobile */}
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
-            <h1 className="text-3xl md:text-6xl font-bold text-white">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white">
               <span className="text-blue-500">Performance</span>
             </h1>
+            <div className="flex flex-wrap gap-2 sm:gap-4 mt-2 sm:mt-4">
+              <span className="text-sm sm:text-base text-white/70">Performance</span>
+              <span className="text-sm sm:text-base text-white/70">Art & Film</span>
+              <span className="text-sm sm:text-base text-white/70">Played a Role</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-8 py-12">
-        {/* Performance Videos */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            Performance <span className="text-blue-500">Videos</span>
-            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
-          </h2>
+      {/* Content - improved padding for mobile */}
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
+        {performanceVideos.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-12 md:mb-16 last:mb-0">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 text-white relative inline-block">
+              <span className="text-blue-500">{category.category}</span>
+              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
+            </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a
-              href="https://www.youtube.com/watch?v=FyTQhsSNJGY&t=462s"
-              target="_blank"
-              className="group"
-              rel="noreferrer"
-            >
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/FyTQhsSNJGY/0.jpg"
-                  alt="Stuttgart Rooftop Streams #10 - Gaisma & Mariano Fernandez (Live-Malerei)"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+              {category.videos.map((video, videoIndex) => (
+                <VideoPreviewCard
+                  key={videoIndex}
+                  title={video.title}
+                  thumbnail={video.thumbnail}
+                  url={video.url}
+                  credits={video.credits}
+                  videoId={video.videoId}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-blue-500 transition-colors">
-                    Stuttgart Rooftop Streams
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    <Play className="w-5 h-5 text-blue-500 fill-blue-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=uifNs3R7t9U" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/uifNs3R7t9U/0.jpg"
-                  alt="TINY WINDOW CONCERTS II - Gaisma"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-blue-500 transition-colors">
-                    TINY WINDOW CONCERTS
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    <Play className="w-5 h-5 text-blue-500 fill-blue-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=lJh2z9t7eZc" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/lJh2z9t7eZc/0.jpg"
-                  alt="Gaisma aka Tumsi - Bold Decisions"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-blue-500 transition-colors">
-                    Bold Decisions
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    <Play className="w-5 h-5 text-blue-500 fill-blue-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=aRcXE3MpmSI" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/aRcXE3MpmSI/0.jpg"
-                  alt="Synthstrom Festival- Antidote"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-blue-500 transition-colors">
-                    Synthstrom Festival
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    <Play className="w-5 h-5 text-blue-500 fill-blue-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
+              ))}
+            </div>
           </div>
-        </div>
-
-        {/* Art & Film */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            Art & <span className="text-purple-500">Film</span>
-            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-purple-500 to-transparent"></span>
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="https://www.youtube.com/watch?v=hjc1WrK-4gA" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/hjc1WrK-4gA/0.jpg"
-                  alt="Apana"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-purple-500/0 group-hover:border-purple-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(147,51,234,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-purple-500 transition-colors">
-                    Apana (Hive Mind)
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-purple-500 flex items-center justify-center shadow-[0_0_15px_rgba(147,51,234,0.5)]">
-                    <Play className="w-5 h-5 text-purple-500 fill-purple-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=JbxhDVcAumA" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/JbxhDVcAumA/0.jpg"
-                  alt="Organic Muesli"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-purple-500/0 group-hover:border-purple-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(147,51,234,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-purple-500 transition-colors">
-                    Organic Muesli
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-purple-500 flex items-center justify-center shadow-[0_0_15px_rgba(147,51,234,0.5)]">
-                    <Play className="w-5 h-5 text-purple-500 fill-purple-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        {/* Played a Role */}
-        <div>
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            Played a <span className="text-pink-500">Role</span>
-            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-pink-500 to-transparent"></span>
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="https://www.youtube.com/watch?v=1UKIHVtwK9M" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/1UKIHVtwK9M/0.jpg"
-                  alt="Dancing All Alone"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-pink-500/0 group-hover:border-pink-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-pink-500 transition-colors">
-                    Dancing All Alone
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-pink-500 flex items-center justify-center shadow-[0_0_15px_rgba(236,72,153,0.5)]">
-                    <Play className="w-5 h-5 text-pink-500 fill-pink-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=azjcpwy_Qfw" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/azjcpwy_Qfw/0.jpg"
-                  alt="Feel Alive"
-                  width={400}
-                  height={225}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-pink-500/0 group-hover:border-pink-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-2">
-                  <h3 className="font-bold text-sm text-white group-hover:text-pink-500 transition-colors">
-                    Feel Alive
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-black/70 border border-pink-500 flex items-center justify-center shadow-[0_0_15px_rgba(236,72,153,0.5)]">
-                    <Play className="w-5 h-5 text-pink-500 fill-pink-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   )
 }
-

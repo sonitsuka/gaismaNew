@@ -187,14 +187,14 @@ export default function VideosPage() {
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <a href="https://www.youtube.com/watch?v=1UKIHVtwK9M" target="_blank" className="group" rel="noreferrer">
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image
                   src="https://img.youtube.com/vi/1UKIHVtwK9M/0.jpg"
                   alt="Dancing All Alone"
-                  width={640}
-                  height={360}
+                  width={320}
+                  height={180}
                   className="object-cover h-full w-full transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -217,8 +217,8 @@ export default function VideosPage() {
                 <Image
                   src="https://img.youtube.com/vi/azjcpwy_Qfw/0.jpg"
                   alt="Feel Alive"
-                  width={640}
-                  height={360}
+                  width={320}
+                  height={180}
                   className="object-cover h-full w-full transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -243,36 +243,8 @@ export default function VideosPage() {
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a
-              href="https://www.youtube.com/watch?v=FyTQhsSNJGY&t=462s"
-              target="_blank"
-              className="group"
-              rel="noreferrer"
-            >
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/FyTQhsSNJGY/0.jpg"
-                  alt="Stuttgart Rooftop Streams #10 - Gaisma & Mariano Fernandez (Live-Malerei)"
-                  width={640}
-                  height={360}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-green-500 transition-colors">
-                    Stuttgart Rooftop Streams #10
-                  </h3>
-                  <p className="text-sm text-white/60">Gaisma & Mariano Fernandez (Live-Malerei)</p>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_15px_rgba(34,197,94,0.5)]">
-                    <Play className="w-6 h-6 text-green-500 fill-green-500" />
-                  </div>
-                </div>
-              </div>
-            </a>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
 
             <a href="https://www.youtube.com/watch?v=uifNs3R7t9U" target="_blank" className="group" rel="noreferrer">
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
@@ -321,7 +293,35 @@ export default function VideosPage() {
                 </div>
               </div>
             </a>
-
+            <a
+              href="https://www.youtube.com/watch?v=FyTQhsSNJGY&t=462s"
+              target="_blank"
+              className="group"
+              rel="noreferrer"
+            >
+              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
+                <Image
+                  src="https://img.youtube.com/vi/FyTQhsSNJGY/0.jpg"
+                  alt="Stuttgart Rooftop Streams #10 - Gaisma & Mariano Fernandez (Live-Malerei)"
+                  width={640}
+                  height={360}
+                  className="object-cover h-full w-full transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
+                <div className="absolute inset-0 flex flex-col justify-end p-4">
+                  <h3 className="font-bold text-white group-hover:text-green-500 transition-colors">
+                    Stuttgart Rooftop Streams #10
+                  </h3>
+                  <p className="text-sm text-white/60">Gaisma & Mariano Fernandez (Live-Malerei)</p>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-12 h-12 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_15px_rgba(34,197,94,0.5)]">
+                    <Play className="w-6 h-6 text-green-500 fill-green-500" />
+                  </div>
+                </div>
+              </div>
+            </a>
             <a href="https://www.youtube.com/watch?v=aRcXE3MpmSI" target="_blank" className="group" rel="noreferrer">
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image
@@ -355,7 +355,7 @@ export default function VideosPage() {
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <a href="https://youtu.be/wFM9VDz1308" target="_blank" className="group" rel="noreferrer">
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image
