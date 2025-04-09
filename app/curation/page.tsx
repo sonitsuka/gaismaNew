@@ -228,36 +228,39 @@ export default function CurationPage() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-            <div className="md:w-1/2 space-y-6">
-              <div className="text-sm sm:text-base text-white/80 space-y-4">
-                <p>
-                  A monthly radio show curated by Gaisma, featuring a blend of electronic, ambient, and experimental music from emerging artists.
-                </p>
-              </div>
+  <div className="md:w-1/2 space-y-6">
+    <div className="text-sm sm:text-base text-white/80 space-y-4">
+      <p>
+        A monthly radio show curated by Gaisma, featuring a blend of electronic, ambient, and experimental music from emerging artists.
+      </p>
+    </div>
 
-              <a
-                href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L&ab_channel=LobbyRadio"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
-              >
-                Listen on YouTube
-              </a>
-            </div>
+    <a
+      href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L&ab_channel=LobbyRadio"
+      target="_blank"
+      rel="noreferrer"
+      className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+    >
+      Listen on YouTube
+    </a>
+  </div>
 
-            <div className="md:w-1/2 flex justify-center">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                <Image
-                  src="/klang_parfum.png?height=200&width=200"
-                  alt="Klang Parfüm Radio Show"
-                  width={200}
-                  height={200}
-                  className="relative w-full max-w-md object-contain rounded-lg border border-blue-500/30"
-                />
-              </div>
-            </div>
-          </div>
+  <div className="md:w-1/2 flex justify-center">
+    <a
+      href="https://www.youtube.com/watch?v=wFM9VDz1308"
+      target="_blank"
+      rel="noreferrer"
+      className="rounded-lg overflow-hidden border border-purple-500/30 shadow-md hover:shadow-lg transition"
+    >
+      <img
+        src="https://img.youtube.com/vi/wFM9VDz1308/hqdefault.jpg"
+        alt="Klang Parfüm YouTube Thumbnail"
+        className="w-64 h-auto object-cover rounded-lg"
+      />
+    </a>
+  </div>
+</div>
+
         </div>
       </div>
     </div>

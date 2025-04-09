@@ -60,7 +60,7 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
 
   return (
     <div
-      className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-colors"
+      className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-colors max-w-md w-full mx-auto"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

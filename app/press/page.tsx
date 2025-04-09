@@ -5,6 +5,11 @@ export default function PressPage() {
   // Press articles data
   const pressArticles = [
     {
+      title: "4 Minuten mit Gaisma",
+      date: "November 11, 2024",
+      url: "https://www.das-ticket-magazin.de/2024/10/11/4-minuten-mit-gaisma/",
+    },
+    {
       title: "LIFT STUTTGARTMAGAZIN Playtime mit Gaisma Interview",
       date: "September 28, 2023",
       url: "https://www.lift-online.de/lift-aktuell/playtime-mit-gaisma/",

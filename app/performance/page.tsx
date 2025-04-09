@@ -9,8 +9,8 @@ export default function PerformancePage() {
       videos: [
         {
           title: "TUSK _Performance STJ Design Fashion Show Opening - Gaisma",
-          thumbnail: "/images/TUSK _Performance.png",
-          url: "https://vimeo.com/user50616907",
+          thumbnail: "/TUSK _Performance.png",
+          url: "https://vimeo.com/938340726",
           credits: `Performance - Alisa Scetinina (Gaisma)
 Live Music and Visuals - Issueswithmysleep (Maximilian Luz)
 Make up - Tamara Kokalj
@@ -48,7 +48,7 @@ Post Production / Colorgrading - Roman Brauch`,
       videos: [
         {
           title: "ISRA - Journey Through The Night - Art House Short Film",
-          thumbnail: "/images/ISRA-perfomance.png",
+          thumbnail: "/ISRA-perfomance.png",
           url: "https://vimeo.com/639004437",
           videoId: "639004437",
           credits:
@@ -56,7 +56,7 @@ Post Production / Colorgrading - Roman Brauch`,
         },
         {
           title: "Alisa - filmed by Simon Pfister in Bavarian State Opera",
-          thumbnail: "/images/alisa-perfomance.png",
+          thumbnail: "/alisa-perfomance.png",
           url: "https://vimeo.com/216516573",
           videoId: "216516573",
           credits: "Director - Donna Mae Burrows\nCamera - Simon Pfister\nDancer - Alisa Scetinina",
@@ -138,7 +138,7 @@ Post Production / Colorgrading - Roman Brauch`,
               <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
               {category.videos.map((video, videoIndex) => (
                 <VideoPreviewCard
                   key={videoIndex}
