@@ -3,27 +3,46 @@ import { Play } from "lucide-react"
 
 export default function VideosPage() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="text-white min-h-screen relative">
+      {/* New prismatic background */}
+      <div className="fixed inset-0 -z-10" style={{
+        background: 'radial-gradient(circle at 10% 20%, rgba(21, 21, 35, 1) 0%, rgba(10, 10, 20, 1) 90%)',
+        filter: 'contrast(1.2) saturate(0.8)'
+      }}>
+        {/* Prismatic blobs */}
+        <div 
+          className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full opacity-[0.07] blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, rgba(34, 197, 94, 0.5) 0%, rgba(13, 13, 35, 0) 70%)',
+            transform: 'rotate(-30deg)'
+          }}
+        />
+        <div 
+          className="absolute top-[40%] -right-[20%] w-[60%] h-[60%] rounded-full opacity-[0.06] blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, rgba(20, 130, 80, 0.5) 0%, rgba(13, 13, 35, 0) 70%)',
+            transform: 'rotate(15deg)'
+          }}
+        />
+        <div 
+          className="absolute -bottom-[20%] left-[30%] w-[50%] h-[50%] rounded-full opacity-[0.04] blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, rgba(23, 97, 148, 0.5) 0%, rgba(13, 13, 35, 0) 70%)',
+            transform: 'rotate(45deg)'
+          }}
+        />
+        
+        {/* Noise texture overlay */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.4\'/%3E%3C/svg%3E")',
+          }}
+        />
+      </div>
+
       <div className="relative w-full h-64 md:h-80 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
-          <Image
-            src="/placeholder.svg?height=800&width=1600"
-            alt="Videos background"
-            fill
-            className="object-cover opacity-40"
-          />
-
-          {/* Neon Grid Lines */}
-          <div className="absolute inset-0 z-20 opacity-20">
-            <div className="w-full h-px bg-green-500 absolute top-1/3"></div>
-            <div className="w-full h-px bg-green-500 absolute top-2/3"></div>
-
-            <div className="h-full w-px bg-green-500 absolute left-1/3"></div>
-            <div className="h-full w-px bg-green-500 absolute left-2/3"></div>
-          </div>
-        </div>
-
+        
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
             <h1 className="text-3xl md:text-6xl font-bold text-white">
