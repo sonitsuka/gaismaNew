@@ -43,7 +43,7 @@ export default function PressPage() {
   ]
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-[url('/bg-press.png')] bg-cover bg-center bg-no-repeat text-white min-h-screen">
       {/* Responsive header - reduced height on mobile */}
       <div className="relative w-full h-32 sm:h-40 md:h-60 lg:h-80 overflow-hidden">
         <div className="absolute inset-0">
