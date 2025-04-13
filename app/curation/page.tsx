@@ -230,7 +230,7 @@ export default function CurationPage() {
 
   <div className="md:w-1/2 flex justify-center">
     <a
-      href="https://www.youtube.com/watch?v=wFM9VDz1308"
+      href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L"
       target="_blank"
       rel="noreferrer"
       className="rounded-lg overflow-hidden border border-purple-500/30 shadow-md hover:shadow-lg transition"
