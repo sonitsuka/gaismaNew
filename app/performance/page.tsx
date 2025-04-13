@@ -98,20 +98,7 @@ Post Production / Colorgrading - Roman Brauch`,
       <div className="relative w-full h-32 sm:h-40 md:h-60 lg:h-80 overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
-          <Image
-            src="/placeholder.svg?height=800&width=1600"
-            alt="Performance background"
-            fill
-            className="object-cover opacity-40"
-          />
 
-          {/* Neon Grid Lines - Less visible and simplified on mobile */}
-          <div className="absolute inset-0 z-20 opacity-10 md:opacity-20">
-            <div className="w-full h-px bg-blue-500 absolute top-1/2"></div>
-            <div className="hidden sm:block w-full h-px bg-blue-500 absolute top-2/3"></div>
-            <div className="h-full w-px bg-blue-500 absolute left-1/2"></div>
-            <div className="hidden sm:block h-full w-px bg-blue-500 absolute left-2/3"></div>
-          </div>
         </div>
 
         {/* Title - better positioned and sized for mobile */}
@@ -121,10 +108,17 @@ Post Production / Colorgrading - Roman Brauch`,
               <span className="text-blue-500">Performance</span>
             </h1>
             <div className="flex flex-wrap gap-2 sm:gap-4 mt-2 sm:mt-4">
-              <span className="text-sm sm:text-base text-white/70">Performance</span>
-              <span className="text-sm sm:text-base text-white/70">Art & Film</span>
-              <span className="text-sm sm:text-base text-white/70">Played a Role</span>
+              {performanceVideos.map((category) => (
+                <a
+                  key={category.category}
+                  href={`#${category.category.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="text-sm sm:text-base text-white/70 hover:text-blue-400 underline underline-offset-2 transition-colors"
+                >
+                  {category.category}
+                </a>
+              ))}
             </div>
+
           </div>
         </div>
       </div>
@@ -132,7 +126,7 @@ Post Production / Colorgrading - Roman Brauch`,
       {/* Content - improved padding for mobile */}
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
         {performanceVideos.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-12 md:mb-16 last:mb-0">
+          <div key={categoryIndex} id={category.category.toLowerCase().replace(/\s+/g, "-")} className="mb-12 md:mb-16 last:mb-0">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 text-white relative inline-block">
               <span className="text-blue-500">{category.category}</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>

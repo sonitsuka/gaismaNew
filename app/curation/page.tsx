@@ -5,23 +5,6 @@ export default function CurationPage() {
     <div className="bg-black text-white min-h-screen">
       {/* Responsive header - reduced height on mobile */}
       <div className="relative w-full h-32 sm:h-40 md:h-60 lg:h-80 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
-          <Image
-            src="/placeholder.svg?height=800&width=1600"
-            alt="Curation background"
-            fill
-            className="object-cover opacity-40"
-          />
-
-          {/* Neon Grid Lines - Less visible and simplified on mobile */}
-          <div className="absolute inset-0 z-20 opacity-10 md:opacity-20">
-            <div className="w-full h-px bg-purple-500 absolute top-1/2"></div>
-            <div className="hidden sm:block w-full h-px bg-purple-500 absolute top-2/3"></div>
-            <div className="h-full w-px bg-purple-500 absolute left-1/2"></div>
-            <div className="hidden sm:block h-full w-px bg-purple-500 absolute left-2/3"></div>
-          </div>
-        </div>
 
         {/* Title - better positioned and sized for mobile */}
         <div className="absolute inset-0 flex items-center z-30">

@@ -132,7 +132,6 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
 
       {/* Holographic Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[url('/holographic-texture.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
 
       {/* Video Controls */}
       <div className="absolute bottom-4 left-4 right-4 z-40">

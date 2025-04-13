@@ -48,6 +48,13 @@ export default function VideosPage() {
             <h1 className="text-3xl md:text-6xl font-bold text-white">
               <span className="text-green-500">Videos</span>
             </h1>
+            <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
+  <a href="#music-video-gaisma" className="hover:text-green-400 underline underline-offset-2">Music Video Gaisma</a>
+  <a href="#music-video-sceti" className="hover:text-green-400 underline underline-offset-2">Music Video Sceti</a>
+  <a href="#dj-live" className="hover:text-green-400 underline underline-offset-2">DJ & Live</a>
+  <a href="#radio-live" className="hover:text-green-400 underline underline-offset-2">Radio Live</a>
+</div>
+
           </div>
         </div>
       </div>
@@ -199,8 +206,8 @@ export default function VideosPage() {
           </div>
         </div>
 
-        {/* Music Video Sceti */}
-        <div className="mb-16">
+        {/* Music Video Sceti */}     
+        <div className="mb-16" id="music-video-sceti">  
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
             Music Video <span className="text-green-500">Sceti</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
@@ -256,7 +263,7 @@ export default function VideosPage() {
         </div>
 
         {/* DJ & Live */}
-        <div className="mb-16">
+        <div className="mb-16" id="dj-live">
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
             DJ & <span className="text-green-500">Live</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
@@ -368,7 +375,7 @@ export default function VideosPage() {
         </div>
 
         {/* Radio Live */}
-        <div>
+        <div className="mb-16" id="radio-live">
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
             Radio <span className="text-green-500">Live</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>

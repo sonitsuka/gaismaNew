@@ -238,7 +238,7 @@ export default function MusicPage() {
         {/* DJ Set */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            DJ <span className="text-yellow-500">Set</span>
+            DJ <span className="text-yellow-500">Sets</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent"></span>
           </h2>
 
