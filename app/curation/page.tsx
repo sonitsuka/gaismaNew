@@ -214,7 +214,7 @@ export default function CurationPage() {
   <div className="md:w-1/2 space-y-6">
     <div className="text-sm sm:text-base text-white/80 space-y-4">
       <p>
-        A monthly radio show curated by Gaisma, featuring a blend of electronic, ambient, and experimental music from emerging artists.
+        How to connect key senses that trigger our memories and emotions? That is how the concept of the “Klang Parfüm” has come to life. Diverse digital or vinyl set’s, within many different genre categories, lets you experience an emotional state, that is comparable with the unknown fragrance.
       </p>
     </div>
 

@@ -161,13 +161,7 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
           </button>
 
           <div className="flex space-x-3">
-            <button
-              onClick={toggleMute}
-              className="w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-cyan-500/50 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] transition-all"
-              aria-label={isMuted ? "Unmute video" : "Mute video"}
-            >
-              {isMuted ? <VolumeX className="w-5 h-5 text-cyan-500" /> : <Volume2 className="w-5 h-5 text-cyan-500" />}
-            </button>
+            
             <button
               onClick={toggleFullscreen}
               className="w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-purple-500/50 flex items-center justify-center shadow-[0_0_15px_rgba(147,51,234,0.4)] hover:shadow-[0_0_20px_rgba(147,51,234,0.6)] transition-all"
