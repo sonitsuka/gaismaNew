@@ -43,23 +43,31 @@ export default function MusicPage() {
           backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.4\'/%3E%3C/svg%3E")',
         }}
       />
-      <div className="relative w-full h-64 md:h-80 overflow-hidden">
+      <div className="relative w-full h-48 sm:h-48 md:h-64 overflow-hidden">
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white">
               <span className="text-yellow-500">Music</span>
             </h1>
+            <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
+              <a href="#gaisma-album-ep" className="hover:text-yellow-400 underline underline-offset-2">Gaisma Album & EP</a>
+              <a href="#sceti-ep" className="hover:text-yellow-400 underline underline-offset-2">Sceti EP</a>
+              <a href="#dj-sets" className="hover:text-yellow-400 underline underline-offset-2">DJ Sets</a>
+              <a href="#radio-show" className="hover:text-yellow-400 underline underline-offset-2">Radio Show</a>
+            </div>
+
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-8 py-12">
         {/* Gaisma Album & EP */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+        <div id="gaisma-album-ep" className="mb-16">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             Gaisma <span className="text-yellow-500">Album & EP</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent"></span>
-          </h2>
+        </h2>
+
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             <a href="https://artists.landr.com/055855682215" target="_blank" className="group" rel="noreferrer">
@@ -74,7 +82,8 @@ export default function MusicPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors">Motherland</h3>
+                <h3 className="text-sm sm:text-base font-medium sm:font-semibold text-white group-hover:text-green-400 transition-colors leading-snug break-words">
+                Motherland</h3>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-12 h-12 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_15px_rgba(234,179,8,0.5)]">
@@ -101,7 +110,7 @@ export default function MusicPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors">
+                <h3 className="text-sm sm:text-base font-medium sm:font-semibold text-white group-hover:text-green-400 transition-colors leading-snug break-words">
                     Mirrors Of The Cosmic Cinema
                   </h3>
                 </div>
@@ -130,7 +139,7 @@ export default function MusicPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors">
+                <h3 className="text-sm sm:text-base font-medium sm:font-semibold text-white group-hover:text-green-400 transition-colors leading-snug break-words">
                     Not My Cup Of Tea
                   </h3>
                 </div>
@@ -199,13 +208,13 @@ export default function MusicPage() {
         </div>
 
         {/* Sceti EP */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+        <div id="sceti-ep" className="mb-16">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             Sceti <span className="text-yellow-500">EP</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent"></span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             <a
               href="https://open.spotify.com/intl-de/artist/7LmgNFt2L76bFO3f27IsC4"
               target="_blank"
@@ -236,13 +245,13 @@ export default function MusicPage() {
         </div>
 
         {/* DJ Set */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+        <div id="dj-sets" className="mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             DJ <span className="text-yellow-500">Sets</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent"></span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             <a
               href="https://soundcloud.com/mutantradio/gaisma-13122022"
               target="_blank"
@@ -260,7 +269,7 @@ export default function MusicPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors">
+                <h3 className="text-sm sm:text-base font-medium sm:font-semibold text-white group-hover:text-green-400 transition-colors leading-snug break-words">
                     Mutant Radio 13.12.2022
                   </h3>
                 </div>
@@ -289,7 +298,7 @@ export default function MusicPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors">
+                <h3 className="text-sm sm:text-base font-medium sm:font-semibold text-white group-hover:text-green-400 transition-colors leading-snug break-words">
                     Umbau/ Stuttgart21/House
                   </h3>
                 </div>
@@ -345,7 +354,7 @@ export default function MusicPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors">
+                <h3 className="text-sm sm:text-base font-medium sm:font-semibold text-white group-hover:text-green-400 transition-colors leading-snug break-words">
                     Fruit Salad - Brombeere
                   </h3>
                 </div>
@@ -360,13 +369,13 @@ export default function MusicPage() {
         </div>
 
         {/* Radio Show */}
-        <div>
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+        <div id="radio-show" >
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             Radio <span className="text-yellow-500">Show</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent"></span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             <a
               href="https://soundcloud.com/gaisma/klang-parfum-viola?si=6f9125d763594aa49fd5ed212dcdd003"
               target="_blank"

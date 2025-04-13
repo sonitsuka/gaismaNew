@@ -95,7 +95,7 @@ Post Production / Colorgrading - Roman Brauch`,
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Responsive header - reduced height on mobile */}
-      <div className="relative w-full h-32 sm:h-40 md:h-60 lg:h-80 overflow-hidden">
+      <div className="relative w-full h-40 sm:h-48 md:h-64 overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
 
@@ -104,7 +104,7 @@ Post Production / Colorgrading - Roman Brauch`,
         {/* Title - better positioned and sized for mobile */}
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white">
               <span className="text-blue-500">Performance</span>
             </h1>
             <div className="flex flex-wrap gap-2 sm:gap-4 mt-2 sm:mt-4">

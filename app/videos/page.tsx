@@ -31,7 +31,7 @@ export default function VideosPage() {
             transform: 'rotate(45deg)'
           }}
         />
-        
+        x
         {/* Noise texture overlay */}
         <div 
           className="absolute inset-0 opacity-20"
@@ -41,20 +41,18 @@ export default function VideosPage() {
         />
       </div>
 
-      <div className="relative w-full h-64 md:h-80 overflow-hidden">
-        
+      <div className="relative w-full h-48 sm:h-48 md:h-64 overflow-hidden">
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
             <h1 className="text-3xl md:text-6xl font-bold text-white">
               <span className="text-green-500">Videos</span>
             </h1>
             <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
-  <a href="#music-video-gaisma" className="hover:text-green-400 underline underline-offset-2">Music Video Gaisma</a>
-  <a href="#music-video-sceti" className="hover:text-green-400 underline underline-offset-2">Music Video Sceti</a>
-  <a href="#dj-live" className="hover:text-green-400 underline underline-offset-2">DJ & Live</a>
-  <a href="#radio-live" className="hover:text-green-400 underline underline-offset-2">Radio Live</a>
-</div>
-
+              <a href="#music-video-gaisma" className="hover:text-green-400 underline underline-offset-2">Music Video Gaisma</a>
+              <a href="#music-video-sceti" className="hover:text-green-400 underline underline-offset-2">Music Video Sceti</a>
+              <a href="#dj-live" className="hover:text-green-400 underline underline-offset-2">DJ & Live</a>
+              <a href="#radio-live" className="hover:text-green-400 underline underline-offset-2">Radio Live</a>
+            </div>
           </div>
         </div>
       </div>
@@ -62,7 +60,7 @@ export default function VideosPage() {
       <div className="container mx-auto px-8 py-12">
         {/* Music Video Gaisma */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             Music Video <span className="text-green-500">Gaisma</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
@@ -208,7 +206,7 @@ export default function VideosPage() {
 
         {/* Music Video Sceti */}     
         <div className="mb-16" id="music-video-sceti">  
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             Music Video <span className="text-green-500">Sceti</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
@@ -264,7 +262,7 @@ export default function VideosPage() {
 
         {/* DJ & Live */}
         <div className="mb-16" id="dj-live">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             DJ & <span className="text-green-500">Live</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
@@ -376,7 +374,7 @@ export default function VideosPage() {
 
         {/* Radio Live */}
         <div className="mb-16" id="radio-live">
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+         <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             Radio <span className="text-green-500">Live</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>

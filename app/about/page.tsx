@@ -43,13 +43,12 @@ export default function AboutPage() {
         }}
       />
 
-      <div className="relative w-full h-40 md:h-80 overflow-hidden">
-
+      <div className="relative w-full h-32 sm:h-40 md:h-56 overflow-hidden">
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
-            <h1 className="text-3xl md:text-6xl font-bold text-white">
-              About <span className="text-orange-500">Me</span>
-            </h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white">
+            About <span className="text-orange-500">Me</span>
+          </h1>
           </div>
         </div>
       </div>
