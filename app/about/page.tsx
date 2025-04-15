@@ -1,47 +1,10 @@
+import PageBackground from "@/components/ui/pageBackground"
 import Image from "next/image"
 
 export default function AboutPage() {
   return (
     <div className="text-white min-h-screen relative overflow-hidden">
-      {/* Mesh gradient background */}
-      <div 
-        className="fixed inset-0 -z-10"
-        style={{
-          background: 'radial-gradient(circle at 10% 20%, rgba(21, 21, 35, 1) 0%, rgba(10, 10, 20, 1) 90%)',
-          filter: 'contrast(1.2) saturate(0.8)'
-        }}
-      >
-        {/* Prismatic blobs - with orange tones for About page */}
-        <div 
-          className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full opacity-[0.07] blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, rgba(249, 115, 22, 0.4) 0%, rgba(13, 13, 35, 0) 70%)',
-            transform: 'rotate(-30deg)'
-          }}
-        />
-        <div 
-          className="absolute top-[40%] -right-[20%] w-[60%] h-[60%] rounded-full opacity-[0.06] blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, rgba(194, 65, 12, 0.4) 0%, rgba(13, 13, 35, 0) 70%)',
-            transform: 'rotate(15deg)'
-          }}
-        />
-        <div 
-          className="absolute -bottom-[20%] left-[30%] w-[50%] h-[50%] rounded-full opacity-[0.04] blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, rgba(234, 88, 12, 0.4) 0%, rgba(13, 13, 35, 0) 70%)',
-            transform: 'rotate(45deg)'
-          }}
-        />
-      </div>
-      
-      {/* Noise texture overlay */}
-      <div 
-        className="fixed inset-0 -z-10 opacity-20"
-        style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.4\'/%3E%3C/svg%3E")',
-        }}
-      />
+      <PageBackground page="about" />
 
       <div className="relative w-full h-32 sm:h-40 md:h-56 overflow-hidden">
         <div className="absolute inset-0 flex items-center z-30">

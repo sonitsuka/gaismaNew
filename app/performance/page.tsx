@@ -1,5 +1,6 @@
 import Image from "next/image"
 import VideoPreviewCard from "@/components/video-preview-card"
+import Background from "@/components/ui/background"
 
 export default function PerformancePage() {
   // Performance videos data
@@ -93,7 +94,8 @@ Post Production / Colorgrading - Roman Brauch`,
   ]
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="text-white min-h-screen">
+      <Background />
       {/* Responsive header - reduced height on mobile */}
       <div className="relative w-full h-40 sm:h-48 md:h-64 overflow-hidden">
         <div className="absolute inset-0">

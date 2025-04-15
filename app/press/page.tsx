@@ -55,7 +55,7 @@ export default function PressPage() {
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white">
-              <span className="text-black">Interviews & Press</span>
+              <span className="text-gray-100">Interviews & Press</span>
             </h1>
           </div>
         </div>
@@ -74,12 +74,12 @@ export default function PressPage() {
             >
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <div className="flex-1">
-                  <h3 className="text-base sm:text-lg font-medium text-white group-hover:text-pink-500 flex items-center">
+                  <h3 className="text-base sm:text-lg font-medium text-white group-hover:text-fuchsia-500 flex items-center">
                     {article.title}
-                    <ExternalLink className="ml-2 h-4 w-4 text-pink-500 opacity-70" />
+                    <ExternalLink className="ml-2 h-4 w-4 text-fuchsia-500 opacity-70" />
                   </h3>
                 </div>
-                <div className="text-sm text-pink-500">{article.date}</div>
+                <div className="text-sm text-fuchsia-500">{article.date}</div>
               </div>
             </a>
           ))}

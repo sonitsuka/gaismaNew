@@ -1,8 +1,10 @@
+import PageBackground from "@/components/ui/pageBackground"
 import Image from "next/image"
 
 export default function CurationPage() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="text-white min-h-screen">
+      <PageBackground page="curation" />
       {/* Responsive header - reduced height on mobile */}
       <div className="relative w-full h-40 sm:h-48 md:h-64 overflow-hidden">
 

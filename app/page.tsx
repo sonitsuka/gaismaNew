@@ -56,7 +56,7 @@ export default function Home() {
             In times of unpredictability and chaos one thing that we can always be certain of is that the power and growth behind our personality lies in our own hands.
           </p>
           <Link
-            href="/about"
+            href="#latestReleases"
             className="inline-block bg-transparent backdrop-blur-sm border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 px-6 py-3 rounded-sm text-sm uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(219,39,119,0.3)] hover:shadow-[0_0_20px_rgba(219,39,119,0.5)]"
           >
             Explore
@@ -66,59 +66,59 @@ export default function Home() {
       </div>
 
       {/* Content Preview */}
-      <div className="px-8 md:px-16 py-16 bg-black">
+      <div id="latestReleases" className="px-8 md:px-16 py-16 bg-black">
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
             Latest <span className="text-pink-500">Releases</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-pink-500 to-transparent"></span>
           </h2>
           <div className="flex flex-wrap gap-4">
-  {/* Album: Motherland */}
-  <a
-    href="https://artists.landr.com/055855682215"
-    target="_blank"
-    rel="noreferrer"
-    className="group"
-  >
-    <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
-      <Image
-        src="/gaisma_dexterEP.jpg"
-        alt="Motherland (prod. by Dexter)"
-        width={200}
-        height={200}
-        className="object-cover h-full w-full transition-all duration-500"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
-      <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
-      <div className="absolute inset-0 flex flex-col justify-end p-3">
-        <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
-          Motherland
-        </h3>
-        <p className="text-xs text-white/60">2023</p>
-      </div>
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
-          <Play className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-        </div>
-      </div>
-    </div>
-  </a>
+          {/* Album: Motherland */}
+          <a
+            href="https://artists.landr.com/055855682215"
+            target="_blank"
+            rel="noreferrer"
+            className="group"
+          >
+            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
+              <Image
+                src="/gaisma_dexterEP.jpg"
+                alt="Motherland (prod. by Dexter)"
+                width={200}
+                height={200}
+                className="object-cover h-full w-full transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
+              <div className="absolute inset-0 flex flex-col justify-end p-3">
+                <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
+                  Motherland
+                </h3>
+                <p className="text-xs text-white/60">2023</p>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
+                  <Play className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                </div>
+              </div>
+            </div>
+          </a>
 
-  {/* Music Video: White Shirt */}
-  <a
-    href="https://www.youtube.com/watch?v=4rBHuXb8-WA"
-    target="_blank"
-    rel="noreferrer"
-    className="group"
-  >
-    <div className="relative aspect-video w-[320px] bg-black border border-white/10 overflow-hidden">
-      <Image
-        src="https://img.youtube.com/vi/4rBHuXb8-WA/0.jpg"
-        alt="White Shirt (prod. by Dexter)"
-        width={320}
-        height={180}
-        className="object-cover h-full w-full transition-all duration-500"
-      />
+          {/* Music Video: White Shirt */}
+          <a
+            href="https://www.youtube.com/watch?v=4rBHuXb8-WA"
+            target="_blank"
+            rel="noreferrer"
+            className="group"
+          >
+            <div className="relative aspect-video w-[320px] bg-black border border-white/10 overflow-hidden">
+              <Image
+                src="https://img.youtube.com/vi/4rBHuXb8-WA/0.jpg"
+                alt="White Shirt (prod. by Dexter)"
+                width={320}
+                height={180}
+                className="object-cover h-full w-full transition-all duration-500"
+              />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
       <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
       <div className="absolute inset-0 flex flex-col justify-end p-3">
