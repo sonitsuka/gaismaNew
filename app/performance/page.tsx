@@ -1,6 +1,6 @@
 import Image from "next/image"
 import VideoPreviewCard from "@/components/video-preview-card"
-import Background from "@/components/ui/background"
+import PageBackground from "@/components/ui/pageBackground"
 
 export default function PerformancePage() {
   // Performance videos data
@@ -13,12 +13,12 @@ export default function PerformancePage() {
           thumbnail: "/TUSK _Performance.png",
           url: "https://vimeo.com/938340726",
           credits: `Performance - Alisa Scetinina (Gaisma)
-Live Music and Visuals - Issueswithmysleep (Maximilian Luz)
-Make up - Tamara Kokalj
-Hair - Mladen Durdevic
-Curation - Reiner Bock
-Camera - Peter Heizmann
-Post Production / Colorgrading - Roman Brauch`,
+            Live Music and Visuals - Issueswithmysleep (Maximilian Luz)
+            Make up - Tamara Kokalj
+            Hair - Mladen Durdevic
+            Curation - Reiner Bock
+            Camera - Peter Heizmann
+            Post Production / Colorgrading - Roman Brauch`,
         },
         {
           title: "Emotional Traffic - Alisa Scetinina",
@@ -95,13 +95,9 @@ Post Production / Colorgrading - Roman Brauch`,
 
   return (
     <div className="text-white min-h-screen">
-      <Background />
+      <PageBackground page="performance" />
       {/* Responsive header - reduced height on mobile */}
       <div className="relative w-full h-40 sm:h-48 md:h-64 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="w-full h-full bg-gradient-to-br from-black via-black to-black absolute z-10"></div>
-
-        </div>
 
         {/* Title - better positioned and sized for mobile */}
         <div className="absolute inset-0 flex items-center z-30">

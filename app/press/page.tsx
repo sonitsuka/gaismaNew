@@ -70,7 +70,7 @@ export default function PressPage() {
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-gray-900/50 hover:bg-gray-800/50 rounded-lg p-4 sm:p-6 transition-colors border border-gray-800 hover:border-pink-500/30"
+              className="block bg-gray-900/50 hover:bg-gray-800/50 rounded-lg p-4 sm:p-6 transition-colors border border-gray-800 hover:border-fuchsia-500/30"
             >
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <div className="flex-1">
