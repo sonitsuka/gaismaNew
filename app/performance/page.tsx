@@ -49,9 +49,9 @@ export default function PerformancePage() {
       videos: [
         {
           title: "ISRA - Journey Through The Night - Art House Short Film",
-          thumbnail: "/ISRA-perfomance.png",
-          url: "https://vimeo.com/639004437",
-          videoId: "639004437",
+          thumbnail: "https://img.youtube.com/vi/h4IpTMWKRxE/0.jpg",
+          url: "https://www.youtube.com/watch?v=h4IpTMWKRxE",
+          videoId: "h4IpTMWKRxE",
           credits:
             "Direction/Production Manager - Reiner Bocka\nCostume Designer - Stjepan Cuka\nChoreography, Performance - Alisa Scetinina\nMusic - Maximilian Luz and Ellie Fords\nCamera - Peter Heizmann, Brian Zajak\nPost Production, Color Grading - Roman Brauch",
         },
