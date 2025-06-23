@@ -145,57 +145,153 @@ export default function Home() {
             Upcoming <span className="text-blue-500">Shows</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
           </h2>
-          {/* comment out tmporaly 
           <div className="grid gap-4">
-            <div className="bg-black border border-white/10 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-              <div>
-                <h3 className="font-bold text-lg text-white">Performance Title 1</h3>
-                <p className="text-white/60">Venue Name, City</p>
-              </div>
-              <div className="mt-4 md:mt-0 flex items-center">
-                <div className="text-right mr-6">
-                  <p className="text-blue-500">Dec 15, 2023</p>
-                  <p className="text-sm text-white/60">20:00</p>
-                </div>
-                <button className="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-                  Tickets
-                </button>
-              </div>
-            </div>
+  <div className="bg-black border border-white/10 hover:border-red-500/50 hover:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">Sceti at Saäxtasy Festival</h3>
+      <p className="text-white/60">Saäxtasy Festival</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-red-500">Jun 14, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-red-500 text-red-500 hover:bg-red-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(239,68,68,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
 
-            <div className="bg-black border border-white/10 hover:border-pink-500/50 hover:shadow-[0_0_15px_rgba(236,72,153,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-              <div>
-                <h3 className="font-bold text-lg text-white">Performance Title 2</h3>
-                <p className="text-white/60">Venue Name, City</p>
-              </div>
-              <div className="mt-4 md:mt-0 flex items-center">
-                <div className="text-right mr-6">
-                  <p className="text-pink-500">Dec 22, 2023</p>
-                  <p className="text-sm text-white/60">21:00</p>
-                </div>
-                <button className="bg-transparent border border-pink-500 text-pink-500 hover:bg-pink-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(236,72,153,0.2)]">
-                  Tickets
-                </button>
-              </div>
-            </div>
+  <div className="bg-black border border-white/10 hover:border-orange-500/50 hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">"Seele am Faden"</h3>
+      <p className="text-white/60">Kleist Forum</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-orange-500">Jun 21 & 22, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(249,115,22,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
 
-            <div className="bg-black border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(147,51,234,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-              <div>
-                <h3 className="font-bold text-lg text-white">Performance Title 3</h3>
-                <p className="text-white/60">Venue Name, City</p>
-              </div>
-              <div className="mt-4 md:mt-0 flex items-center">
-                <div className="text-right mr-6">
-                  <p className="text-purple-500">Jan 5, 2024</p>
-                  <p className="text-sm text-white/60">22:00</p>
-                </div>
-                <button className="bg-transparent border border-purple-500 text-purple-500 hover:bg-purple-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(147,51,234,0.2)]">
-                  Tickets
-                </button>
-              </div>
-            </div>
-          </div>
-          */}
+  <div className="bg-black border border-white/10 hover:border-yellow-500/50 hover:shadow-[0_0_15px_rgba(234,179,8,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">Tumsi Kessel Festival</h3>
+      <p className="text-white/60">Tumsi Kessel Festival</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-yellow-500">Jul 4, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(234,179,8,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
+
+  <div className="bg-black border border-white/10 hover:border-green-500/50 hover:shadow-[0_0_15px_rgba(34,197,94,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">Gaisma Live</h3>
+      <p className="text-white/60">Magdeburg Beats&Butter</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-green-500">Jul 5, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-green-500 text-green-500 hover:bg-green-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(34,197,94,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
+
+  <div className="bg-black border border-white/10 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">DJ Gaisma at WeAre The Future Festival</h3>
+      <p className="text-white/60">Waiblingen</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-blue-500">Jul 11, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(59,130,246,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
+
+  <div className="bg-black border border-white/10 hover:border-indigo-500/50 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">"Seele am Faden"</h3>
+      <p className="text-white/60">Hamburg</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-indigo-500">Jul 14, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-indigo-500 text-indigo-500 hover:bg-indigo-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(99,102,241,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
+
+  <div className="bg-black border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(147,51,234,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">DJ Gaisma Marienplatz Festival</h3>
+      <p className="text-white/60">Marienplatz Festival</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-purple-500">Jul 18, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-purple-500 text-purple-500 hover:bg-purple-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(147,51,234,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
+
+  <div className="bg-black border border-white/10 hover:border-pink-500/50 hover:shadow-[0_0_15px_rgba(236,72,153,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">Levin Goes Lightly</h3>
+      <p className="text-white/60">Kubus Museum</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-pink-500">Jul 19, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-pink-500 text-pink-500 hover:bg-pink-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(236,72,153,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
+
+  <div className="bg-black border border-white/10 hover:border-red-500/50 hover:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300 p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div>
+      <h3 className="font-bold text-lg text-white">Gaisma Live at Feel Festival</h3>
+      <p className="text-white/60">Feel Festival</p>
+    </div>
+    <div className="mt-4 md:mt-0 flex items-center">
+      <div className="text-right mr-6">
+        <p className="text-red-500">Jul 25, 2025</p>
+        <p className="text-sm text-white/60">TBA</p>
+      </div>
+      <button className="bg-transparent border border-red-500 text-red-500 hover:bg-red-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(239,68,68,0.2)]">
+        Tickets
+      </button>
+    </div>
+  </div>
+</div>
+          
+         
         </div>
 
         {/* About Section Preview */}
