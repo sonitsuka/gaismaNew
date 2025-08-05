@@ -42,7 +42,7 @@ export default function Home() {
 
         {/* Video Player (Centered) */}
         <div className="absolute inset-0 flex items-center justify-center z-30">
-          <div className="relative w-full max-w-md aspect-[9/16] md:max-w-lg">
+          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg aspect-[9/16] max-h-[90vh]">
             <div className="absolute inset-0 rounded-lg overflow-hidden border border-fuchsia-500/50 shadow-[0_0_25px_rgba(219,39,119,0.4)] bg-black/20 backdrop-blur-sm">
               <VideoPlayer videoSrc="/gaisma-Matze-short.mp4" />
             </div>

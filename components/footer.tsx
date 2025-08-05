@@ -168,7 +168,7 @@ export default function Footer() {
 
           {/* School Logo and Copyright */}
           <div className="flex items-center gap-2">
-            <p className="text-white/60 text-xs hidden md:block">Gaisma &copy; 2023</p>
+            <p className="text-white/60 text-xs hidden md:block">Gaisma &copy; 2025</p>
             <span className="text-white/40 mx-1 hidden md:block">|</span>
             <div className="flex items-center gap-1">
               <p className="text-white/60 text-xs">Member of</p>
