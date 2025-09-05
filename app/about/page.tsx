@@ -36,26 +36,17 @@ export default function AboutPage() {
 
           <div className="space-y-6">
             <p className="text-white/80">
-              Born in Latvia, Alisa has been involved with music and dance since her childhood. From her first visit to
-              the theater, she fell in love with the atmosphere and decided to pursue her dream of becoming a
-              professional ballet dancer. At the age of fifteen, she left her family and moved to Germany to study at
-              the Munich Ballet Academy. She has since signed contracts with the Bavarian and Stuttgart Ballet and has
-              been on international tours with both companies.
+            Born in Latvia, Alisa has been immersed in music and dance since childhood. From her very first visit to the theater, she was captivated by its atmosphere and set her sights on becoming a professional ballet dancer.
+After six years of dancing professionally, she made the difficult decision to leave the classical ballet world behind in pursuit of broader artistic passions. She began her studies at the Stuttgart Art Academy but ultimately chose to follow her creative path beyond institutional boundaries, guided by the richness of everyday experience.
+Alisa has since traveled the world, exploring and learning diverse methods for healing the body, mind, and soul, while delving deeply into the realm of analog music production.
             </p>
 
             <p className="text-white/80">
-              After six years of dancing professionally, she made the difficult decision to drastically change her life
-              by leaving the classical ballet world in pursuit of other artistic passions. She traveled the globe,
-              exploring and learning new ways and techniques to heal the body, mind, and soul, and dove into the world
-              of analog music production.
+            With her main project Gaisma, she has carved out a unique space in rap, hip-hop, and neo-soul—blending raw energy with emotional depth. She has collaborated with influential acts like Chicks On Speed and produced her most recent album alongside renowned German hip-hop producer Dexter. Currently, she plays synth in the wave-pop band Levin Goes Lightly, further expanding her sonic reach.
             </p>
 
             <p className="text-white/80">
-              Besides her music work, she is also frequently engaged with projects in the visual arts. These include
-              analog and digital photography, behind and in front of the camera; as well as collages and video works,
-              which she often puts within the context of music. Symbioses of auditory and visual material emerge, in
-              which she presents herself in an increasingly contemporary form of movement. She acts as a composer,
-              cinematographer, and performer in her works, which fluctuate between choreography and improvisation.
+            Beyond Gaisma, Alisa explores multiple musical personas: Sceti channels synthwave, electronica, and disco-infused grooves, while Tumsi leans into a more technoid, experimental, and high-tempo realm. Each project reveals a distinct facet of her ever-evolving artistic identity—consistently bold, curious, and unmistakably her.
             </p>
 
             <blockquote className="border-l-4 border-orange-500 pl-6 py-4 italic text-white/70 my-8 bg-black/30 backdrop-blur-sm rounded-r">
