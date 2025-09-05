@@ -48,11 +48,6 @@ Alisa has since traveled the world, exploring and learning diverse methods for h
             <p className="text-white/80">
             Beyond Gaisma, Alisa explores multiple musical personas: Sceti channels synthwave, electronica, and disco-infused grooves, while Tumsi leans into a more technoid, experimental, and high-tempo realm. Each project reveals a distinct facet of her ever-evolving artistic identity—consistently bold, curious, and unmistakably her.
             </p>
-
-            <blockquote className="border-l-4 border-orange-500 pl-6 py-4 italic text-white/70 my-8 bg-black/30 backdrop-blur-sm rounded-r">
-              "In times of unpredictability and chaos one thing that we can always be certain of is that the power and
-              growth behind our personality lies in our own hands."
-            </blockquote>
           </div>
         </div>
       </div>
