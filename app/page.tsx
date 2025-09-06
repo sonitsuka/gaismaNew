@@ -111,7 +111,7 @@ export default function Home() {
           >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/dumpedInParis.jpg"
+                src="/dumpedInParis.webp"
                 alt="Gaisma - Album"
                 width={200}
                 height={200}
@@ -140,7 +140,7 @@ export default function Home() {
           >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/Cashback.jpeg"
+                src="/cashback.webp"
                 alt="Gaisma - Ca$hback"
                 width={200}
                 height={200}
