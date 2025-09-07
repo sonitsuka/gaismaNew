@@ -23,7 +23,7 @@ export default function VideosPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-8 py-12">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
         {/* Music Video Gaisma */}
         <div className="mb-16">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
