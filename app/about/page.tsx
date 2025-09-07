@@ -34,18 +34,18 @@ export default function AboutPage() {
             </a>
           </div>
 
-          <div className="space-y-6">
-            <p className="text-white/80">
+          <div className="text-sm sm:text-base text-white/80 space-y-6">
+            <p>
             Born in Latvia, Alisa has been immersed in music and dance since childhood. From her very first visit to the theater, she was captivated by its atmosphere and set her sights on becoming a professional ballet dancer.
 After six years of dancing professionally, she made the difficult decision to leave the classical ballet world behind in pursuit of broader artistic passions. She began her studies at the Stuttgart Art Academy but ultimately chose to follow her creative path beyond institutional boundaries, guided by the richness of everyday experience.
 Alisa has since traveled the world, exploring and learning diverse methods for healing the body, mind, and soul, while delving deeply into the realm of analog music production.
             </p>
 
-            <p className="text-white/80">
+            <p>
             With her main project Gaisma, she has carved out a unique space in rap, hip-hop, and neo-soul—blending raw energy with emotional depth. She has collaborated with influential acts like Chicks On Speed and produced her most recent album alongside renowned German hip-hop producer Dexter. Currently, she plays synth in the wave-pop band Levin Goes Lightly, further expanding her sonic reach.
             </p>
 
-            <p className="text-white/80">
+            <p>
             Beyond Gaisma, Alisa explores multiple musical personas: Sceti channels synthwave, electronica, and disco-infused grooves, while Tumsi leans into a more technoid, experimental, and high-tempo realm. Each project reveals a distinct facet of her ever-evolving artistic identity—consistently bold, curious, and unmistakably her.
             </p>
             <blockquote className="border-l-4 border-orange-500 pl-4 py-2 italic text-white/70">
