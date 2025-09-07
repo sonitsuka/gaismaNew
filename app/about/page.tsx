@@ -16,7 +16,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-8 py-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="relative">
             <div className="relative aspect-[3/4] bg-black/30 backdrop-blur-sm border border-white/10 overflow-hidden">
