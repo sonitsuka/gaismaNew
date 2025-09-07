@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Play } from "lucide-react"
-import VideoPlayer from "@/components/video-player"
+import VideoHero from "@/components/hero-promo-video";
+import ReleaseHeroTeaser from "@/components/ReleaseHeroTeaser";
+import AnnouncementBar from "@/components/AnnouncementBar";
 
 
 // ------------ Latest data ------------
@@ -34,65 +36,25 @@ export default function Home() {
 ;
 
   return (
+
     <div className="bg-black text-white min-h-screen">
+      <AnnouncementBar 
+        message="New single Ca$hback drops"
+        releaseDate="19 Sept 2025"
+        preSaveHref="https://artists.landr.com/057829514119"
+        showPreSave={true}
+      />
       {/* Hero Video */}
-      <div className="relative w-full h-[90vh] overflow-hidden">
-        {/* Y2K Futuristic Background Elements */}
-        {/* Y2K Futuristic Background Elements */}
-        <div className="absolute inset-0 z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-fuchsia-900/30 to-purple-900/30"></div>
-
-          {/* Holographic Grid Lines */}
-          <div className="absolute inset-0 z-20">
-            <div className="w-full h-px bg-gradient-to-r from-cyan-500/70 via-fuchsia-500/70 to-cyan-500/70 absolute top-1/4 animate-pulse"></div>
-            <div className="w-full h-px bg-gradient-to-r from-fuchsia-500/70 via-cyan-500/70 to-fuchsia-500/70 absolute top-2/4 animate-pulse"></div>
-            <div className="w-full h-px bg-gradient-to-r from-cyan-500/70 via-fuchsia-500/70 to-cyan-500/70 absolute top-3/4 animate-pulse"></div>
-
-            <div className="h-full w-px bg-gradient-to-b from-fuchsia-500/70 via-cyan-500/70 to-fuchsia-500/70 absolute left-1/4 animate-pulse"></div>
-            <div className="h-full w-px bg-gradient-to-b from-cyan-500/70 via-fuchsia-500/70 to-cyan-500/70 absolute left-2/4 animate-pulse"></div>
-            <div className="h-full w-px bg-gradient-to-b from-fuchsia-500/70 via-cyan-500/70 to-fuchsia-500/70 absolute left-3/4 animate-pulse"></div>
-          </div>
-
-          {/* Prismatic Light Effects */}
-          <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 via-fuchsia-500/20 to-purple-500/20 rounded-full blur-3xl animate-slow-pulse"></div>
-          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 via-fuchsia-500/20 to-cyan-500/20 rounded-full blur-3xl animate-slow-pulse delay-1000"></div>
-
-          <video
-            id="background-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-40"
-          >
-            <source src="/gaisma-Matze-short.mp4" type="video/mp4" />
-          </video>
-        </div>
-
-        {/* Video Player (Centered) */}
-        <div className="absolute inset-0 flex items-center justify-center z-30">
-          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg aspect-[9/16] max-h-[90vh]">
-            <div className="absolute inset-0 rounded-lg overflow-hidden border border-fuchsia-500/50 shadow-[0_0_25px_rgba(219,39,119,0.4)] bg-black/20 backdrop-blur-sm">
-              <VideoPlayer videoSrc="/gaisma-Matze-short.mp4" />
-            </div>
-          </div>
-        </div>
-
-        {/* Title Overlay */}
-        <div className="hidden md:block absolute top-1/4 left-8 md:left-16 z-30 max-w-md">
-          
-          <p className="text-lg text-white mb-6 max-w-sm drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
-            In times of unpredictability and chaos one thing that we can always be certain of is that the power and growth behind our personality lies in our own hands.
-          </p>
-          <Link
-            href="#latestReleases"
-            className="inline-block bg-transparent backdrop-blur-sm border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 px-6 py-3 rounded-sm text-sm uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(219,39,119,0.3)] hover:shadow-[0_0_20px_rgba(219,39,119,0.5)]"
-          >
-            Explore
-          </Link>
-
-        </div>
-      </div>
+      <ReleaseHeroTeaser
+        releaseTitle="Gaisma Ca$hback"
+        releaseDateISO="2025-09-19T00:00:00+02:00"
+        coverSrc="/cashbackCover.webp"              // replace with your attached cover if different
+        preSaveHref="https://artists.landr.com/057829514119"
+        listenHref="https://www.youtube.com/@gaisma_/featured"                         // "full" | "tall" | "comfortable"
+        focal="object-[center_20%]"             // tweak to keep face centered on mobile crops
+        tickerItems={LATEST_NEWS}               // scrolling upcoming
+        scrollToId="latestReleases"
+      />
 
       {/* Content Preview */}
       <div id="latestReleases" className="px-8 md:px-16 py-16 bg-black">
@@ -140,7 +102,7 @@ export default function Home() {
           >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/cashback.webp"
+                src="/cashbackCover.webp"
                 alt="Gaisma - Ca$hback"
                 width={200}
                 height={200}

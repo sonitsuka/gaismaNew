@@ -5,6 +5,11 @@ export default function PressPage() {
   // Press articles data
   const pressArticles = [
     {
+      title: "TwinTalk: Gaisma on creative diversity and her path into the Stuttgart music scene - STUGGI.TV",
+      date: "September 4, 2025",
+      url: "https://www.youtube.com/watch?v=ok7Y6PG6icg",
+    },
+    {
       title: "4 Minuten mit Gaisma",
       date: "November 11, 2024",
       url: "https://www.das-ticket-magazin.de/2024/10/11/4-minuten-mit-gaisma/",
