@@ -125,7 +125,7 @@ export default function PerformancePage() {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
         {performanceVideos.map((category, categoryIndex) => (
           <div key={categoryIndex} id={category.category.toLowerCase().replace(/\s+/g, "-")} className="mb-12 md:mb-16 last:mb-0">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 text-white relative inline-block">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
               <span className="text-blue-500">{category.category}</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
             </h2>

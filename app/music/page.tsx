@@ -6,7 +6,8 @@ import MusicCard from "@/components/music-card"
 export default function MusicPage() {
   const musicSections = [
     {
-      category: "Gaisma Album & EP",
+      category: "Album & EP",
+      name: "Gaisma",
       items: [
         {
           title: "Motherland",
@@ -41,7 +42,8 @@ export default function MusicPage() {
       ],
     },
     {
-      category: "Sceti EP",
+      category: "EP",
+      name: "Sceti",
       items: [
         {
           title: "Feel Alive",
@@ -139,7 +141,8 @@ export default function MusicPage() {
             className="mb-16"
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
-              <span className="text-yellow-500">{section.category}</span>
+              <span >{section.name}</span>
+              <span className="text-yellow-500 ml-3">{section.category}</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent" />
             </h2>
 
