@@ -236,9 +236,9 @@ export default function Home() {
           </h2>
           <ul className="grid gap-3">
             {LATEST_NEWS.map((n, i) => (
-              <li key={i} className="bg-black border border-white/10 hover:border-blue-400/50 transition-all duration-300 p-4 flex items-start">
-                <p className="text-blue-500 text-sm">{n.date}</p>
-                <p className="text-white/90 ml-6">{n.title}</p>
+              <li key={i} className="bg-black border border-white/10 hover:border-blue-400/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start">
+                <p className="text-blue-500 text-sm mb-2 sm:mb-0">{n.date}</p>
+                <p className="text-white/90 sm:ml-6">{n.title}</p>
               </li>
             ))}
           </ul>

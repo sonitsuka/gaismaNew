@@ -112,7 +112,7 @@ export default function MusicPage() {
       <div className="relative w-full h-48 sm:h-48 md:h-64 overflow-hidden">
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
+            <h1 className="text-3xl md:text-6xl font-bold text-white">
               <span className="text-yellow-500">Music</span>
             </h1>
             <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">

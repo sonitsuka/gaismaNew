@@ -26,7 +26,7 @@ export default function VideosPage() {
       <div className="container mx-auto px-8 py-12">
         {/* Music Video Gaisma */}
         <div className="mb-16">
-          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
             Music Video <span className="text-green-500">Gaisma</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>

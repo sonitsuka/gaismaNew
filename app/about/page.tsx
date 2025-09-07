@@ -9,14 +9,14 @@ export default function AboutPage() {
       <div className="relative w-full h-32 sm:h-40 md:h-56 overflow-hidden">
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl md:text-6xl font-bold text-white">
-            About <span className="text-orange-500">Me</span>
+          <h1 className="text-3xl md:text-6xl font-bold text-white">
+            <span className="text-orange-500">About Me</span>
           </h1>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-8 py-12">
+      <div className="container mx-auto px-8 py-10">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="relative">
             <div className="relative aspect-[3/4] bg-black/30 backdrop-blur-sm border border-white/10 overflow-hidden">
@@ -48,6 +48,10 @@ Alisa has since traveled the world, exploring and learning diverse methods for h
             <p className="text-white/80">
             Beyond Gaisma, Alisa explores multiple musical personas: Sceti channels synthwave, electronica, and disco-infused grooves, while Tumsi leans into a more technoid, experimental, and high-tempo realm. Each project reveals a distinct facet of her ever-evolving artistic identity—consistently bold, curious, and unmistakably her.
             </p>
+            <blockquote className="border-l-4 border-orange-500 pl-4 py-2 italic text-white/70">
+                "In times of unpredictability and chaos one thing that we can always be certain of is that the power and
+                growth behind our personality lies in our own hands."
+            </blockquote>
           </div>
         </div>
       </div>
