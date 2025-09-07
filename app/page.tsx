@@ -200,7 +200,7 @@ export default function Home() {
             rel="noreferrer"
             className="group"
           >
-            <div className="relative aspect-video w-[320px] bg-black border border-white/10 overflow-hidden">
+            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
                 src="https://img.youtube.com/vi/4rBHuXb8-WA/0.jpg"
                 alt="White Shirt (prod. by Dexter)"
@@ -214,7 +214,7 @@ export default function Home() {
         <h3 className="font-bold text-white group-hover:text-green-500 transition-colors text-sm">
           White Shirt (prod. by Dexter)
         </h3>
-        <p className="text-xs text-white/60">2023</p>
+        <p className="text-xs text-white/60">2024</p>
       </div>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="w-10 h-10 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_10px_rgba(34,197,94,0.5)]">
@@ -269,9 +269,6 @@ After six years of dancing professionally, she made the difficult decision to le
 Alisa has since traveled the world, exploring and learning diverse methods for healing the body, mind, and soul, while delving deeply into the realm of analog music production.
             </p>
 
-            <p className="text-white/80">
-            With her main project Gaisma, she has carved out a unique space in rap, hip-hop, and neo-soul—blending raw energy with emotional depth. She has collaborated with influential acts like Chicks On Speed and produced her most recent album alongside renowned German hip-hop producer Dexter. Currently, she plays synth in the wave-pop band Levin Goes Lightly, further expanding her sonic reach.
-            </p>
               <div className="pt-4">
                 <Link
                   href="/about"
