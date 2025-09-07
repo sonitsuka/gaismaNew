@@ -44,7 +44,7 @@ export default function PressPage() {
 
   return (
     <div className="bg-[url('/bg-press.png')] bg-cover bg-center bg-no-repeat text-white min-h-screen">
-      <div className="relative w-full h-40 sm:h-48 md:h-64 overflow-hidden">
+      <div className="relative w-full h-32 sm:h-48 md:h-64 overflow-hidden">
         <div className="absolute inset-0">
 
 

@@ -6,7 +6,7 @@ export default function CurationPage() {
     <div className="text-white min-h-screen">
       <PageBackground page="curation" />
       {/* Responsive header - reduced height on mobile */}
-      <div className="relative w-full h-40 sm:h-48 md:h-64 overflow-hidden">
+      <div className="relative w-full h-32 sm:h-48 md:h-64 overflow-hidden">
 
         {/* Title - better positioned and sized for mobile */}
         <div className="absolute inset-0 flex items-center z-30">
