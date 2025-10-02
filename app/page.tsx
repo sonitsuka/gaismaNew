@@ -8,7 +8,6 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 
 // ------------ Latest data ------------
 const LATEST_NEWS = [
-{ date: "27.09.2025", title: "Gaisma Vinyl DJ Set — 40. Jahre Werkstatthaus", tag: "dj" },
 { date: "03.10.2025", title: "Levin Goes Lightly — St. Maria Kirche Stuttgart", tag: "other" },
 { date: "10.10.2025", title: "Gaisma Live — Stuttpark", tag: "live" },
 { date: "11.10.2025", title: "Gaisma Live — Das Zentrum Bayreuth", tag: "live" },
@@ -41,19 +40,17 @@ export default function Home() {
       <AnnouncementBar 
         message="New single Ca$hback drops"
         releaseDate="19 Sept 2025"
-        preSaveHref="https://artists.landr.com/057829514119"
+        preSaveHref="https://link.aurale.agency/cash_back"
         showPreSave={true}
       />
       {/* Hero Video */}
-      <ReleaseHeroTeaser
-        releaseTitle="Gaisma Ca$hback"
-        releaseDateISO="2025-09-19T00:00:00+02:00"
-        coverSrc="/cashbackCover.webp"              // replace with your attached cover if different
-        preSaveHref="https://artists.landr.com/057829514119"
-        listenHref="https://www.youtube.com/@gaisma_/featured"                         // "full" | "tall" | "comfortable"
-        focal="object-[center_20%]"             // tweak to keep face centered on mobile crops
-        tickerItems={LATEST_NEWS}               // scrolling upcoming
-        scrollToId="latestReleases"
+      <VideoHero
+        backgroundVideoSrc="/gaisma-Matze-short.mp4"
+        mainVideoSrc="/gaisma-Matze-short.mp4"
+        description="In times of unpredictability and chaos one thing that we can always be certain of is that the power and growth behind our personality lies in our own hands."
+        buttonText="Explore"
+        buttonLink="#latestReleases"
+        showTitleOverlay
       />
 
       {/* Content Preview */}
@@ -95,7 +92,7 @@ export default function Home() {
             </div>
           </a>
           <a
-            href="https://artists.landr.com/057829514119"
+            href="https://link.aurale.agency/cash_back"
             target="_blank"
             rel="noreferrer"
             className="group"
@@ -157,12 +154,41 @@ export default function Home() {
 
           {/* Music Video: White Shirt */}
           <a
+            href="https://www.youtube.com/watch?v=_nLaTRlHUqw"
+            target="_blank"
+            rel="noreferrer"
+            className="group"
+          >
+            <div className="relative bg-black border border-white/10 overflow-hidden">
+              <Image
+                src="https://img.youtube.com/vi/_nLaTRlHUqw/mqdefault.jpg"
+                alt="GAISMA - Ca$hback"
+                width={320}
+                height={180}
+                className="object-cover h-full w-full transition-all duration-500"
+              />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
+      <div className="absolute inset-0 flex flex-col justify-end p-3">
+        <h3 className="font-bold text-white group-hover:text-green-500 transition-colors text-sm">
+          Ca$hback
+        </h3>
+        <p className="text-xs text-white/60">2024</p>
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="w-10 h-10 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_10px_rgba(34,197,94,0.5)]">
+          <Play className="w-5 h-5 text-green-500 fill-green-500" />
+        </div>
+      </div>
+    </div>
+  </a>
+          <a
             href="https://www.youtube.com/watch?v=4rBHuXb8-WA"
             target="_blank"
             rel="noreferrer"
             className="group"
           >
-            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
+            <div className="relative w-[260px] bg-black border border-white/10 overflow-hidden">
               <Image
                 src="https://img.youtube.com/vi/4rBHuXb8-WA/0.jpg"
                 alt="White Shirt (prod. by Dexter)"
