@@ -103,25 +103,26 @@ const LATEST_NEWS = [
 ];
 
 
-// Example: move your hard-coded shows here. Add older shows; they will auto-sort into Past.
 const ALL_SHOWS = [
-// Keep any existing or future shows here (date can be dd.mm or dd.mm.yyyy)
-{ date: "14.06.2025", title: "Sceti at Saäxtasy Festival", venue: "Saäxtasy Festival", tag: "other" },
-{ date: "21.06.2025", title: "Seele am Faden", venue: "Kleist Forum", tag: "theatre" },
-{ date: "22.06.2025", title: "Seele am Faden", venue: "Kleist Forum", tag: "theatre" },
-{ date: "04.07.2025", title: "Tumsi Kessel Festival", venue: "Tumsi Kessel Festival", tag: "other" },
-{ date: "05.07.2025", title: "Gaisma Live", venue: "Magdeburg Beats & Butter", tag: "live" },
-{ date: "11.07.2025", title: "DJ Gaisma — WeAre The Future Festival", venue: "Waiblingen", tag: "dj" },
-{ date: "14.07.2025", title: "Seele am Faden", venue: "Hamburg", tag: "theatre" },
-{ date: "18.07.2025", title: "DJ Gaisma — Marienplatz Festival", venue: "Marienplatz Festival", tag: "dj" },
-{ date: "19.07.2025", title: "Levin Goes Lightly", venue: "Kubus Museum", tag: "other" },
-{ date: "25.07.2025", title: "Gaisma Live — Feel Festival", venue: "Feel Festival", tag: "live" },
-{ date: "03.10.2025", title: "Levin Goes Lightly — St. Maria Kirche Stuttgart", tag: "other" },
-{ date: "10.10.2025", title: "Gaisma Live — Stuttpark", tag: "live" },
-{ date: "11.10.2025", title: "Gaisma Live — Das Zentrum Bayreuth", tag: "live" },
-{ date: "17.10.2025", title: "Tumsi DJ Vinyl Set — Sunny High Club", tag: "dj" },
-{ date: "07.11.2025", title: "Vinyl DJ Set vor Erobique — Wizemann", tag: "dj" },
-];
+  { date: "07.11.2025", title: "Vinyl DJ Set vor Erobique — Wizemann", tag: "dj" },
+  { date: "17.10.2025", title: "Tumsi DJ Vinyl Set — Sunny High Club", tag: "dj" },
+  { date: "11.10.2025", title: "Gaisma Live — Das Zentrum Bayreuth", tag: "live" },
+  { date: "10.10.2025", title: "Gaisma Live — Stuttpark", tag: "live" },
+  { date: "03.10.2025", title: "Levin Goes Lightly — St. Maria Kirche Stuttgart", tag: "other" },
+
+  { date: "25.07.2025", title: "Gaisma Live — Feel Festival", venue: "Feel Festival", tag: "live" },
+  { date: "19.07.2025", title: "Levin Goes Lightly", venue: "Kubus Museum", tag: "other" },
+  { date: "18.07.2025", title: "DJ Gaisma — Marienplatz Festival", venue: "Marienplatz Festival", tag: "dj" },
+  { date: "14.07.2025", title: "Seele am Faden", venue: "Hamburg", tag: "theatre" },
+  { date: "11.07.2025", title: "DJ Gaisma — WeAre The Future Festival", venue: "Waiblingen", tag: "dj" },
+  { date: "05.07.2025", title: "Gaisma Live", venue: "Magdeburg Beats & Butter", tag: "live" },
+  { date: "04.07.2025", title: "Tumsi Kessel Festival", venue: "Tumsi Kessel Festival", tag: "other" },
+
+  { date: "22.06.2025", title: "Seele am Faden", venue: "Kleist Forum", tag: "theatre" },
+  { date: "21.06.2025", title: "Seele am Faden", venue: "Kleist Forum", tag: "theatre" },
+  { date: "14.06.2025", title: "Sceti at Saäxtasy Festival", venue: "Saäxtasy Festival", tag: "other" },
+]
+
 
 export default function Home() {
 ;
