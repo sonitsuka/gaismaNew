@@ -192,7 +192,7 @@ export default function Footer() {
           <p>Gaisma &copy; 2025</p>    
             <span className="text-white/40">|</span>
             <Link href="/imprint" className="hover:text-white transition-colors">
-              Imprint
+            Impressum
             </Link>
             <span className="text-white/40">|</span>
             <Link href="/privacy" className="hover:text-white transition-colors">
