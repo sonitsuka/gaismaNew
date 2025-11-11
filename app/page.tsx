@@ -2,17 +2,104 @@ import Image from "next/image"
 import Link from "next/link"
 import { Play } from "lucide-react"
 import VideoHero from "@/components/hero-promo-video";
-import ReleaseHeroTeaser from "@/components/ReleaseHeroTeaser";
+// import ReleaseHeroTeaser from "@/components/ReleaseHeroTeaser";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import PastShows from "@/components/pastShows"
 
 
 // ------------ Latest data ------------
 const LATEST_NEWS = [
-{ date: "03.10.2025", title: "Levin Goes Lightly — St. Maria Kirche Stuttgart", tag: "other" },
-{ date: "10.10.2025", title: "Gaisma Live — Stuttpark", tag: "live" },
-{ date: "11.10.2025", title: "Gaisma Live — Das Zentrum Bayreuth", tag: "live" },
-{ date: "17.10.2025", title: "Tumsi DJ Vinyl Set — Sunny High Club", tag: "dj" },
-{ date: "07.11.2025", title: "Vinyl DJ Set vor Erobique — Wizemann", tag: "dj" },
+  // November 2025
+  {
+    date: "20. - 21.11.2025",
+    title: 'Theater Performance – "Sinn des Lebens"',
+    venue: "Heilbronn",
+    tag: "theatre",
+  },
+  {
+    date: "22.11.2025",
+    title: "DJ Gaisma – La Fest",
+    venue: "Staatsoper Stuttgart",
+    tag: "dj",
+  },
+  {
+    date: "25.11.2025",
+    title: "DJ Gaisma – La Fest",
+    venue: "Staatsoper Stuttgart",
+    tag: "dj",
+  },
+
+  // December 2025
+  {
+    date: "12.12.2025",
+    title: "Seele am Faden",
+    venue: "Rome, Italy",
+    tag: "theatre",
+  },
+  {
+    date: "13.12.2025",
+    title: "Seele am Faden",
+    venue: "Rome, Italy",
+    tag: "theatre",
+  },
+  {
+    date: "18. - 19. 12.2025",
+    title: 'Performance “When will we be …?”',
+    venue: "Kulturinsel Stuttgart",
+    tag: "performance",
+  },
+  {
+    date: "21.12.2025",
+    title: "DJ Gaisma – La Fest",
+    venue: "Staatsoper Stuttgart",
+    tag: "dj",
+  },
+
+  // January 2026 – Seele am Faden, SOLD OUT
+  {
+    date: "10.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "13.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "18.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "19.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "24.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "30.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+
+  // February 2026
+  {
+    date: "28.02.2026",
+    title: '"Radiant Nexus" – STJ Fashion Show',
+    venue: "Wagenhallen Stuttgart",
+    tag: "other",
+  },
 ];
 
 
@@ -29,6 +116,11 @@ const ALL_SHOWS = [
 { date: "18.07.2025", title: "DJ Gaisma — Marienplatz Festival", venue: "Marienplatz Festival", tag: "dj" },
 { date: "19.07.2025", title: "Levin Goes Lightly", venue: "Kubus Museum", tag: "other" },
 { date: "25.07.2025", title: "Gaisma Live — Feel Festival", venue: "Feel Festival", tag: "live" },
+{ date: "03.10.2025", title: "Levin Goes Lightly — St. Maria Kirche Stuttgart", tag: "other" },
+{ date: "10.10.2025", title: "Gaisma Live — Stuttpark", tag: "live" },
+{ date: "11.10.2025", title: "Gaisma Live — Das Zentrum Bayreuth", tag: "live" },
+{ date: "17.10.2025", title: "Tumsi DJ Vinyl Set — Sunny High Club", tag: "dj" },
+{ date: "07.11.2025", title: "Vinyl DJ Set vor Erobique — Wizemann", tag: "dj" },
 ];
 
 export default function Home() {
@@ -258,6 +350,10 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </div>
+        { /* Past Shows Section Preview */}
+        <div className="mt-16">
+          <PastShows shows={ALL_SHOWS} />
         </div>
 
         {/* About Section Preview */}
