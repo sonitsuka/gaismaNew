@@ -38,9 +38,9 @@ export default function Home() {
 
     <div className="bg-black text-white min-h-screen">
       <AnnouncementBar 
-        message="New single Ca$hback drops"
-        releaseDate="19 Sept 2025"
-        preSaveHref="https://link.aurale.agency/cash_back"
+        message="New single Verpiss Dich drops"
+        releaseDate="Nov 2025"
+        preSaveHref="https://artists.landr.com/057829708549"
         showPreSave={true}
       />
       {/* Hero Video */}
@@ -61,13 +61,12 @@ export default function Home() {
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-pink-500 to-transparent"></span>
           </h2>
           <div className="flex flex-wrap gap-4">
-
           <a
-            href="https://artists.landr.com/057829514119"
-            target="_blank"
-            rel="noreferrer"
-            className="group"
-          >
+              href="https://artists.landr.com/057829514119"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+            >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
                 src="/dumpedInParis.webp"
@@ -83,6 +82,35 @@ export default function Home() {
                 
                 </h3>
                 <p className="text-xs text-white/60">21.11.2025</p>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
+                  <Play className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+              href="https://artists.landr.com/057829708549"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+            >
+            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
+              <Image
+                src="/verpissDich.jpg"
+                alt="Gaisma - Verpiss Dich"
+                width={200}
+                height={200}
+                className="object-cover h-full w-full transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
+              <div className="absolute inset-0 flex flex-col justify-end p-3">
+                <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
+                Verpiss Dich
+                </h3>
+                <p className="text-xs text-white/60">11.2025</p>
               </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
@@ -240,7 +268,7 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative aspect-[3/4] bg-black border border-white/10 overflow-hidden">
+            <div className="relative aspect-[3/4] max-w-[260px] md:max-w-[320px] bg-black border border-white/10 overflow-hidden mx-auto md:mx-0">
               <Image
                 src="/aboutMe.jpg?height=600&width=400"
                 alt="Gaisma profile pic"

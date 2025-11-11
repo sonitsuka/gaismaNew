@@ -5,43 +5,37 @@ export default function PressPage() {
   // Press articles data
   const pressArticles = [
     {
-      title: "TwinTalk: Gaisma on creative diversity and her path into the Stuttgart music scene - STUGGI.TV",
+      title: "TwinTalk: Gaisma on creative diversity and her path into the Stuttgart music scene - STUGGI.TV (DE)",
       date: "September 4, 2025",
       url: "https://www.youtube.com/watch?v=ok7Y6PG6icg",
     },
     {
-      title: "4 Minuten mit Gaisma",
+      title: "4 Minuten mit Gaisma (DE)",
       date: "November 11, 2024",
       url: "https://www.das-ticket-magazin.de/2024/10/11/4-minuten-mit-gaisma/",
     },
     {
-      title: "LIFT STUTTGARTMAGAZIN Playtime mit Gaisma Interview",
+      title: "LIFT STUTTGARTMAGAZIN Playtime mit Gaisma Interview (DE)",
       date: "September 28, 2023",
       url: "https://www.lift-online.de/lift-aktuell/playtime-mit-gaisma/",
     },
     {
-      title: "Al-Tiba9 Contemporary Art - Alisa Scetinina Performace music body",
+      title: "Al-Tiba9 Contemporary Art - Alisa Scetinina Performace music body (EN)",
       date: "April 12, 2023",
       url: "https://www.altiba9.com/artist-interviews/alisa-scetinina-performace-music-body",
     },
     {
-      title: "LKZ - Vor dem Literaturmuseum in Marbach: Ein Klangspielplatz unter Strom",
+      title: "LKZ - Vor dem Literaturmuseum in Marbach: Ein Klangspielplatz unter Strom (DE)",
       date: "September 26, 2022",
       url: "https://www.lkz.de/lokales_artikel,-vor-dem-literaturmuseum-in-marbach-ein-klangspielplatz-unter-strom-_arid,703510.html",
     },
     {
-      title: "dmcworld magazine - BACK TO MINE WITH SCETI",
+      title: "dmcworld magazine - BACK TO MINE WITH SCETI (DE)",
       date: "August 27, 2021",
       url: "http://www.dmcworld.net/back-to-mine/back-to-mine-with-sceti/",
     },
     {
-      title:
-        "como las grecas - An interview with SCETI: their debut on the Exlove label with a fantastic four-track synthesized disco EP",
-      date: "August 2, 2021",
-      url: "https://www.comolasgrecas.com/en/an-interview-with-sceti/",
-    },
-    {
-      title: "WOMAN OF MUSIC - ALISA SCETININA",
+      title: "WOMAN OF MUSIC - ALISA SCETININA (DE)",
       date: "May, 2019",
       url: "https://womenofmusic.de/member_reader/alisa-pgeboren-in-lettland-hat-sich-alisa-scetinina-seit-ihrer-kindheit-mit-musik-und-lettischem-tanz-besch%C3%A4ftigt-w%C3%A4hrend-ihres-.html",
     },

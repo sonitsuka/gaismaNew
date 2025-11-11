@@ -1,14 +1,22 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer id="footer-section" className="bg-black/90 backdrop-blur-md border-t border-white/10 fixed bottom-0 left-0 w-full h-[50px]">
+    <footer
+      id="footer-section"
+      className="bg-black/90 backdrop-blur-md border-t border-white/10 fixed bottom-0 left-0 w-full min-h-[50px] flex items-center"
+    >
       <div className="container mx-auto px-4 h-full">
-        <div className="flex items-center justify-between h-full">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-4  h-full">
+
           {/* Social Icons */}
           <div className="social flex flex-wrap items-center gap-2">
             {/* Email (Gray) */}
-            <a href="mailto:gaisma@posteo.de" className="text-gray-300 hover:text-gray-100 transition-colors">
+            <a
+              href="mailto:gaisma@posteo.de"
+              className="text-gray-300 hover:text-gray-100 transition-colors"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-4 h-4 md:w-5 md:h-5"
@@ -100,7 +108,7 @@ export default function Footer() {
                 viewBox="0 0 168 168"
                 className="w-4 h-4 md:w-5 md:h-5 fill-current"
               >
-                <path d="M84 0a84 84 0 1 0 0 168 84 84 0 0 0 0-168zm38.5 120.3a5.25 5.25 0 0 1-7.2 1.7c-19.7-12-44.5-14.7-73.8-8.1a5.25 5.25 0 0 1-2.4-10.3c32-7.5 59-4.3 81.5 9.6a5.25 5.25 0 0 1 1.9 7.1zm10.3-20.8a6.56 6.56 0 0 1-9 2.1c-22.6-13.8-57.1-17.9-83.8-9.8a6.56 6.56 0 0 1-3.8-12.6c30.3-9.1 68.7-4.4 94.5 11.3a6.56 6.56 0 0 1 2.1 9zm1.2-21.7C113.3 62.6 66.2 60 40.9 67.6a7.88 7.88 0 1 1-4.4-15c29-8.3 81.6-5.3 113.3 14.4a7.88 7.88 0 0 1-8.8 13.2z"/>
+                <path d="M84 0a84 84 0 1 0 0 168 84 84 0 0 0 0-168zm38.5 120.3a5.25 5.25 0 0 1-7.2 1.7c-19.7-12-44.5-14.7-73.8-8.1a5.25 5.25 0 0 1-2.4-10.3c32-7.5 59-4.3 81.5 9.6a5.25 5.25 0 0 1 1.9 7.1zm10.3-20.8a6.56 6.56 0 0 1-9 2.1c-22.6-13.8-57.1-17.9-83.8-9.8a6.56 6.56 0 0 1-3.8-12.6c30.3-9.1 68.7-4.4 94.5 11.3a6.56 6.56 0 0 1 2.1 9zm1.2-21.7C113.3 62.6 66.2 60 40.9 67.6a7.88 7.88 0 1 1-4.4-15c29-8.3 81.6-5.3 113.3 14.4a7.88 7.88 0 0 1-8.8 13.2z" />
               </svg>
             </a>
 
@@ -163,30 +171,36 @@ export default function Footer() {
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
+            <p className="text-xs">Member of</p>
+            <a
+              href="https://www.produktionszentrum.de/mitglieder-portraets/alisa-scetinina/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src="/pz_tanz_logo.jpg"
+                alt="pz tanz logo"
+                width={70}
+                height={25}
+                className="border border-white/20 rounded"
+              />
+            </a>
+          </div>
+
+          {/* Copyright, Links and Logo */}
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-2 gap-y-1 text-xs text-white/60 w-full md:w-auto">
+          <p>Gaisma &copy; 2025</p>    
+            <span className="text-white/40">|</span>
+            <Link href="/imprint" className="hover:text-white transition-colors">
+              Imprint
+            </Link>
+            <span className="text-white/40">|</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
           </div>
 
 
-          {/* School Logo and Copyright */}
-          <div className="flex items-center gap-2">
-            <p className="text-white/60 text-xs hidden md:block">Gaisma &copy; 2025</p>
-            <span className="text-white/40 mx-1 hidden md:block">|</span>
-            <div className="flex items-center gap-1">
-              <p className="text-white/60 text-xs">Member of</p>
-              <a
-                href="https://www.produktionszentrum.de/mitglieder-portraets/alisa-scetinina/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  src="/pz_tanz_logo.jpg"
-                  alt="pz tanz logo"
-                  width={70}
-                  height={25}
-                  className="border border-white/20 rounded"
-                />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </footer>

@@ -10,6 +10,18 @@ export default function MusicPage() {
       name: "Gaisma",
       items: [
         {
+          title: "Verpiss Dich",
+          image: "/verpissDich.jpg",
+          href: "https://artists.landr.com/057829708549",
+          alt: "Verpiss Dich",
+        },
+        {
+          title: "Ca$hback",
+          image: "/Cashback.jpeg",
+          href: "https://artists.landr.com/057829514119",
+          alt: "Ca$hback",
+        },
+        {
           title: "Motherland",
           image: "/gaisma_dexterEP.jpg",
           href: "https://artists.landr.com/055855682215",
