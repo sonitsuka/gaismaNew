@@ -28,13 +28,6 @@ export default function PerformancePage() {
           credits: "Founded by the city of Stuttgart, Pop - Büro and Kunstverein Wagenhalle",
         },
         {
-          title: "Retaken Heart - Azimuth Art and Dance Ansamble",
-          thumbnail: "https://img.youtube.com/vi/UVqem5Be9VI/0.jpg",
-          url: "https://youtu.be/UVqem5Be9VI",
-          videoId: "UVqem5Be9VI",
-          credits: "Director - Gonçalo Cruzinha\nPerformed at Gedok Galerie und Landesmuseum Württemberg",
-        },
-        {
           title: "Intact - Noverre - Young Choreographers Of Stuttgart Ballet 2017",
           thumbnail: "https://img.youtube.com/vi/GIh38PjyJnQ/0.jpg",
           url: "https://youtu.be/GIh38PjyJnQ",
