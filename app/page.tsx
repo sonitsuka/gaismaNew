@@ -18,13 +18,13 @@ const LATEST_NEWS = [
   },
   {
     date: "22.11.2025",
-    title: "DJ Gaisma – La Fest",
+    title: "DJ GAISMA – La Fest",
     venue: "Staatsoper Stuttgart",
     tag: "dj",
   },
   {
     date: "25.11.2025",
-    title: "DJ Gaisma – La Fest",
+    title: "DJ GAISMA – La Fest",
     venue: "Staatsoper Stuttgart",
     tag: "dj",
   },
@@ -50,7 +50,7 @@ const LATEST_NEWS = [
   },
   {
     date: "21.12.2025",
-    title: "DJ Gaisma – La Fest",
+    title: "DJ GAISMA – La Fest",
     venue: "Staatsoper Stuttgart",
     tag: "dj",
   },
@@ -106,16 +106,16 @@ const LATEST_NEWS = [
 const ALL_SHOWS = [
   { date: "07.11.2025", title: "Vinyl DJ Set vor Erobique — Wizemann", tag: "dj" },
   { date: "17.10.2025", title: "Tumsi DJ Vinyl Set — Sunny High Club", tag: "dj" },
-  { date: "11.10.2025", title: "Gaisma Live — Das Zentrum Bayreuth", tag: "live" },
-  { date: "10.10.2025", title: "Gaisma Live — Stuttpark", tag: "live" },
+  { date: "11.10.2025", title: "GAISMA Live — Das Zentrum Bayreuth", tag: "live" },
+  { date: "10.10.2025", title: "GAISMA Live — Stuttpark", tag: "live" },
   { date: "03.10.2025", title: "Levin Goes Lightly — St. Maria Kirche Stuttgart", tag: "other" },
 
-  { date: "25.07.2025", title: "Gaisma Live — Feel Festival", venue: "Feel Festival", tag: "live" },
+  { date: "25.07.2025", title: "GAISMA Live — Feel Festival", venue: "Feel Festival", tag: "live" },
   { date: "19.07.2025", title: "Levin Goes Lightly", venue: "Kubus Museum", tag: "other" },
-  { date: "18.07.2025", title: "DJ Gaisma — Marienplatz Festival", venue: "Marienplatz Festival", tag: "dj" },
+  { date: "18.07.2025", title: "DJ GAISMA — Marienplatz Festival", venue: "Marienplatz Festival", tag: "dj" },
   { date: "14.07.2025", title: "Seele am Faden", venue: "Hamburg", tag: "theatre" },
-  { date: "11.07.2025", title: "DJ Gaisma — WeAre The Future Festival", venue: "Waiblingen", tag: "dj" },
-  { date: "05.07.2025", title: "Gaisma Live", venue: "Magdeburg Beats & Butter", tag: "live" },
+  { date: "11.07.2025", title: "DJ GAISMA — WeAre The Future Festival", venue: "Waiblingen", tag: "dj" },
+  { date: "05.07.2025", title: "GAISMA Live", venue: "Magdeburg Beats & Butter", tag: "live" },
   { date: "04.07.2025", title: "Tumsi Kessel Festival", venue: "Tumsi Kessel Festival", tag: "other" },
 
   { date: "22.06.2025", title: "Seele am Faden", venue: "Kleist Forum", tag: "theatre" },
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
                 src="/dumpedInParis.webp"
-                alt="Gaisma - Album"
+                alt="GAISMA - Album"
                 width={200}
                 height={200}
                 className="object-cover h-full w-full transition-all duration-500"
@@ -192,7 +192,7 @@ export default function Home() {
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
                 src="/verpissDich.jpg"
-                alt="Gaisma - Verpiss Dich"
+                alt="GAISMA - Verpiss Dich"
                 width={200}
                 height={200}
                 className="object-cover h-full w-full transition-all duration-500"
@@ -221,7 +221,7 @@ export default function Home() {
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
                 src="/cashbackCover.webp"
-                alt="Gaisma - Ca$hback"
+                alt="GAISMA - Ca$hback"
                 width={200}
                 height={200}
                 className="object-cover h-full w-full transition-all duration-500"
@@ -230,7 +230,7 @@ export default function Home() {
               <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
               <div className="absolute inset-0 flex flex-col justify-end p-3">
                 <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
-                Gaisma - Ca$hback
+                GAISMA - Ca$hback
                 </h3>
                 <p className="text-xs text-white/60">19.09.2025</p>
               </div>
@@ -360,17 +360,17 @@ export default function Home() {
         {/* About Section Preview */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            About <span className="text-orange-500">Gaisma</span>
+            About <span className="text-orange-500">GAISMA</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-orange-500 to-transparent"></span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative aspect-[3/4] max-w-[260px] md:max-w-[320px] bg-black border border-white/10 overflow-hidden mx-auto md:mx-0">
+            <div className="relative aspect-[3/4] max-w-[320px] md:max-w-[400px] bg-black border border-white/10 overflow-hidden mx-auto md:mx-0">
               <Image
-                src="/aboutMe.jpg?height=600&width=400"
-                alt="Gaisma profile pic"
+                src="/profImg.jpg"
+                alt="GAISMA profile pic"
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover  hover:grayscale-0 transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             </div>

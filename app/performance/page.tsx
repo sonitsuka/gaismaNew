@@ -9,10 +9,10 @@ export default function PerformancePage() {
       category: "Performance",
       videos: [
         {
-          title: "TUSK _Performance STJ Design Fashion Show Opening - Gaisma",
+          title: "TUSK _Performance STJ Design Fashion Show Opening - GAISMA",
           thumbnail: "/TUSK _Performance.png",
           url: "https://vimeo.com/938340726",
-          credits: `Performance - Alisa Scetinina (Gaisma)
+          credits: `Performance - Alisa Scetinina (GAISMA)
             Live Music and Visuals - Issueswithmysleep (Maximilian Luz)
             Make up - Tamara Kokalj
             Hair - Mladen Durdevic

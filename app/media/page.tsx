@@ -5,7 +5,7 @@ export default function MediaPage() {
   const pressItems = [
     {
       id: 1,
-      title: "Gaisma Pushes Boundaries with New Album",
+      title: "GAISMA Pushes Boundaries with New Album",
       publication: "Electronic Sound Magazine",
       date: "November 2023",
       excerpt:
@@ -14,7 +14,7 @@ export default function MediaPage() {
     },
     {
       id: 2,
-      title: "Interview: The Visual World of Gaisma",
+      title: "Interview: The Visual World of GAISMA",
       publication: "Resident Advisor",
       date: "September 2023",
       excerpt:
@@ -23,7 +23,7 @@ export default function MediaPage() {
     },
     {
       id: 3,
-      title: "Festival Highlight: Gaisma's Prismatic Performance",
+      title: "Festival Highlight: GAISMA's Prismatic Performance",
       publication: "DJ Mag",
       date: "July 2023",
       excerpt:

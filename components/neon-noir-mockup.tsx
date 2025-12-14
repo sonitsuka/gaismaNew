@@ -456,15 +456,15 @@ export default function NeonNoirMockup() {
           {/* About Section Preview */}
           <div className="mt-16">
             <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-              About <span className="text-orange-500">Gaisma</span>
+              About <span className="text-orange-500">GAISMA</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-orange-500 to-transparent"></span>
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative aspect-[3/4] bg-black border border-white/10 overflow-hidden">
                 <Image
-                  src="/aboutMe.jpg"
-                  alt="Gaisma profile pic"
+                  src="/profImg.jpg"
+                  alt="GAISMA profile pic"
                   fill
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />

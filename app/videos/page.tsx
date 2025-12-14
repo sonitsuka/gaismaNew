@@ -14,7 +14,7 @@ export default function VideosPage() {
               <span className="text-green-500">Videos</span>
             </h1>
             <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
-              <a href="#music-video-gaisma" className="hover:text-green-400 underline underline-offset-2">Music Video Gaisma</a>
+              <a href="#music-video-gaisma" className="hover:text-green-400 underline underline-offset-2">Music Video GAISMA</a>
               <a href="#music-video-sceti" className="hover:text-green-400 underline underline-offset-2">Music Video Sceti</a>
               <a href="#dj-live" className="hover:text-green-400 underline underline-offset-2">DJ & Live</a>
               <a href="#radio-live" className="hover:text-green-400 underline underline-offset-2">Radio Live</a>
@@ -24,10 +24,10 @@ export default function VideosPage() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
-        {/* Music Video Gaisma */}
+        {/* Music Video GAISMA */}
         <div className="mb-16">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
-            Music Video <span className="text-green-500">Gaisma</span>
+            Music Video <span className="text-green-500">GAISMA</span>
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-green-500 to-transparent"></span>
           </h2>
 
@@ -240,7 +240,7 @@ export default function VideosPage() {
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image
                   src="https://img.youtube.com/vi/uifNs3R7t9U/0.jpg"
-                  alt="TINY WINDOW CONCERTS II - Gaisma"
+                  alt="TINY WINDOW CONCERTS II - GAISMA"
                   width={640}
                   height={360}
                   className="object-cover h-full w-full transition-all duration-500"
@@ -249,7 +249,7 @@ export default function VideosPage() {
                 <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
                   <h3 className="font-bold text-white group-hover:text-green-500 transition-colors">
-                    TINY WINDOW CONCERTS II - Gaisma
+                    TINY WINDOW CONCERTS II - GAISMA
                   </h3>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -264,7 +264,7 @@ export default function VideosPage() {
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image
                   src="https://img.youtube.com/vi/lJh2z9t7eZc/0.jpg"
-                  alt="Gaisma aka Tumsi - Bold Decisions"
+                  alt="GAISMA aka Tumsi - Bold Decisions"
                   width={640}
                   height={360}
                   className="object-cover h-full w-full transition-all duration-500"
@@ -273,7 +273,7 @@ export default function VideosPage() {
                 <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
                   <h3 className="font-bold text-white group-hover:text-green-500 transition-colors">
-                    Bold Decisions - Gaisma aka Tumsi
+                    Bold Decisions - GAISMA aka Tumsi
                   </h3>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -292,7 +292,7 @@ export default function VideosPage() {
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image
                   src="https://img.youtube.com/vi/FyTQhsSNJGY/0.jpg"
-                  alt="Stuttgart Rooftop Streams #10 - Gaisma & Mariano Fernandez (Live-Malerei)"
+                  alt="Stuttgart Rooftop Streams #10 - GAISMA & Mariano Fernandez (Live-Malerei)"
                   width={640}
                   height={360}
                   className="object-cover h-full w-full transition-all duration-500"
@@ -303,7 +303,7 @@ export default function VideosPage() {
                   <h3 className="font-bold text-white group-hover:text-green-500 transition-colors">
                     Stuttgart Rooftop Streams #10
                   </h3>
-                  <p className="text-sm text-white/60">Gaisma & Mariano Fernandez (Live-Malerei)</p>
+                  <p className="text-sm text-white/60">GAISMA & Mariano Fernandez (Live-Malerei)</p>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-12 h-12 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_15px_rgba(34,197,94,0.5)]">

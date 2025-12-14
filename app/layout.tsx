@@ -8,9 +8,9 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Gaisma | Alisa Scetinina: Music and Performance Art Portfolio",
+  title: "GAISMA | Alisa Scetinina: Music and Performance Art Portfolio",
   description:
-    "Gaisma Music Artist Page: Art resembles symbiosis of technology and human energy, that unifies in lucid dance.",
+    "GAISMA Music Artist Page: Art resembles symbiosis of technology and human energy, that unifies in lucid dance.",
   generator: 'v0.dev'
 }
 

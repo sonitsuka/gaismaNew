@@ -189,7 +189,7 @@ export default function Footer() {
 
           {/* Copyright, Links and Logo */}
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-2 gap-y-1 text-xs text-white/60 w-full md:w-auto">
-          <p>Gaisma &copy; 2025</p>    
+          <p>GAISMA &copy; 2025</p>    
             <span className="text-white/40">|</span>
             <Link href="/imprint" className="hover:text-white transition-colors">
             Impressum
