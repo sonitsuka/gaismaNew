@@ -9,6 +9,19 @@ export default function PerformancePage() {
       category: "Performance",
       videos: [
         {
+          title: "Die Seele am Faden – Tanzperformance mit Friedemann Vogel nach Heinrich von Kleist",
+          thumbnail: "https://img.youtube.com/vi/iM1_UlsykWw/0.jpg",
+          url: "https://www.youtube.com/watch?v=iM1_UlsykWw",
+          videoId: "iM1_UlsykWw",
+          credits: `
+          Konzept und Choreografie - Thomas Lempertz und Friedemann Vogel
+          Kostüme und Raum - Thomas Lempertz
+          Komposition und Live-Musikerin - Alisa Scetinina (GAISMA)
+          Digital Artist - Timo Kreitz
+          Licht - Henry Winter
+          `,
+        },
+        {
           title: "TUSK _Performance STJ Design Fashion Show Opening - GAISMA",
           thumbnail: "/TUSK _Performance.png",
           url: "https://vimeo.com/938340726",

@@ -32,6 +32,29 @@ export default function VideosPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="https://www.youtube.com/watch?v=_nLaTRlHUqw" target="_blank" className="group" rel="noreferrer">
+              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
+                <Image
+                  src="https://img.youtube.com/vi/_nLaTRlHUqw/0.jpg"
+                  alt="GAISMA - Ca$hback"
+                  width={640}
+                  height={360}
+                  className="object-cover h-full w-full transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
+                <div className="absolute inset-0 flex flex-col justify-end p-4">
+                  <h3 className="font-bold text-white group-hover:text-green-500 transition-colors">
+                  GAISMA - Ca$hback
+                  </h3>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-12 h-12 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_15px_rgba(34,197,94,0.5)]">
+                    <Play className="w-6 h-6 text-green-500 fill-green-500" />
+                  </div>
+                </div>
+              </div>
+            </a>
             <a href="https://www.youtube.com/watch?v=4rBHuXb8-WA" target="_blank" className="group" rel="noreferrer">
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image

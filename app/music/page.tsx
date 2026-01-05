@@ -17,7 +17,7 @@ export default function MusicPage() {
         },
         {
           title: "Ca$hback",
-          image: "/Cashback.jpeg",
+          image: "/cashback.jpeg",
           href: "https://artists.landr.com/057829514119",
           alt: "Ca$hback",
         },

@@ -131,9 +131,9 @@ export default function Home() {
 
     <div className="bg-black text-white min-h-screen">
       <AnnouncementBar 
-        message="New single Verpiss Dich drops"
-        releaseDate="Nov 2025"
-        preSaveHref="https://artists.landr.com/057829708549"
+        message="New EP Dumped in Paris"
+        releaseDate=""
+        preSaveHref="https://artists.landr.com/057829699953"
         showPreSave={true}
       />
       {/* Hero Video */}
@@ -367,7 +367,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative aspect-[3/4] max-w-[320px] md:max-w-[400px] bg-black border border-white/10 overflow-hidden mx-auto md:mx-0">
               <Image
-                src="/profImg.jpg"
+                src="/profile-new.jpg"
                 alt="GAISMA profile pic"
                 fill
                 className="object-cover  hover:grayscale-0 transition-all duration-500"
