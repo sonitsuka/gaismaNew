@@ -9,52 +9,6 @@ import PastShows from "@/components/pastShows"
 
 // ------------ Latest data ------------
 const LATEST_NEWS = [
-  // November 2025
-  {
-    date: "20. - 21.11.2025",
-    title: 'Theater Performance – "Sinn des Lebens"',
-    venue: "Heilbronn",
-    tag: "theatre",
-  },
-  {
-    date: "22.11.2025",
-    title: "DJ GAISMA – La Fest",
-    venue: "Staatsoper Stuttgart",
-    tag: "dj",
-  },
-  {
-    date: "25.11.2025",
-    title: "DJ GAISMA – La Fest",
-    venue: "Staatsoper Stuttgart",
-    tag: "dj",
-  },
-
-  // December 2025
-  {
-    date: "12.12.2025",
-    title: "Seele am Faden",
-    venue: "Rome, Italy",
-    tag: "theatre",
-  },
-  {
-    date: "13.12.2025",
-    title: "Seele am Faden",
-    venue: "Rome, Italy",
-    tag: "theatre",
-  },
-  {
-    date: "18. - 19. 12.2025",
-    title: 'Performance “When will we be …?”',
-    venue: "Kulturinsel Stuttgart",
-    tag: "performance",
-  },
-  {
-    date: "21.12.2025",
-    title: "DJ GAISMA – La Fest",
-    venue: "Staatsoper Stuttgart",
-    tag: "dj",
-  },
-
   // January 2026 – Seele am Faden, SOLD OUT
   {
     date: "10.01.2026",
@@ -103,13 +57,52 @@ const LATEST_NEWS = [
 ];
 
 
+
 const ALL_SHOWS = [
+  // December 2025
+  {
+    date: "21.12.2025",
+    title: "DJ GAISMA – La Fest",
+    venue: "Staatsoper Stuttgart",
+    tag: "dj",
+  },
+  {
+    date: "18. - 19. 12.2025",
+    title: 'Performance “When will we be …?”',
+    venue: "Kulturinsel Stuttgart",
+    tag: "performance",
+  },
+  {
+    date: "13.12.2025",
+    title: "Seele am Faden",
+    venue: "Rome, Italy",
+    tag: "theatre",
+  },
+  {
+    date: "12.12.2025",
+    title: "Seele am Faden",
+    venue: "Rome, Italy",
+    tag: "theatre",
+  },
+
+  // November 2025
+  { date: "25.11.2025", title: "DJ GAISMA – La Fest", venue: "Staatsoper Stuttgart", tag: "dj" },
+  { date: "22.11.2025", title: "DJ GAISMA – La Fest", venue: "Staatsoper Stuttgart", tag: "dj" },
+  {
+    date: "20. - 21.11.2025",
+    title: 'Theater Performance – "Sinn des Lebens"',
+    venue: "Heilbronn",
+    tag: "theatre",
+  },
   { date: "07.11.2025", title: "Vinyl DJ Set vor Erobique — Wizemann", tag: "dj" },
+
+  // October 2025
   { date: "17.10.2025", title: "Tumsi DJ Vinyl Set — Sunny High Club", tag: "dj" },
   { date: "11.10.2025", title: "GAISMA Live — Das Zentrum Bayreuth", tag: "live" },
   { date: "10.10.2025", title: "GAISMA Live — Stuttpark", tag: "live" },
   { date: "03.10.2025", title: "Levin Goes Lightly — St. Maria Kirche Stuttgart", tag: "other" },
 
+  // July 2025
   { date: "25.07.2025", title: "GAISMA Live — Feel Festival", venue: "Feel Festival", tag: "live" },
   { date: "19.07.2025", title: "Levin Goes Lightly", venue: "Kubus Museum", tag: "other" },
   { date: "18.07.2025", title: "DJ GAISMA — Marienplatz Festival", venue: "Marienplatz Festival", tag: "dj" },
@@ -118,11 +111,11 @@ const ALL_SHOWS = [
   { date: "05.07.2025", title: "GAISMA Live", venue: "Magdeburg Beats & Butter", tag: "live" },
   { date: "04.07.2025", title: "Tumsi Kessel Festival", venue: "Tumsi Kessel Festival", tag: "other" },
 
+  // June 2025
   { date: "22.06.2025", title: "Seele am Faden", venue: "Kleist Forum", tag: "theatre" },
   { date: "21.06.2025", title: "Seele am Faden", venue: "Kleist Forum", tag: "theatre" },
   { date: "14.06.2025", title: "Sceti at Saäxtasy Festival", venue: "Saäxtasy Festival", tag: "other" },
-]
-
+];
 
 export default function Home() {
 ;
@@ -155,7 +148,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-4">
           <a
-              href="https://artists.landr.com/057829514119"
+              href="https://artists.landr.com/057829699953"
               target="_blank"
               rel="noreferrer"
               className="group"
@@ -172,7 +165,7 @@ export default function Home() {
               <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
               <div className="absolute inset-0 flex flex-col justify-end p-3">
                 <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
-                
+                  Dumped in Paris
                 </h3>
                 <p className="text-xs text-white/60">21.11.2025</p>
               </div>

@@ -10,6 +10,12 @@ export default function MusicPage() {
       name: "GAISMA",
       items: [
         {
+          title: "Dumped In Paris",
+          image: "/dumpedInParis.webp",
+          href: "https://artists.landr.com/057829699953",
+          alt: "dumped In Paris",
+        },
+        {
           title: "Verpiss Dich",
           image: "/verpissDich.jpg",
           href: "https://artists.landr.com/057829708549",
@@ -153,7 +159,8 @@ export default function MusicPage() {
             className="mb-16"
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
-              <span className="font-[Helvetica,Arial,sans-serif]">{section.name}</span>              <span className="text-yellow-500 ml-3">{section.category}</span>
+              <span className="font-[Helvetica,Arial,sans-serif]">{section.name}</span>              
+              <span className="text-yellow-500 ml-3">{section.category}</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent" />
             </h2>
 
