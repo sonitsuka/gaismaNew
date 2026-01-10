@@ -22,7 +22,7 @@ export default function MusicCard({ title, image, href, alt }: MusicCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300" />
         <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none" />
         <div className="absolute inset-0 flex flex-col justify-end px-2 pt-1 pb-2 sm:px-4 sm:pb-4 sm:pt-2">
-          <h3 className="text-[0.9rem] sm:text-base font-normal sm:font-semibold text-white group-hover:text-text-400 transition-colors leading-snug break-normal">
+          <h3 className="text-[0.9rem] sm:text-base font-normal sm:font-semibold text-white group-hover:text-yellow-400 transition-colors leading-snug break-normal">
             {title}
           </h3>
         </div>
