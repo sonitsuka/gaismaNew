@@ -6,6 +6,7 @@ import performance from './performance'
 import show from './show'
 import pressArticle from './pressArticle'
 import mediaPhoto from './mediaPhoto'
+import aboutPage from './aboutPage'
 
 // Export all schemas
 export const schemaTypes = [
@@ -16,4 +17,5 @@ export const schemaTypes = [
   show,
   pressArticle,
   mediaPhoto,
+  aboutPage,
 ]
