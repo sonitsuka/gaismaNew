@@ -4,20 +4,61 @@ import { getPressArticles } from "@/lib/sanity"
 
 export const revalidate = 60
 
+// Fallback data - original hardcoded content
+const FALLBACK_PRESS_ARTICLES = [
+  {
+    title: "TwinTalk: GAISMA on creative diversity and her path into the Stuttgart music scene - STUGGI.TV (DE)",
+    date: "September 4, 2025",
+    url: "https://www.youtube.com/watch?v=ok7Y6PG6icg",
+  },
+  {
+    title: "4 Minuten mit GAISMA (DE)",
+    date: "November 11, 2024",
+    url: "https://www.das-ticket-magazin.de/2024/10/11/4-minuten-mit-gaisma/",
+  },
+  {
+    title: "LIFT STUTTGARTMAGAZIN Playtime mit GAISMA Interview (DE)",
+    date: "September 28, 2023",
+    url: "https://www.lift-online.de/lift-aktuell/playtime-mit-gaisma/",
+  },
+  {
+    title: "Al-Tiba9 Contemporary Art - Alisa Scetinina Performace music body (EN)",
+    date: "April 12, 2023",
+    url: "https://www.altiba9.com/artist-interviews/alisa-scetinina-performace-music-body",
+  },
+  {
+    title: "LKZ - Vor dem Literaturmuseum in Marbach: Ein Klangspielplatz unter Strom (DE)",
+    date: "September 26, 2022",
+    url: "https://www.lkz.de/lokales_artikel,-vor-dem-literaturmuseum-in-marbach-ein-klangspielplatz-unter-strom-_arid,703510.html",
+  },
+  {
+    title: "dmcworld magazine - BACK TO MINE WITH SCETI (DE)",
+    date: "August 27, 2021",
+    url: "http://www.dmcworld.net/back-to-mine/back-to-mine-with-sceti/",
+  },
+  {
+    title: "WOMAN OF MUSIC - ALISA SCETININA (DE)",
+    date: "May, 2019",
+    url: "https://womenofmusic.de/member_reader/alisa-pgeboren-in-lettland-hat-sich-alisa-scetinina-seit-ihrer-kindheit-mit-musik-und-lettischem-tanz-besch%C3%A4ftigt-w%C3%A4hrend-ihres-.html",
+  },
+]
+
 export default async function PressPage() {
   // Fetch press articles from Sanity
   const articles = await getPressArticles()
 
-  // Format articles for display
-  const pressArticles = articles.map((article) => ({
-    title: article.title,
-    date: article.dateText || new Date(article.date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    }),
-    url: article.url,
-  }))
+  // Use Sanity data if available, otherwise use fallback
+  const pressArticles = articles.length > 0
+    ? articles.map((article) => ({
+        title: article.title,
+        date: article.dateText || new Date(article.date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        }),
+        url: article.url,
+      }))
+    : FALLBACK_PRESS_ARTICLES
 
   return (
     <div className="bg-[url('/bg-press.png')] bg-cover bg-center bg-no-repeat text-white min-h-screen">
