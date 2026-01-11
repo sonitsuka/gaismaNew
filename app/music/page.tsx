@@ -139,15 +139,20 @@ export default async function MusicPage() {
   const formattedSections = musicSections.map((section: any) => ({
     category: section.category,
     name: section.name,
-    items: section.items ? section.items.map((item: any) => ({
-      title: item.title,
-      // Use Sanity image if available, otherwise use external URL or local path
-      image: item.image && isSanityConfigured
-        ? urlFor(item.image).width(500).height(500).url()
-        : item.imageUrl || item.image || '',
-      href: item.href,
-      alt: item.alt,
-    })) : [],
+    items: section.items ? section.items.map((item: any) => {
+      // Check if item.image is a Sanity image object (has asset property)
+      const isSanityImage = item.image && typeof item.image === 'object' && item.image.asset
+
+      return {
+        title: item.title,
+        // Use Sanity image builder only for Sanity images, otherwise use the URL/path directly
+        image: isSanityImage && isSanityConfigured
+          ? urlFor(item.image).width(500).height(500).url()
+          : item.imageUrl || item.image || '',
+        href: item.href,
+        alt: item.alt,
+      }
+    }) : [],
   }))
 
   return (
