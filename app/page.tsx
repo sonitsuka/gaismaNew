@@ -5,10 +5,29 @@ import VideoHero from "@/components/hero-promo-video";
 // import ReleaseHeroTeaser from "@/components/ReleaseHeroTeaser";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import PastShows from "@/components/pastShows"
+import { getShows } from "@/lib/sanity"
 
+export const revalidate = 60
 
-// ------------ Latest data ------------
-const LATEST_NEWS = [
+async function getFormattedShows() {
+  const upcomingShows = await getShows(true)
+  const pastShows = await getShows(false)
+
+  const formatShow = (show: any) => ({
+    date: show.dateRange || new Date(show.date).toLocaleDateString('de-DE'),
+    title: show.isSoldOut ? `${show.title} (SOLD OUT)` : show.title,
+    venue: show.venue,
+    tag: show.tag,
+  })
+
+  return {
+    latest: upcomingShows.map(formatShow),
+    all: pastShows.map(formatShow),
+  }
+}
+
+// Fallback data for if Sanity is not set up yet
+const FALLBACK_LATEST_NEWS = [
   // January 2026 – Seele am Faden, SOLD OUT
   {
     date: "10.01.2026",
@@ -117,11 +136,13 @@ const ALL_SHOWS = [
   { date: "14.06.2025", title: "Sceti at Saäxtasy Festival", venue: "Saäxtasy Festival", tag: "other" },
 ];
 
-export default function Home() {
-;
+export default async function Home() {
+  // Fetch shows from Sanity
+  const { latest, all } = await getFormattedShows()
+  const LATEST_NEWS = latest.length > 0 ? latest : FALLBACK_LATEST_NEWS
+  const ALL_SHOWS = all.length > 0 ? all : []
 
   return (
-
     <div className="bg-black text-white min-h-screen">
       <AnnouncementBar 
         message="New EP Dumped in Paris"

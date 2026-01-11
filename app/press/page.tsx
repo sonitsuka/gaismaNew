@@ -1,45 +1,23 @@
 import Image from "next/image"
 import { ExternalLink } from "lucide-react"
+import { getPressArticles } from "@/lib/sanity"
 
-export default function PressPage() {
-  // Press articles data
-  const pressArticles = [
-    {
-      title: "TwinTalk: GAISMA on creative diversity and her path into the Stuttgart music scene - STUGGI.TV (DE)",
-      date: "September 4, 2025",
-      url: "https://www.youtube.com/watch?v=ok7Y6PG6icg",
-    },
-    {
-      title: "4 Minuten mit GAISMA (DE)",
-      date: "November 11, 2024",
-      url: "https://www.das-ticket-magazin.de/2024/10/11/4-minuten-mit-gaisma/",
-    },
-    {
-      title: "LIFT STUTTGARTMAGAZIN Playtime mit GAISMA Interview (DE)",
-      date: "September 28, 2023",
-      url: "https://www.lift-online.de/lift-aktuell/playtime-mit-gaisma/",
-    },
-    {
-      title: "Al-Tiba9 Contemporary Art - Alisa Scetinina Performace music body (EN)",
-      date: "April 12, 2023",
-      url: "https://www.altiba9.com/artist-interviews/alisa-scetinina-performace-music-body",
-    },
-    {
-      title: "LKZ - Vor dem Literaturmuseum in Marbach: Ein Klangspielplatz unter Strom (DE)",
-      date: "September 26, 2022",
-      url: "https://www.lkz.de/lokales_artikel,-vor-dem-literaturmuseum-in-marbach-ein-klangspielplatz-unter-strom-_arid,703510.html",
-    },
-    {
-      title: "dmcworld magazine - BACK TO MINE WITH SCETI (DE)",
-      date: "August 27, 2021",
-      url: "http://www.dmcworld.net/back-to-mine/back-to-mine-with-sceti/",
-    },
-    {
-      title: "WOMAN OF MUSIC - ALISA SCETININA (DE)",
-      date: "May, 2019",
-      url: "https://womenofmusic.de/member_reader/alisa-pgeboren-in-lettland-hat-sich-alisa-scetinina-seit-ihrer-kindheit-mit-musik-und-lettischem-tanz-besch%C3%A4ftigt-w%C3%A4hrend-ihres-.html",
-    },
-  ]
+export const revalidate = 60
+
+export default async function PressPage() {
+  // Fetch press articles from Sanity
+  const articles = await getPressArticles()
+
+  // Format articles for display
+  const pressArticles = articles.map((article) => ({
+    title: article.title,
+    date: article.dateText || new Date(article.date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }),
+    url: article.url,
+  }))
 
   return (
     <div className="bg-[url('/bg-press.png')] bg-cover bg-center bg-no-repeat text-white min-h-screen">
@@ -47,7 +25,7 @@ export default function PressPage() {
         <div className="absolute inset-0">
 
 
-          
+
         </div>
 
         {/* Title - better positioned and sized for mobile */}
@@ -62,27 +40,34 @@ export default function PressPage() {
 
       {/* Content - improved padding for mobile */}
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
-        <div className="space-y-4 md:space-y-6">
-          {pressArticles.map((article, index) => (
-            <a
-              key={index}
-              href={article.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-gray-900/50 hover:bg-gray-800/50 rounded-lg p-4 sm:p-6 transition-colors border border-gray-800 hover:border-fuchsia-500/30"
-            >
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
-                <div className="flex-1">
-                  <h3 className="text-base sm:text-lg font-medium text-white group-hover:text-fuchsia-500 flex items-center">
-                    {article.title}
-                    <ExternalLink className="ml-2 h-4 w-4 text-fuchsia-500 opacity-70" />
-                  </h3>
+        {pressArticles.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-white/70">No press articles available yet.</p>
+            <p className="text-white/50 text-sm mt-2">Add press articles in the Sanity Studio.</p>
+          </div>
+        ) : (
+          <div className="space-y-4 md:space-y-6">
+            {pressArticles.map((article, index) => (
+              <a
+                key={index}
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-gray-900/50 hover:bg-gray-800/50 rounded-lg p-4 sm:p-6 transition-colors border border-gray-800 hover:border-fuchsia-500/30"
+              >
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                  <div className="flex-1">
+                    <h3 className="text-base sm:text-lg font-medium text-white group-hover:text-fuchsia-500 flex items-center">
+                      {article.title}
+                      <ExternalLink className="ml-2 h-4 w-4 text-fuchsia-500 opacity-70" />
+                    </h3>
+                  </div>
+                  <div className="text-sm text-fuchsia-500">{article.date}</div>
                 </div>
-                <div className="text-sm text-fuchsia-500">{article.date}</div>
-              </div>
-            </a>
-          ))}
-        </div>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
