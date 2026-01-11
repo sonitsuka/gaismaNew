@@ -201,7 +201,7 @@ export async function getVideos(category?: string): Promise<Video[]> {
         _id, title, url, videoId, thumbnail, category, description, credits, releaseDate, order, isActive
       }`
 
-  return client.fetch(query, { category })
+  return client.fetch(query, category ? { category } : {})
 }
 
 export async function getPerformances(category?: string): Promise<Performance[]> {
@@ -215,7 +215,7 @@ export async function getPerformances(category?: string): Promise<Performance[]>
         _id, title, url, videoId, thumbnail, thumbnailUrl, category, credits, description, date, order, isActive
       }`
 
-  return client.fetch(query, { category })
+  return client.fetch(query, category ? { category } : {})
 }
 
 export async function getShows(upcoming: boolean = true): Promise<Show[]> {
@@ -251,5 +251,5 @@ export async function getMediaPhotos(category?: string): Promise<MediaPhoto[]> {
         _id, title, image, alt, caption, photographer, date, category, order, isActive
       }`
 
-  return client.fetch(query, { category })
+  return client.fetch(query, category ? { category } : {})
 }
