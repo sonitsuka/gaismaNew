@@ -2,18 +2,28 @@ import { createClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
+// Check if Sanity is configured
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || ''
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
+export const isSanityConfigured = projectId && projectId !== 'placeholder' && projectId !== ''
+
 // Sanity client configuration
-export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2024-01-01',
-  useCdn: true, // Set to false if you need fresh data
-})
+export const client = isSanityConfigured
+  ? createClient({
+      projectId,
+      dataset,
+      apiVersion: '2024-01-01',
+      useCdn: true, // Set to false if you need fresh data
+    })
+  : null as any // Placeholder when not configured
 
 // Image URL builder helper
-const builder = imageUrlBuilder(client)
+const builder = isSanityConfigured ? imageUrlBuilder(client) : null
 
 export function urlFor(source: SanityImageSource) {
+  if (!builder) {
+    throw new Error('Sanity is not configured. Please set NEXT_PUBLIC_SANITY_PROJECT_ID in .env.local')
+  }
   return builder.image(source)
 }
 
@@ -157,6 +167,8 @@ export interface MediaPhoto {
 
 // Fetch functions
 export async function getMusicSections(): Promise<MusicSection[]> {
+  if (!isSanityConfigured) return []
+
   const query = `*[_type == "musicSection" && isActive == true] | order(order asc) {
     _id,
     category,
@@ -179,6 +191,8 @@ export async function getMusicSections(): Promise<MusicSection[]> {
 }
 
 export async function getVideos(category?: string): Promise<Video[]> {
+  if (!isSanityConfigured) return []
+
   const query = category
     ? `*[_type == "video" && category == $category && isActive == true] | order(order asc) {
         _id, title, url, videoId, thumbnail, category, description, credits, releaseDate, order, isActive
@@ -191,6 +205,8 @@ export async function getVideos(category?: string): Promise<Video[]> {
 }
 
 export async function getPerformances(category?: string): Promise<Performance[]> {
+  if (!isSanityConfigured) return []
+
   const query = category
     ? `*[_type == "performance" && category == $category && isActive == true] | order(order asc) {
         _id, title, url, videoId, thumbnail, thumbnailUrl, category, credits, description, date, order, isActive
@@ -203,6 +219,8 @@ export async function getPerformances(category?: string): Promise<Performance[]>
 }
 
 export async function getShows(upcoming: boolean = true): Promise<Show[]> {
+  if (!isSanityConfigured) return []
+
   const query = `*[_type == "show" && isUpcoming == $upcoming] | order(date ${
     upcoming ? 'asc' : 'desc'
   }) {
@@ -213,6 +231,8 @@ export async function getShows(upcoming: boolean = true): Promise<Show[]> {
 }
 
 export async function getPressArticles(): Promise<PressArticle[]> {
+  if (!isSanityConfigured) return []
+
   const query = `*[_type == "pressArticle"] | order(date desc) {
     _id, title, publication, date, dateText, url, excerpt, language, coverImage, isFeatured, order
   }`
@@ -221,6 +241,8 @@ export async function getPressArticles(): Promise<PressArticle[]> {
 }
 
 export async function getMediaPhotos(category?: string): Promise<MediaPhoto[]> {
+  if (!isSanityConfigured) return []
+
   const query = category
     ? `*[_type == "mediaPhoto" && category == $category && isActive == true] | order(order asc) {
         _id, title, image, alt, caption, photographer, date, category, order, isActive
