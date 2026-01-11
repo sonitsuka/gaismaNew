@@ -14,49 +14,49 @@ const FALLBACK_MUSIC_SECTIONS = [
     items: [
       {
         title: "Dumped In Paris",
-        image: "/dumpedInParis.webp",
+        image: "/music/dumpedInParis.webp",
         href: "https://artists.landr.com/057829699953",
         alt: "dumped In Paris",
       },
       {
         title: "Verpiss Dich",
-        image: "/verpissDich.jpg",
+        image: "/music/verpissDich.jpg",
         href: "https://artists.landr.com/057829708549",
         alt: "Verpiss Dich",
       },
       {
         title: "Ca$hback",
-        image: "/cachback.jpeg",
+        image: "/music/cachback.jpeg",
         href: "https://artists.landr.com/057829514119",
         alt: "Ca$hback",
       },
       {
         title: "Motherland",
-        image: "/gaisma_dexterEP.jpg",
+        image: "/music/gaisma_dexterEP.jpg",
         href: "https://artists.landr.com/055855682215",
         alt: "Motherland (prod. by Dexter)",
       },
       {
         title: "Mirrors Of The Cosmic Cinema",
-        image: "/mirrorsOfCosmic.jpg",
+        image: "/music/mirrorsOfCosmic.jpg",
         href: "https://open.spotify.com/intl-de/album/47S3HkEBEkwxPv6vQup7zB",
         alt: "Mirrors Of The Cosmic Cinema",
       },
       {
         title: "Not My Cup Of Tea",
-        image: "notMyCupOfTea.jpeg",
+        image: "/common/notMyCupOfTea.jpeg",
         href: "https://open.spotify.com/intl-de/album/0c3Bd93SHLw5vlVhrHN26P",
         alt: "Not My Cup Of Tea",
       },
       {
         title: "Empathy",
-        image: "/empathy.jpg",
+        image: "/music/empathy.jpg",
         href: "https://open.spotify.com/intl-de/album/2bOnhokrEQOnHuvl8H6oZn",
         alt: "Empathy",
       },
       {
         title: "Monarchy",
-        image: "/monarchy.jpg",
+        image: "/music/monarchy.jpg",
         href: "https://open.spotify.com/intl-de/album/0ZLCVkecn8E0h0RXuPbgpi",
         alt: "Monarchy",
       },
@@ -68,7 +68,7 @@ const FALLBACK_MUSIC_SECTIONS = [
     items: [
       {
         title: "Feel Alive",
-        image: "/sceti.png",
+        image: "/music/sceti.png",
         href: "https://open.spotify.com/intl-de/artist/7LmgNFt2L76bFO3f27IsC4",
         alt: "Feel Alive",
       },

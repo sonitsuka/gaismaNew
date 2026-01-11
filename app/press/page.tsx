@@ -61,7 +61,7 @@ export default async function PressPage() {
     : FALLBACK_PRESS_ARTICLES
 
   return (
-    <div className="bg-[url('/bg-press.png')] bg-cover bg-center bg-no-repeat text-white min-h-screen">
+    <div className="bg-[url('/press/bg-press.png')] bg-cover bg-center bg-no-repeat text-white min-h-screen">
       <div className="relative w-full h-32 sm:h-48 md:h-64 overflow-hidden">
         <div className="absolute inset-0">
 

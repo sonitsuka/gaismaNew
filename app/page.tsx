@@ -152,8 +152,8 @@ export default async function Home() {
       />
       {/* Hero Video */}
       <VideoHero
-        backgroundVideoSrc="/gaisma-Matze-short.mp4"
-        mainVideoSrc="/gaisma-Matze-short.mp4"
+        backgroundVideoSrc="/home/gaisma-Matze-short.mp4"
+        mainVideoSrc="/home/gaisma-Matze-short.mp4"
         description="In times of unpredictability and chaos one thing that we can always be certain of is that the power and growth behind our personality lies in our own hands."
         buttonText="Explore"
         buttonLink="#latestReleases"
@@ -176,7 +176,7 @@ export default async function Home() {
             >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/dumpedInParis.webp"
+                src="/music/dumpedInParis.webp"
                 alt="GAISMA - Album"
                 width={200}
                 height={200}
@@ -205,7 +205,7 @@ export default async function Home() {
             >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/verpissDich.jpg"
+                src="/music/verpissDich.jpg"
                 alt="GAISMA - Verpiss Dich"
                 width={200}
                 height={200}
@@ -234,7 +234,7 @@ export default async function Home() {
           >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/cashbackCover.webp"
+                src="/home/cashbackCover.webp"
                 alt="GAISMA - Ca$hback"
                 width={200}
                 height={200}
@@ -265,7 +265,7 @@ export default async function Home() {
           >
             <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
               <Image
-                src="/gaisma_dexterEP.jpg"
+                src="/music/gaisma_dexterEP.jpg"
                 alt="Motherland (prod. by Dexter)"
                 width={200}
                 height={200}
@@ -381,7 +381,7 @@ export default async function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative aspect-[3/4] max-w-[320px] md:max-w-[400px] bg-black border border-white/10 overflow-hidden mx-auto md:mx-0">
               <Image
-                src="/profile-new.jpg"
+                src="/about/profile-new.jpg"
                 alt="GAISMA profile pic"
                 fill
                 className="object-cover  hover:grayscale-0 transition-all duration-500"

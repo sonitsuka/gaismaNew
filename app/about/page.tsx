@@ -5,7 +5,7 @@ export default function AboutPage() {
     <div className="min-h-screen relative text-white overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/profile-new.jpg"
+          src="/about/profile-new.jpg"
           alt=""
           fill
           priority
@@ -24,7 +24,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/profile-new.jpg"
+                src="/about/profile-new.jpg"
                 alt="Alisa Scetinina portrait"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"

@@ -80,7 +80,7 @@ export default function CurationPage() {
               <div className="relative aspect-[3/4] sm:aspect-auto sm:h-auto mt-4 md:mt-6 group">
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
                 <Image
-                  src="/nectar127_poster.png"
+                  src="/curation/nectar127_poster.png"
                   alt="Event Poster"
                   width={500}
                   height={700}
@@ -96,7 +96,7 @@ export default function CurationPage() {
                 {/* Large image */}
                 <div className="col-span-12 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/SacrificeOfourLittleSelf.jpg"
+                    src="/curation/SacrificeOfourLittleSelf.jpg"
                     alt="Main Theme Art"
                     width={800}
                     height={400}
@@ -108,7 +108,7 @@ export default function CurationPage() {
                 {/* 2x2 grid of smaller images */}
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/simulation.jpg"
+                    src="/curation/simulation.jpg"
                     alt="Simulation Art"
                     width={400}
                     height={400}
@@ -118,7 +118,7 @@ export default function CurationPage() {
                 </div>
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/stimulation1-left.jpg"
+                    src="/curation/stimulation1-left.jpg"
                     alt="Simulation Left Art"
                     width={400}
                     height={400}
@@ -128,7 +128,7 @@ export default function CurationPage() {
                 </div>
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/stimulation1-right.jpg"
+                    src="/curation/stimulation1-right.jpg"
                     alt="Simulation Right Art"
                     width={400}
                     height={400}
@@ -138,7 +138,7 @@ export default function CurationPage() {
                 </div>
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/simulation2.jpg"
+                    src="/curation/simulation2.jpg"
                     alt="Simulation Art 2"
                     width={400}
                     height={400}
@@ -188,7 +188,7 @@ export default function CurationPage() {
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                 <Image
-                  src="/weAretheFutureFes_logo.jpg"
+                  src="/curation/weAretheFutureFes_logo.jpg"
                   alt="We Are The Future Festival Logo"
                   width={500}
                   height={500}

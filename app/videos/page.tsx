@@ -127,7 +127,7 @@ export default async function VideosPage() {
                   ? urlFor(video.thumbnail).width(640).height(360).url()
                   : video.videoId
                   ? getYouTubeThumbnail(video.videoId)
-                  : '/placeholder.svg'
+                  : '/common/placeholder.svg'
 
                 return (
                   <a

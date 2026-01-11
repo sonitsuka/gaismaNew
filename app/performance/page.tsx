@@ -69,7 +69,7 @@ Post Production, Color Grading - Roman Brauch`,
       },
       {
         title: "Alisa - filmed by Simon Pfister in Bavarian State Opera",
-        thumbnail: "/alisa-perfomance.png",
+        thumbnail: "/performance/alisa-perfomance.png",
         url: "https://vimeo.com/216516573",
         videoId: "216516573",
         credits: "Director - Donna Mae Burrows\nCamera - Simon Pfister\nDancer - Alisa Scetinina",
@@ -139,7 +139,7 @@ export default async function PerformancePage() {
           title: p.title,
           thumbnail: isSanityImage && isSanityConfigured
             ? urlFor(p.thumbnail).width(640).height(360).url()
-            : p.thumbnailUrl || (p.videoId ? getYouTubeThumbnail(p.videoId) : '/placeholder.svg'),
+            : p.thumbnailUrl || (p.videoId ? getYouTubeThumbnail(p.videoId) : '/common/placeholder.svg'),
           url: p.url,
           videoId: p.videoId,
           credits: p.credits,

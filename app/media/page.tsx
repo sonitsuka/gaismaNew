@@ -33,12 +33,12 @@ export default function MediaPage() {
   ]
 
   const photos = [
-    { id: 1, src: "/placeholder.svg?height=800&width=1200", alt: "Live performance at Berghain" },
-    { id: 2, src: "/placeholder.svg?height=800&width=1200", alt: "Studio session" },
-    { id: 3, src: "/placeholder.svg?height=800&width=1200", alt: "Festival appearance" },
-    { id: 4, src: "/placeholder.svg?height=800&width=1200", alt: "Album artwork" },
-    { id: 5, src: "/placeholder.svg?height=800&width=1200", alt: "Behind the scenes" },
-    { id: 6, src: "/placeholder.svg?height=800&width=1200", alt: "Visual installation" },
+    { id: 1, src: "/common/placeholder.svg?height=800&width=1200", alt: "Live performance at Berghain" },
+    { id: 2, src: "/common/placeholder.svg?height=800&width=1200", alt: "Studio session" },
+    { id: 3, src: "/common/placeholder.svg?height=800&width=1200", alt: "Festival appearance" },
+    { id: 4, src: "/common/placeholder.svg?height=800&width=1200", alt: "Album artwork" },
+    { id: 5, src: "/common/placeholder.svg?height=800&width=1200", alt: "Behind the scenes" },
+    { id: 6, src: "/common/placeholder.svg?height=800&width=1200", alt: "Visual installation" },
   ]
 
   return (
@@ -82,7 +82,7 @@ export default function MediaPage() {
             {photos.map((photo) => (
               <div key={photo.id} className="aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src={photo.src || "/placeholder.svg"}
+                  src={photo.src || "/common/placeholder.svg"}
                   alt={photo.alt}
                   width={1200}
                   height={800}
