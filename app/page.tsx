@@ -11,12 +11,6 @@ import PastShows from "@/components/pastShows"
 const LATEST_NEWS = [
   // January 2026 – Seele am Faden, SOLD OUT
   {
-    date: "10.01.2026",
-    title: "Seele am Faden (SOLD OUT)",
-    venue: "Schauspielhaus Stuttgart",
-    tag: "theatre",
-  },
-  {
     date: "13.01.2026",
     title: "Seele am Faden (SOLD OUT)",
     venue: "Schauspielhaus Stuttgart",
@@ -59,6 +53,14 @@ const LATEST_NEWS = [
 
 
 const ALL_SHOWS = [
+  // January 2026
+  {
+    date: "10.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+
   // December 2025
   {
     date: "21.12.2025",
