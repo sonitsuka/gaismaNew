@@ -9,38 +9,6 @@ import PastShows from "@/components/pastShows"
 
 // ------------ Latest data ------------
 const LATEST_NEWS = [
-  // January 2026 – Seele am Faden, SOLD OUT
-  {
-    date: "13.01.2026",
-    title: "Seele am Faden (SOLD OUT)",
-    venue: "Schauspielhaus Stuttgart",
-    tag: "theatre",
-  },
-  {
-    date: "18.01.2026",
-    title: "Seele am Faden (SOLD OUT)",
-    venue: "Schauspielhaus Stuttgart",
-    tag: "theatre",
-  },
-  {
-    date: "19.01.2026",
-    title: "Seele am Faden (SOLD OUT)",
-    venue: "Schauspielhaus Stuttgart",
-    tag: "theatre",
-  },
-  {
-    date: "24.01.2026",
-    title: "Seele am Faden (SOLD OUT)",
-    venue: "Schauspielhaus Stuttgart",
-    tag: "theatre",
-  },
-  {
-    date: "30.01.2026",
-    title: "Seele am Faden (SOLD OUT)",
-    venue: "Schauspielhaus Stuttgart",
-    tag: "theatre",
-  },
-
   // February 2026
   {
     date: "28.02.2026",
@@ -54,6 +22,36 @@ const LATEST_NEWS = [
 
 const ALL_SHOWS = [
   // January 2026
+  {
+    date: "30.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "24.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "19.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "18.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
+  {
+    date: "13.01.2026",
+    title: "Seele am Faden (SOLD OUT)",
+    venue: "Schauspielhaus Stuttgart",
+    tag: "theatre",
+  },
   {
     date: "10.01.2026",
     title: "Seele am Faden (SOLD OUT)",
