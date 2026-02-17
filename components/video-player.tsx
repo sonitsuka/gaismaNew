@@ -1,63 +1,55 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useRef, useState } from "react"
-import { Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react"
+import { Play, Pause, Maximize } from "lucide-react"
 
 interface VideoPlayerProps {
   videoSrc: string
+}
+
+/** Returns null until measured on client, then true/false */
+function useIsMobile(breakpoint = 768): boolean | null {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null)
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < breakpoint)
+    check()
+    window.addEventListener("resize", check)
+    return () => window.removeEventListener("resize", check)
+  }, [breakpoint])
+  return isMobile
 }
 
 export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const [progress, setProgress] = useState(0)
+  const [srcLoaded, setSrcLoaded] = useState(false)
+
   const videoRef = useRef<HTMLVideoElement>(null)
   const progressContainerRef = useRef<HTMLDivElement>(null)
   const videoContainerRef = useRef<HTMLDivElement>(null)
 
+  const isMobile = useIsMobile()
+
+  // ── Event listeners (once) ──────────────────────────────────────────
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
-    // Prevent right-click on videos
-    const handleContextMenu = (e: Event) => {
-      e.preventDefault()
-    }
-
-    // Update progress bar
+    const handleContextMenu = (e: Event) => e.preventDefault()
     const handleTimeUpdate = () => {
-      if (video.duration) {
-        setProgress((video.currentTime / video.duration) * 100)
-      }
+      if (video.duration) setProgress((video.currentTime / video.duration) * 100)
     }
+    const handleEnded = () => setIsPlaying(false)
 
-    // Handle video end
-    const handleEnded = () => {
-      setIsPlaying(false)
-    }
-
-    // Add event listeners
     video.addEventListener("contextmenu", handleContextMenu)
     video.addEventListener("timeupdate", handleTimeUpdate)
     video.addEventListener("ended", handleEnded)
 
-    // Disable picture-in-picture
-    if ("disablePictureInPicture" in video) {
-      video.disablePictureInPicture = true
-    }
-
-    // Set crossorigin to anonymous to prevent CORS issues
+    if ("disablePictureInPicture" in video) video.disablePictureInPicture = true
     video.crossOrigin = "anonymous"
 
-    // Try to autoplay the video & muted
-    video.muted = true
-    video.play().catch((error) => {
-      console.log("Autoplay prevented:", error)
-    })
-
-    // Cleanup
     return () => {
       video.removeEventListener("contextmenu", handleContextMenu)
       video.removeEventListener("timeupdate", handleTimeUpdate)
@@ -65,59 +57,75 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
     }
   }, [])
 
-  // Play/Pause functionality
+  // ── Desktop autoplay: load src once we know it's not mobile ─────────
+  useEffect(() => {
+    if (isMobile === null || isMobile) return // wait / skip on mobile
+    const video = videoRef.current
+    if (!video || srcLoaded) return
+
+    video.src = videoSrc
+    video.muted = true
+    video.load()
+    video.play().catch(() => {})
+    setSrcLoaded(true)
+    setIsPlaying(true)
+  }, [isMobile, videoSrc, srcLoaded])
+
+  // ── Load + play (called on first tap on mobile, or play btn desktop) ─
+  const loadAndPlay = () => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (!srcLoaded) {
+      video.src = videoSrc
+      video.muted = true
+      video.load()
+      setSrcLoaded(true)
+    }
+
+    video.play().then(() => setIsPlaying(true)).catch(() => {})
+  }
+
   const togglePlay = () => {
     const video = videoRef.current
     if (!video) return
 
+    if (!srcLoaded) {
+      loadAndPlay()
+      return
+    }
+
     if (video.paused) {
-      video.play()
-      setIsPlaying(true)
+      video.play().then(() => setIsPlaying(true))
     } else {
       video.pause()
       setIsPlaying(false)
     }
   }
 
-  // Mute/Unmute functionality
   const toggleMute = () => {
     const video = videoRef.current
     if (!video) return
-
     video.muted = !video.muted
     setIsMuted(video.muted)
   }
 
-  // Fullscreen functionality
   const toggleFullscreen = () => {
     const container = videoContainerRef.current
     if (!container) return
-
     if (!document.fullscreenElement) {
-      if (container.requestFullscreen) {
-        container.requestFullscreen()
-      } else if ((container as any).webkitRequestFullscreen) {
-        ;(container as any).webkitRequestFullscreen()
-      } else if ((container as any).msRequestFullscreen) {
-        ;(container as any).msRequestFullscreen()
-      }
+      if (container.requestFullscreen) container.requestFullscreen()
+      else if ((container as any).webkitRequestFullscreen) (container as any).webkitRequestFullscreen()
     } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen()
-      } else if ((document as any).webkitExitFullscreen) {
-        ;(document as any).webkitExitFullscreen()
-      } else if ((document as any).msExitFullscreen) {
-        ;(document as any).msExitFullscreen()
-      }
+      if (document.exitFullscreen) document.exitFullscreen()
+      else if ((document as any).webkitExitFullscreen) (document as any).webkitExitFullscreen()
     }
   }
 
-  // Seek functionality
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const container = progressContainerRef.current
     const video = videoRef.current
     if (!container || !video) return
-
     const rect = container.getBoundingClientRect()
     const pos = (e.clientX - rect.left) / rect.width
     video.currentTime = pos * video.duration
@@ -125,13 +133,30 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
 
   return (
     <div ref={videoContainerRef} className="relative w-full h-full">
-      <video ref={videoRef} className="w-full h-full object-cover" playsInline muted>
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* video element – src is set dynamically, never via <source> */}
+      <video
+        ref={videoRef}
+        preload="none"
+        className="w-full h-full object-cover"
+        playsInline
+        muted
+      />
 
       {/* Holographic Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+
+      {/* Mobile tap-to-load overlay – shown until the user taps play */}
+      {isMobile && !srcLoaded && (
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 cursor-pointer z-20"
+          onClick={loadAndPlay}
+        >
+          <div className="w-16 h-16 rounded-full bg-black/40 border-2 border-fuchsia-500 flex items-center justify-center shadow-[0_0_20px_rgba(219,39,119,0.5)]">
+            <Play className="w-8 h-8 text-fuchsia-500 ml-1" />
+          </div>
+          <p className="text-white/60 text-xs mt-3 tracking-wider uppercase">Tap to play</p>
+        </div>
+      )}
 
       {/* Video Controls */}
       <div className="absolute bottom-4 left-4 right-4 z-40">
@@ -144,7 +169,7 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
           <div
             className="h-full bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-purple-500 rounded-full"
             style={{ width: `${progress}%` }}
-          ></div>
+          />
         </div>
 
         <div className="flex justify-between items-center">
@@ -161,7 +186,6 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
           </button>
 
           <div className="flex space-x-3">
-            
             <button
               onClick={toggleFullscreen}
               className="w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-purple-500/50 flex items-center justify-center shadow-[0_0_15px_rgba(147,51,234,0.4)] hover:shadow-[0_0_20px_rgba(147,51,234,0.6)] transition-all"
@@ -175,4 +199,3 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
     </div>
   )
 }
-
