@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import VideoPlayer from "@/components/video-player"
+import BackgroundVideo from "@/components/BackgroundVideo"
 
 export default function VideoHero({ 
   backgroundVideoSrc = "/gaisma-Matze-short.mp4",
@@ -30,16 +31,7 @@ export default function VideoHero({
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 via-fuchsia-500/20 to-purple-500/20 rounded-full blur-3xl animate-slow-pulse"></div>
         <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 via-fuchsia-500/20 to-cyan-500/20 rounded-full blur-3xl animate-slow-pulse delay-1000"></div>
 
-        <video
-          id="background-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-40"
-        >
-          <source src={backgroundVideoSrc} type="video/mp4" />
-        </video>
+        <BackgroundVideo src={backgroundVideoSrc} />
       </div>
 
       {/* Video Player (Centered) */}
