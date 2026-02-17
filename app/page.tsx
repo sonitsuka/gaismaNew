@@ -16,6 +16,19 @@ const LATEST_NEWS = [
     venue: "Wagenhallen Stuttgart",
     tag: "other",
   },
+  // April 2026
+  {
+    date: "11.04.2026",
+    title: "Live in Theaterhaus with Band and Dancers",
+    venue: "Theaterhaus Stuttgart",
+    tag: "live",
+  },
+  {
+    date: "18.04.2026",
+    title: "Live Lauter Festival Zurich",
+    venue: "Zurich",
+    tag: "live",
+  },
 ];
 
 
