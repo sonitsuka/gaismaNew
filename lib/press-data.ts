@@ -24,7 +24,7 @@ export const pressItems: PressItem[] = [
     slug: "stuttgarter-zeitung-erst-ballett-dann-beats",
     description:
       "Ein Porträt über GAISMA – Balletttänzerin, Produzentin, Performerin. Die Stuttgarter Zeitung beleuchtet ihren Weg von der klassischen Bühne in die elektronische Musikwelt.",
-    pages: ["/press/stuttgarter-zeitung-erst-ballett-dann-beats/page-1.webp"],
+    pages: ["/page-01.webp"],
   },
 
   // ── 2025 ──────────────────────────────────────────────────────────────
