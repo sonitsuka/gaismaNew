@@ -287,7 +287,7 @@ export default function Home() {
         <h3 className="font-bold text-white group-hover:text-green-500 transition-colors text-sm">
           Ca$hback
         </h3>
-        <p className="text-xs text-white/60">2024</p>
+        <p className="text-xs text-white/60">2025</p>
       </div>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="w-10 h-10 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_10px_rgba(34,197,94,0.5)]">
