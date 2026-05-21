@@ -7,8 +7,23 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import PastShows from "@/components/pastShows"
 
 
-// ------------ Latest data ------------
-const LATEST_NEWS = [
+// ------------ Date helpers ------------
+function parseEventDate(dateStr: string): Date | null {
+  // Range format: "18. - 19. 12.2025" or "20. - 21.11.2025" — use start day
+  const rangeMatch = dateStr.match(/^(\d{1,2})\.\s*-\s*\d{1,2}\.\s*(\d{1,2})\.(\d{4})$/)
+  if (rangeMatch) {
+    return new Date(parseInt(rangeMatch[3], 10), parseInt(rangeMatch[2], 10) - 1, parseInt(rangeMatch[1], 10))
+  }
+  // Standard format: "DD.MM.YYYY"
+  const stdMatch = dateStr.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/)
+  if (stdMatch) {
+    return new Date(parseInt(stdMatch[3], 10), parseInt(stdMatch[2], 10) - 1, parseInt(stdMatch[1], 10))
+  }
+  return null
+}
+
+// ------------ All events (upcoming + past combined) ------------
+const ALL_EVENTS = [
   // February 2026
   {
     date: "28.02.2026",
@@ -29,11 +44,7 @@ const LATEST_NEWS = [
     venue: "Zurich",
     tag: "live",
   },
-];
 
-
-
-const ALL_SHOWS = [
   // January 2026
   {
     date: "30.01.2026",
@@ -131,7 +142,23 @@ const ALL_SHOWS = [
 ];
 
 export default function Home() {
-;
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+
+  const upcomingShows = ALL_EVENTS
+    .filter(e => { const d = parseEventDate(e.date); return d !== null && d > today })
+    .sort((a, b) => parseEventDate(a.date)!.getTime() - parseEventDate(b.date)!.getTime())
+
+  const pastShows = ALL_EVENTS
+    .filter(e => { const d = parseEventDate(e.date); return d === null || d <= today })
+    .sort((a, b) => {
+      const da = parseEventDate(a.date)
+      const db = parseEventDate(b.date)
+      if (!da && !db) return 0
+      if (!da) return 1
+      if (!db) return -1
+      return db.getTime() - da.getTime()
+    })
 
   return (
 
@@ -344,23 +371,25 @@ export default function Home() {
           
         </div>
 
-        <div>
-          <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            Upcoming <span className="text-blue-500">Shows</span>
-            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
-          </h2>
-          <ul className="grid gap-3">
-            {LATEST_NEWS.map((n, i) => (
-              <li key={i} className="bg-black border border-white/10 hover:border-blue-400/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start">
-                <p className="text-blue-500 text-sm mb-2 sm:mb-0">{n.date}</p>
-                <p className="text-white/90 sm:ml-6">{n.title}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {upcomingShows.length > 0 && (
+          <div>
+            <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
+              Upcoming <span className="text-blue-500">Shows</span>
+              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
+            </h2>
+            <ul className="grid gap-3">
+              {upcomingShows.map((n, i) => (
+                <li key={i} className="bg-black border border-white/10 hover:border-blue-400/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start">
+                  <p className="text-blue-500 text-sm mb-2 sm:mb-0">{n.date}</p>
+                  <p className="text-white/90 sm:ml-6">{n.title}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         { /* Past Shows Section Preview */}
         <div className="mt-16">
-          <PastShows shows={ALL_SHOWS} />
+          <PastShows shows={pastShows} />
         </div>
 
         {/* About Section Preview */}
