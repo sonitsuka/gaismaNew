@@ -115,7 +115,7 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
 
       <div className="p-4">
         <a href={url} target="_blank" rel="noopener noreferrer" className="group/title">
-          <h3 className="text-base sm:text-lg font-bold mb-2 group-hover/title:text-blue-400 flex items-center">
+          <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover/title:text-blue-400 flex items-center">
             {title}
             <ExternalLink className="ml-2 h-4 w-4 text-blue-400 opacity-70" />
           </h3>
