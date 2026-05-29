@@ -9,6 +9,13 @@ export default function PerformancePage() {
       category: "Performance",
       videos: [
         {
+          title: "AIKE 3000 - Eingefroren",
+          thumbnail: "https://img.youtube.com/vi/Trz1IDfL4Kg/0.jpg",
+          url: "https://www.youtube.com/watch?v=Trz1IDfL4Kg",
+          videoId: "Trz1IDfL4Kg",
+          credits: "Performance: Alisa Scetinina\nKamera: Milo Wiersdorff\nSchnitt: Nicolas Ohnesorge",
+        },
+        {
           title: "Die Seele am Faden – Tanzperformance mit Friedemann Vogel nach Heinrich von Kleist",
           thumbnail: "https://img.youtube.com/vi/iM1_UlsykWw/0.jpg",
           url: "https://www.youtube.com/watch?v=iM1_UlsykWw",
