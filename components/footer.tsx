@@ -14,9 +14,7 @@ export default function Footer() {
           <div className="social flex flex-wrap items-center gap-2">
             {/* Email (Gray) */}
             <a
-              href="/contact.pdf"
-              target="_blank"
-              rel="noreferrer"
+              href="/contact"
               className="text-gray-300 hover:text-gray-100 transition-colors"
             >
               <svg

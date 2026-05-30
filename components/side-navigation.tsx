@@ -15,7 +15,7 @@ export default function SideNavigation() {
     { name: "Performance", path: "/performance", color: "#3399ff", icon: Film }, // Film icon for performance art/dance/cinema
     { name: "Curation", path: "/curation", color: "#9966ff", icon: Palette }, 
     { name: "Press", path: "/press", color: "#cc33ff", icon: Newspaper },
-    { name: "Contact", path: "mailto:gaisma@posteo.de", color: "#00cccc", icon: Mail, isExternal: true }, 
+    { name: "Contact", path: "/contact", color: "#00cccc", icon: Mail },
   ]
 
   return (
