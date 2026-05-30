@@ -15,7 +15,7 @@ export default function SideNavigation() {
     { name: "Performance", path: "/performance", color: "#3399ff", icon: Film }, // Film icon for performance art/dance/cinema
     { name: "Curation", path: "/curation", color: "#9966ff", icon: Palette }, 
     { name: "Press", path: "/press", color: "#cc33ff", icon: Newspaper },
-    { name: "Contact", path: "mailto:gaisma@posteo.de", color: "#00cccc", icon: Mail, isExternal: true }, 
+    { name: "Contact", path: "/contact.pdf", color: "#00cccc", icon: Mail, isExternal: true },
   ]
 
   return (
@@ -30,6 +30,8 @@ export default function SideNavigation() {
               <a
                 key={item.name}
                 href={item.path}
+                target="_blank"
+                rel="noreferrer"
                 className="text-white/60 transition-colors relative group"
                 style={{
                   color: "rgba(255, 255, 255, 0.6)",
