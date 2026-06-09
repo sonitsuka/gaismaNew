@@ -15,7 +15,7 @@ export default function Footer() {
             {/* Email (Gray) */}
             <a
               href="/contact"
-              className="text-gray-300 hover:text-gray-100 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export default function Footer() {
               href="https://www.youtube.com/channel/UC4xlthzyUhxk7mI1pCV7W6w"
               target="_blank"
               rel="noreferrer"
-              className="text-red-500 hover:text-red-300 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ export default function Footer() {
               href="https://soundcloud.com/gaisma"
               target="_blank"
               rel="noreferrer"
-              className="text-orange-500 hover:text-orange-300 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ export default function Footer() {
               href="https://soundcloud.com/gaisma/sets/klang-parfuem-lobby-radio?si=83873f0cdb5e473db623ddd8f9a89203&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
               target="_blank"
               rel="noreferrer"
-              className="text-amber-400 hover:text-amber-300 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ export default function Footer() {
               href="https://open.spotify.com/artist/01EmU1Segbe63mUG2eyJ58"
               target="_blank"
               rel="noreferrer"
-              className="text-green-500 hover:text-green-300 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ export default function Footer() {
               href="https://gaisma.bandcamp.com/music"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-400 hover:text-blue-200 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@ export default function Footer() {
               href="https://www.facebook.com/gaisma.lovin"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-500 hover:text-blue-300 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ export default function Footer() {
               href="https://www.instagram.com/__gaisma__/"
               target="_blank"
               rel="noreferrer"
-              className="text-pink-500 hover:text-pink-300 transition-colors"
+              className="text-white hover:text-white/70 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
