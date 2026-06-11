@@ -39,12 +39,6 @@ export default function MusicPage() {
           href: "https://open.spotify.com/intl-de/album/2bOnhokrEQOnHuvl8H6oZn",
           alt: "Empathy",
         },
-        {
-          title: "Monarchy",
-          image: "/monarchy.jpg",
-          href: "https://open.spotify.com/intl-de/album/0ZLCVkecn8E0h0RXuPbgpi",
-          alt: "Monarchy",
-        },
       ],
     },
     {
