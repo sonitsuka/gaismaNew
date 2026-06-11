@@ -86,6 +86,12 @@ export default function MusicPage() {
       category: "Radio Show",
       items: [
         {
+          title: "LAF Podcast 052 - GAISMA",
+          image: "/klang_parfum.png",
+          href: "https://soundcloud.com/laf-musik/laf-podcast-052-gaisma",
+          alt: "LAF Podcast 052 - GAISMA",
+        },
+        {
           title: "Mutant Radio 13.12.2022",
           image: "https://i1.sndcdn.com/artworks-zCmzohVQkIyQ25zK-ALphPQ-t500x500.jpg",
           href: "https://soundcloud.com/mutantradio/gaisma-13122022",
