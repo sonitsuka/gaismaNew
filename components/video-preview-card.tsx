@@ -60,7 +60,7 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
 
   return (
     <div
-      className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-colors max-w-md w-full mx-auto"
+      className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-white/30 transition-colors max-w-md w-full mx-auto"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -98,7 +98,7 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
           {/* For other video sources or fallback */}
           {isHovering && !isYouTube && !isVimeo && (
             <div className="absolute inset-0 flex items-center justify-center bg-black">
-              <p className="text-blue-500">Preview not available</p>
+              <p className="text-white">Preview not available</p>
             </div>
           )}
 
@@ -106,8 +106,8 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
 
           {/* Play button overlay */}
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-black/70 border border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-              <Play className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500 fill-blue-500" />
+            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+              <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white fill-white" />
             </div>
           </div>
         </div>
@@ -115,9 +115,9 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
 
       <div className="p-4">
         <a href={url} target="_blank" rel="noopener noreferrer" className="group/title">
-          <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover/title:text-blue-400 flex items-center">
+          <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover/title:text-white/70 flex items-center">
             {title}
-            <ExternalLink className="ml-2 h-4 w-4 text-blue-400 opacity-70" />
+            <ExternalLink className="ml-2 h-4 w-4 text-white/70 opacity-70" />
           </h3>
         </a>
         <div className="text-xs sm:text-sm text-gray-400 whitespace-pre-line">{credits}</div>

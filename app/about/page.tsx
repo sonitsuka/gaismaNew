@@ -74,7 +74,7 @@ export default function AboutPage() {
                 href="https://drive.google.com/file/d/1kIYDlgAiEeDAK7c9NgAUKdYbKuUD8Ire/view"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block border border-orange-500 text-orange-500 hover:bg-orange-500/10 px-5 py-3 text-sm uppercase tracking-wider transition-colors"
+                className="inline-block border border-white text-white hover:bg-white/10 px-5 py-3 text-sm uppercase tracking-wider transition-colors"
               >
                 View My CV
               </a>

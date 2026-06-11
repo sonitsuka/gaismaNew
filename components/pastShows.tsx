@@ -21,17 +21,17 @@ export default function PastShows({ shows }: PastShowsProps) {
   return (
     <div>
       <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-        <span className="text-blue-500">Shows</span>
-        <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
+        <span className="text-white">Shows</span>
+        <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent"></span>
       </h2>
 
       <ul className="grid gap-3">
         {visibleShows.map((n, i) => (
           <li
             key={i}
-            className="bg-black border border-white/10 hover:border-blue-400/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start"
+            className="bg-black border border-white/10 hover:border-white/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start"
           >
-            <p className="text-blue-500 text-sm mb-2 sm:mb-0">{n.date}</p>
+            <p className="text-white text-sm mb-2 sm:mb-0">{n.date}</p>
             <p className="text-white/90 sm:ml-6">
               {n.title}
               {n.venue ? ` — ${n.venue}` : ""}
@@ -45,7 +45,7 @@ export default function PastShows({ shows }: PastShowsProps) {
           <button
             type="button"
             onClick={() => setShowAll((prev) => !prev)}
-            className="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500/10 px-4 py-2 text-xs uppercase tracking-wider transition-colors"
+            className="bg-transparent border border-white text-white hover:bg-white/10 px-4 py-2 text-xs uppercase tracking-wider transition-colors"
           >
             {showAll ? "Show less" : "Read more"}
           </button>

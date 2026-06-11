@@ -151,8 +151,8 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
           className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 cursor-pointer z-20"
           onClick={loadAndPlay}
         >
-          <div className="w-16 h-16 rounded-full bg-black/40 border-2 border-fuchsia-500 flex items-center justify-center shadow-[0_0_20px_rgba(219,39,119,0.5)]">
-            <Play className="w-8 h-8 text-fuchsia-500 ml-1" />
+          <div className="w-16 h-16 rounded-full bg-black/40 border-2 border-white flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+            <Play className="w-8 h-8 text-white ml-1" />
           </div>
           <p className="text-white/60 text-xs mt-3 tracking-wider uppercase">Tap to play</p>
         </div>
@@ -167,7 +167,7 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
           className="w-full h-2 bg-white/10 rounded-full mb-4 overflow-hidden cursor-pointer backdrop-blur-sm"
         >
           <div
-            className="h-full bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-purple-500 rounded-full"
+            className="h-full bg-gradient-to-r from-white/60 via-white/80 to-white rounded-full"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -175,23 +175,23 @@ export default function VideoPlayer({ videoSrc }: VideoPlayerProps) {
         <div className="flex justify-between items-center">
           <button
             onClick={togglePlay}
-            className="w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-fuchsia-500/50 flex items-center justify-center shadow-[0_0_15px_rgba(219,39,119,0.4)] hover:shadow-[0_0_20px_rgba(219,39,119,0.6)] transition-all"
+            className="w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-white/50 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] transition-all"
             aria-label={isPlaying ? "Pause video" : "Play video"}
           >
             {isPlaying ? (
-              <Pause className="w-6 h-6 text-fuchsia-500" />
+              <Pause className="w-6 h-6 text-white" />
             ) : (
-              <Play className="w-6 h-6 text-fuchsia-500 ml-1" />
+              <Play className="w-6 h-6 text-white ml-1" />
             )}
           </button>
 
           <div className="flex space-x-3">
             <button
               onClick={toggleFullscreen}
-              className="w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-purple-500/50 flex items-center justify-center shadow-[0_0_15px_rgba(147,51,234,0.4)] hover:shadow-[0_0_20px_rgba(147,51,234,0.6)] transition-all"
+              className="w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-white/50 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] transition-all"
               aria-label="Toggle fullscreen"
             >
-              <Maximize className="w-5 h-5 text-purple-500" />
+              <Maximize className="w-5 h-5 text-white" />
             </button>
           </div>
         </div>
