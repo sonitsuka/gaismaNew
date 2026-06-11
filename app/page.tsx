@@ -25,7 +25,7 @@ function parseEventDate(dateStr: string): Date | null {
 // ------------ All events (upcoming + past combined) ------------
 const ALL_EVENTS = [
   // August 2026
-  { date: "01.08.2026", title: "GAISMA Live — Marienplatz Festival", venue: "Marienplatz Festival", tag: "live" },
+  { date: "01.08.2026", title: "Marienplatz Festival - Live", venue: "Marienplatz Festival", tag: "live" },
 
   // July 2026
   {
