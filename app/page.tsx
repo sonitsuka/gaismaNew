@@ -175,7 +175,7 @@ export default function Home() {
 
     <div className="bg-black text-white min-h-screen">
       <AnnouncementBar 
-        message="New EP Dumped in Paris"
+        message="Latest EP Dumped in Paris"
         releaseDate=""
         preSaveHref="https://artists.landr.com/057829699953"
         showPreSave={true}
