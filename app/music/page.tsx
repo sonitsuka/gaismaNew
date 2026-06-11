@@ -87,7 +87,7 @@ export default function MusicPage() {
       items: [
         {
           title: "LAF Podcast 052 - GAISMA",
-          image: "/klang_parfum.png",
+          image: "https://i1.sndcdn.com/visuals-000043666335-IWVW8f-original.jpg",
           href: "https://soundcloud.com/laf-musik/laf-podcast-052-gaisma",
           alt: "LAF Podcast 052 - GAISMA",
         },
