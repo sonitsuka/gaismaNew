@@ -16,18 +16,6 @@ export default function MusicPage() {
           alt: "dumped In Paris",
         },
         {
-          title: "Verpiss Dich",
-          image: "/verpissDich.jpg",
-          href: "https://artists.landr.com/057829708549",
-          alt: "Verpiss Dich",
-        },
-        {
-          title: "Ca$hback",
-          image: "/cachback.jpeg",
-          href: "https://artists.landr.com/057829514119",
-          alt: "Ca$hback",
-        },
-        {
           title: "Motherland",
           image: "/gaisma_dexterEP.jpg",
           href: "https://artists.landr.com/055855682215",
@@ -72,37 +60,20 @@ export default function MusicPage() {
       ],
     },
     {
-      category: "DJ Sets",
+      category: "Radio Show",
       items: [
+        {
+          title: "LAF Podcast 052 - GAISMA",
+          image: "https://i1.sndcdn.com/visuals-000043666335-IWVW8f-original.jpg",
+          href: "https://soundcloud.com/laf-musik/laf-podcast-052-gaisma",
+          alt: "LAF Podcast 052 - GAISMA",
+        },
         {
           title: "Mutant Radio 13.12.2022",
           image: "https://i1.sndcdn.com/artworks-zCmzohVQkIyQ25zK-ALphPQ-t500x500.jpg",
           href: "https://soundcloud.com/mutantradio/gaisma-13122022",
           alt: "Mutant Radio 13.12.2022",
         },
-        {
-          title: "Umbau/ Stuttgart21/House",
-          image: "https://i1.sndcdn.com/artworks-000634171918-fbk03p-t500x500.jpg",
-          href: "https://soundcloud.com/gaisma/umbaustuttgart21house?ref=clipboard&p=a&c=1",
-          alt: "Umbau/ Stuttgart21/House",
-        },
-        {
-          title: "House Party",
-          image: "https://i1.sndcdn.com/artworks-000678411697-sm98iw-t500x500.jpg",
-          href: "https://soundcloud.com/gaisma/house-party-2?ref=clipboard&p=a&c=1",
-          alt: "House Party",
-        },
-        {
-          title: "Fruit Salad - Brombeere",
-          image: "https://i1.sndcdn.com/artworks-000380865012-ucttl1-t500x500.jpg",
-          href: "https://soundcloud.com/gaisma/fruit-salad-brombeere?ref=clipboard&p=a&c=1",
-          alt: "Fruit Salad - Brombeere",
-        },
-      ],
-    },
-    {
-      category: "Radio Show",
-      items: [
         {
           title: "Viola {Klang Parfüm}",
           image: "https://i1.sndcdn.com/artworks-7GTYzvqqVXi50Nqz-YhW2ag-t500x500.jpg",

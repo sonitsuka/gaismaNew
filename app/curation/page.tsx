@@ -20,6 +20,103 @@ export default function CurationPage() {
 
       {/* Content - improved padding for mobile */}
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
+        {/* Festival: We Are The Future */}
+        <div className="mb-16 md:mb-24">
+          {/* Festival Header */}
+          <div className="relative mb-8 md:mb-12">
+            <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-white">Festival</h2>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 leading-tight">
+                We Are The Future
+              </h3>
+            </div>
+            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
+          </div>
+
+          {/* Festival Content */}
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+            <div className="md:w-1/2 space-y-6">
+              <div className="text-sm sm:text-base text-white/80 space-y-4">
+                <p>
+                  Family Festival in the German city of Waiblingen, offering Skate, BMX, Streetboard, Hip - Hop,
+                  Graffiti, Parkour, Fashion and Recycling Workshops, as well as Music Shows and Sport contests.
+                </p>
+              </div>
+
+              <a
+                href="https://www.wearethefuture-festival.de"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(168,85,247,0.2)]"
+              >
+                Visit Festival Website
+              </a>
+            </div>
+
+            <div className="md:w-1/2 flex justify-center">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <Image
+                  src="/weAretheFutureFes_logo.jpg"
+                  alt="We Are The Future Festival Logo"
+                  width={500}
+                  height={500}
+                  className="relative w-full max-w-md object-contain rounded-lg border border-purple-500/30"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Klang Parfüm Radio Show Section */}
+        <div className="mb-16 md:mb-24">
+          <div className="relative mb-8 md:mb-12">
+            <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-white">Radio</h2>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 leading-tight">
+                Klang Parfüm Radio Show
+              </h3>
+            </div>
+            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+  <div className="md:w-1/2 space-y-6">
+    <div className="text-sm sm:text-base text-white/80 space-y-4">
+      <p>
+        How to connect key senses that trigger our memories and emotions? That is how the concept of the “Klang Parfüm” has come to life. Diverse digital or vinyl set’s, within many different genre categories, lets you experience an emotional state, that is comparable with the unknown fragrance.
+      </p>
+    </div>
+
+    <a
+      href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L&ab_channel=LobbyRadio"
+      target="_blank"
+      rel="noreferrer"
+      className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+    >
+      Listen on YouTube
+    </a>
+  </div>
+
+  <div className="md:w-1/2 flex justify-center">
+    <a
+      href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L"
+      target="_blank"
+      rel="noreferrer"
+      className="rounded-lg overflow-hidden border border-purple-500/30 shadow-md hover:shadow-lg transition"
+    >
+      <img
+        src="https://img.youtube.com/vi/wFM9VDz1308/hqdefault.jpg"
+        alt="Klang Parfüm YouTube Thumbnail"
+        className="w-64 h-auto object-cover rounded-lg"
+      />
+    </a>
+  </div>
+</div>
+
+        </div>
+
         {/* Exhibition: The Sacrifice Of Your Little Self */}
         <div className="mb-16 md:mb-24">
           {/* Exhibition Header */}
@@ -149,103 +246,6 @@ export default function CurationPage() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Festival: We Are The Future */}
-        <div className="mb-16 md:mb-24">
-          {/* Festival Header */}
-          <div className="relative mb-8 md:mb-12">
-            <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
-              <h2 className="text-xl sm:text-2xl font-bold text-white">Festival</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 leading-tight">
-                We Are The Future
-              </h3>
-            </div>
-            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
-          </div>
-
-          {/* Festival Content */}
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-            <div className="md:w-1/2 space-y-6">
-              <div className="text-sm sm:text-base text-white/80 space-y-4">
-                <p>
-                  Family Festival in the German city of Waiblingen, offering Skate, BMX, Streetboard, Hip - Hop,
-                  Graffiti, Parkour, Fashion and Recycling Workshops, as well as Music Shows and Sport contests.
-                </p>
-              </div>
-
-              <a
-                href="https://www.wearethefuture-festival.de"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(168,85,247,0.2)]"
-              >
-                Visit Festival Website
-              </a>
-            </div>
-
-            <div className="md:w-1/2 flex justify-center">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                <Image
-                  src="/weAretheFutureFes_logo.jpg"
-                  alt="We Are The Future Festival Logo"
-                  width={500}
-                  height={500}
-                  className="relative w-full max-w-md object-contain rounded-lg border border-purple-500/30"
-                />
-              </div>
-            </div>
-          </div>
-          
-        </div>
-
-        {/* Klang Parfüm Radio Show Section */}
-        <div className="mb-16 md:mb-24">
-          <div className="relative mb-8 md:mb-12">
-            <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
-              <h2 className="text-xl sm:text-2xl font-bold text-white">Radio</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 leading-tight">
-                Klang Parfüm Radio Show
-              </h3>
-            </div>
-            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-  <div className="md:w-1/2 space-y-6">
-    <div className="text-sm sm:text-base text-white/80 space-y-4">
-      <p>
-        How to connect key senses that trigger our memories and emotions? That is how the concept of the “Klang Parfüm” has come to life. Diverse digital or vinyl set’s, within many different genre categories, lets you experience an emotional state, that is comparable with the unknown fragrance.
-      </p>
-    </div>
-
-    <a
-      href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L&ab_channel=LobbyRadio"
-      target="_blank"
-      rel="noreferrer"
-      className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
-    >
-      Listen on YouTube
-    </a>
-  </div>
-
-  <div className="md:w-1/2 flex justify-center">
-    <a
-      href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L"
-      target="_blank"
-      rel="noreferrer"
-      className="rounded-lg overflow-hidden border border-purple-500/30 shadow-md hover:shadow-lg transition"
-    >
-      <img
-        src="https://img.youtube.com/vi/wFM9VDz1308/hqdefault.jpg"
-        alt="Klang Parfüm YouTube Thumbnail"
-        className="w-64 h-auto object-cover rounded-lg"
-      />
-    </a>
-  </div>
-</div>
-
         </div>
       </div>
     </div>
