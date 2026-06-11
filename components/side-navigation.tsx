@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, User, Music, Video, Film, Palette, Newspaper, Mail } from "lucide-react"
+import { Home, User, Music, Video, Film, Palette, Newspaper, Mail, ChevronRight, ChevronLeft } from "lucide-react"
 
 export default function SideNavigation() {
   const pathname = usePathname()
@@ -22,24 +22,47 @@ export default function SideNavigation() {
 
   return (
     <>
-      {/* Mobile backdrop: tap to close the drawer */}
+      {/* Mobile backdrop: tap anywhere to close the drawer */}
       {isOpen && (
         <div
-          className="md:hidden fixed inset-0 z-40 bg-black/40"
+          className="md:hidden fixed inset-0 z-40 bg-black/50"
           onClick={() => setIsOpen(false)}
         />
       )}
 
+      {/* Mobile open zone — tapping anywhere in the left ~1cm strip slides the bar in */}
+      {!isOpen && (
+        <button
+          type="button"
+          onClick={() => setIsOpen(true)}
+          aria-label="Open menu"
+          className="md:hidden fixed left-0 top-0 z-40 h-[calc(100vh-50px)] w-10 flex items-center justify-start"
+        >
+          <span className="flex items-center justify-center h-16 w-7 bg-black/90 backdrop-blur-md border border-l-0 border-white/20 rounded-r-md text-white/70">
+            <ChevronRight size={18} />
+          </span>
+        </button>
+      )}
+
+      {/* Mobile close tab — sits at the open drawer's edge */}
+      {isOpen && (
+        <button
+          type="button"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close menu"
+          className="md:hidden fixed top-1/2 -translate-y-1/2 left-16 z-50 h-16 w-7 flex items-center justify-center bg-black/90 backdrop-blur-md border border-l-0 border-white/20 rounded-r-md text-white/70"
+        >
+          <ChevronLeft size={18} />
+        </button>
+      )}
+
+      {/* Sidebar — hidden off-screen on mobile, always visible on desktop */}
       <div
-        onClick={() => setIsOpen((open) => !open)}
-        className={`fixed top-0 left-0 h-[calc(100vh-50px)] w-16 md:w-20 bg-black/90 backdrop-blur-md z-50 border-r border-white/20 flex flex-col py-8 transition-transform duration-300 ease-in-out cursor-pointer md:cursor-default md:translate-x-0 ${
-          isOpen ? "translate-x-0" : "-translate-x-12"
+        className={`fixed top-0 left-0 h-[calc(100vh-50px)] w-16 md:w-20 bg-black/90 backdrop-blur-md z-50 border-r border-white/20 flex flex-col py-8 transition-transform duration-300 ease-in-out md:translate-x-0 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <nav
-          className="flex flex-col items-center space-y-8 mt-4 cursor-default"
-          onClick={(e) => e.stopPropagation()}
-        >
+        <nav className="flex flex-col items-center space-y-8 mt-4">
           {navItems.map((item) => {
             const isActive = pathname === item.path
 
@@ -47,15 +70,13 @@ export default function SideNavigation() {
               <Link
                 key={item.name}
                 href={item.path}
+                onClick={() => setIsOpen(false)}
                 className="text-white/60 transition-colors relative group"
                 style={{
                   color: isActive ? item.color : "rgba(255, 255, 255, 0.6)",
                 }}
               >
-                <span className="text-xs uppercase tracking-wider hidden md:block">
-                  {item.icon ? <item.icon size={16} /> : item.name[0]}
-                </span>
-                <span className="text-xs uppercase tracking-wider block md:hidden">
+                <span className="text-xs uppercase tracking-wider block">
                   {item.icon ? <item.icon size={16} /> : item.name[0]}
                 </span>
                 <span
