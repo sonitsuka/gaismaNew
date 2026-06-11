@@ -16,18 +16,6 @@ export default function MusicPage() {
           alt: "dumped In Paris",
         },
         {
-          title: "Verpiss Dich",
-          image: "/verpissDich.jpg",
-          href: "https://artists.landr.com/057829708549",
-          alt: "Verpiss Dich",
-        },
-        {
-          title: "Ca$hback",
-          image: "/cachback.jpeg",
-          href: "https://artists.landr.com/057829514119",
-          alt: "Ca$hback",
-        },
-        {
           title: "Motherland",
           image: "/gaisma_dexterEP.jpg",
           href: "https://artists.landr.com/055855682215",
