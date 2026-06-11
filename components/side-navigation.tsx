@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Home, User, Music, Video, Film, Palette, Newspaper, Mail, ChevronRight, ChevronLeft } from "lucide-react"
@@ -7,6 +7,40 @@ import { Home, User, Music, Video, Film, Palette, Newspaper, Mail, ChevronRight,
 export default function SideNavigation() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+
+  // Swipe gestures (mobile): swipe right from the left edge opens, swipe left closes
+  useEffect(() => {
+    let startX = 0
+    let startY = 0
+    let tracking = false
+
+    const onTouchStart = (e: TouchEvent) => {
+      const touch = e.touches[0]
+      startX = touch.clientX
+      startY = touch.clientY
+      // Only begin tracking near the left edge when closed, or anywhere when open
+      tracking = isOpen || startX < 40
+    }
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (!tracking) return
+      tracking = false
+      const touch = e.changedTouches[0]
+      const dx = touch.clientX - startX
+      const dy = touch.clientY - startY
+      // Ignore mostly-vertical swipes (scrolling)
+      if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx)) return
+      if (dx > 0 && startX < 40) setIsOpen(true)
+      else if (dx < 0 && isOpen) setIsOpen(false)
+    }
+
+    window.addEventListener("touchstart", onTouchStart, { passive: true })
+    window.addEventListener("touchend", onTouchEnd, { passive: true })
+    return () => {
+      window.removeEventListener("touchstart", onTouchStart)
+      window.removeEventListener("touchend", onTouchEnd)
+    }
+  }, [isOpen])
 
   // Rainbow colors for navigation with appropriate icons
   const navItems = [
