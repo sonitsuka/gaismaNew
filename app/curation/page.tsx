@@ -12,7 +12,7 @@ export default function CurationPage() {
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 md:px-8">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white">
-              <span className="text-purple-500">Curation</span>
+              <span className="text-white">Curation</span>
             </h1>
           </div>
         </div>
@@ -26,11 +26,11 @@ export default function CurationPage() {
           <div className="relative mb-8 md:mb-12">
             <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
               <h2 className="text-xl sm:text-2xl font-bold text-white">Festival</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 leading-tight">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                 We Are The Future
               </h3>
             </div>
-            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
+            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-white/50 to-transparent"></div>
           </div>
 
           {/* Festival Content */}
@@ -47,7 +47,7 @@ export default function CurationPage() {
                 href="https://www.wearethefuture-festival.de"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(168,85,247,0.2)]"
+                className="inline-block bg-white/10 border border-white/30 rounded-lg px-6 py-3 text-white hover:bg-white/20 transition-colors duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
               >
                 Visit Festival Website
               </a>
@@ -55,13 +55,13 @@ export default function CurationPage() {
 
             <div className="md:w-1/2 flex justify-center">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div className="absolute -inset-1 bg-white/20 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                 <Image
                   src="/weAretheFutureFes_logo.jpg"
                   alt="We Are The Future Festival Logo"
                   width={500}
                   height={500}
-                  className="relative w-full max-w-md object-contain rounded-lg border border-purple-500/30"
+                  className="relative w-full max-w-md object-contain rounded-lg border border-white/30"
                 />
               </div>
             </div>
@@ -74,11 +74,11 @@ export default function CurationPage() {
           <div className="relative mb-8 md:mb-12">
             <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
               <h2 className="text-xl sm:text-2xl font-bold text-white">Radio</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 leading-tight">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                 Klang Parfüm Radio Show
               </h3>
             </div>
-            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
+            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-white/50 to-transparent"></div>
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
@@ -93,7 +93,7 @@ export default function CurationPage() {
       href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L&ab_channel=LobbyRadio"
       target="_blank"
       rel="noreferrer"
-      className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-lg px-6 py-3 text-purple-300 hover:text-white hover:bg-purple-800/40 transition-colors duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+      className="inline-block bg-white/10 border border-white/30 rounded-lg px-6 py-3 text-white hover:bg-white/20 transition-colors duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
     >
       Listen on YouTube
     </a>
@@ -104,7 +104,7 @@ export default function CurationPage() {
       href="https://www.youtube.com/watch?v=wFM9VDz1308&list=PLDUsCsePpYHRQF_h1V3xkId7Q-zH4bx4L"
       target="_blank"
       rel="noreferrer"
-      className="rounded-lg overflow-hidden border border-purple-500/30 shadow-md hover:shadow-lg transition"
+      className="rounded-lg overflow-hidden border border-white/30 shadow-md hover:shadow-lg transition"
     >
       <img
         src="https://img.youtube.com/vi/wFM9VDz1308/hqdefault.jpg"
@@ -123,11 +123,11 @@ export default function CurationPage() {
           <div className="relative mb-8 md:mb-12">
             <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
               <h2 className="text-xl sm:text-2xl font-bold text-white">Exhibition</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 leading-tight">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                 The Sacrifice Of Your Little Self
               </h3>
             </div>
-            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
+            <div className="absolute -bottom-3 left-0 w-full md:w-2/3 h-px bg-gradient-to-r from-white/50 to-transparent"></div>
           </div>
 
           {/* Main Exhibition Content */}
@@ -148,8 +148,8 @@ export default function CurationPage() {
               </div>
 
               {/* Credits Box */}
-              <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4 md:p-6 backdrop-blur-sm">
-                <h4 className="text-base sm:text-lg font-semibold text-purple-300 mb-3">Artists & Bands</h4>
+              <div className="bg-white/10 border border-white/30 rounded-lg p-4 md:p-6 backdrop-blur-sm">
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-3">Artists & Bands</h4>
                 <div className="space-y-1.5 text-sm sm:text-base">
                   <p>
                     <span className="font-medium">Ivan Zozulya</span> - Painting
@@ -168,20 +168,20 @@ export default function CurationPage() {
                     <span className="font-medium">Diva Daneben</span>
                   </p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-purple-500/30">
-                  <p className="text-sm text-purple-300">Project funded by the city of Stuttgart.</p>
+                <div className="mt-4 pt-3 border-t border-white/30">
+                  <p className="text-sm text-white/70">Project funded by the city of Stuttgart.</p>
                 </div>
               </div>
 
               {/* Poster */}
               <div className="relative aspect-[3/4] sm:aspect-auto sm:h-auto mt-4 md:mt-6 group">
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
                 <Image
                   src="/nectar127_poster.png"
                   alt="Event Poster"
                   width={500}
                   height={700}
-                  className="w-full object-contain border border-purple-500/30 rounded-lg shadow-[0_0_15px_rgba(168,85,247,0.2)]"
+                  className="w-full object-contain border border-white/30 rounded-lg shadow-[0_0_15px_rgba(255,255,255,0.2)]"
                 />
                 <p className="text-xs text-gray-400 mt-1">Poster: Ivan Zozulya</p>
               </div>

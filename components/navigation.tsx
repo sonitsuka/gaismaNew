@@ -30,7 +30,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link
             href="/"
-            className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
+            className="text-2xl font-bold text-white"
           >
             GAISMA
           </Link>
@@ -38,7 +38,7 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link key={item.path} href={item.path} className="text-gray-300 hover:text-white transition-colors">
+              <Link key={item.path} href={item.path} className="text-white/70 hover:text-white transition-colors">
                 {item.name}
               </Link>
             ))}
@@ -46,7 +46,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300 hover:text-white"
+            className="md:hidden text-white/70 hover:text-white"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -63,7 +63,7 @@ export default function Navigation() {
               <Link
                 key={item.path}
                 href={item.path}
-                className="text-gray-300 hover:text-white transition-colors py-2 border-b border-gray-800"
+                className="text-white/70 hover:text-white transition-colors py-2 border-b border-gray-800"
                 onClick={closeMenu}
               >
                 {item.name}

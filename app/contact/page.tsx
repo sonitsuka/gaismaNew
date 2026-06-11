@@ -35,13 +35,14 @@ export default function ContactPage() {
           alt="Contact GAISMA"
           fill
           className="object-cover"
+          style={{ objectPosition: "left center" }}
           priority
         />
         {/* Transparent link over GAISMA@POSTEO.DE on mobile */}
         <a
           href="mailto:gaisma@posteo.de"
           className="absolute cursor-pointer"
-          style={{ left: "15%", top: "61%", width: "55%", height: "11%" }}
+          style={{ left: "36%", top: "63%", width: "48%", height: "5%" }}
           aria-label="Email GAISMA"
         />
       </div>

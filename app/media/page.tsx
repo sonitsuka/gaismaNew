@@ -43,7 +43,7 @@ export default function MediaPage() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text">
+      <h1 className="text-3xl md:text-5xl font-bold mb-8 text-white">
         Media
       </h1>
 
@@ -59,7 +59,7 @@ export default function MediaPage() {
                   <span>{item.date}</span>
                 </div>
                 <p className="mb-4">{item.excerpt}</p>
-                <a href={item.link} className="text-purple-400 hover:text-purple-300 inline-flex items-center">
+                <a href={item.link} className="text-white hover:text-white/70 inline-flex items-center">
                   Read full article
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

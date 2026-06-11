@@ -25,7 +25,7 @@ function parseEventDate(dateStr: string): Date | null {
 // ------------ All events (upcoming + past combined) ------------
 const ALL_EVENTS = [
   // August 2026
-  { date: "01.08.2026", title: "GAISMA Live — Marienplatz Festival", venue: "Marienplatz Festival", tag: "live" },
+  { date: "01.08.2026", title: "Marienplatz Festival - Live", venue: "Marienplatz Festival", tag: "live" },
 
   // July 2026
   {
@@ -194,8 +194,8 @@ export default function Home() {
       <div id="latestReleases" className="px-8 md:px-16 py-16 bg-black">
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            Latest <span className="text-pink-500">Releases</span>
-            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-pink-500 to-transparent"></span>
+            Latest <span className="text-white">Releases</span>
+            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent"></span>
           </h2>
           <div className="flex flex-wrap gap-4">
           <a
@@ -213,16 +213,16 @@ export default function Home() {
                 className="object-cover h-full w-full transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
+              <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
               <div className="absolute inset-0 flex flex-col justify-end p-3">
-                <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
+                <h3 className="font-bold text-white group-hover:text-white transition-colors text-sm">
                   Dumped in Paris
                 </h3>
                 <p className="text-xs text-white/60">21.11.2025</p>
               </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
-                  <Play className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                <div className="w-10 h-10 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+                  <Play className="w-5 h-5 text-white fill-white" />
                 </div>
               </div>
             </div>
@@ -243,16 +243,16 @@ export default function Home() {
                 className="object-cover h-full w-full transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
+              <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
               <div className="absolute inset-0 flex flex-col justify-end p-3">
-                <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
+                <h3 className="font-bold text-white group-hover:text-white transition-colors text-sm">
                   Motherland
                 </h3>
                 <p className="text-xs text-white/60">2024</p>
               </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
-                  <Play className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                <div className="w-10 h-10 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+                  <Play className="w-5 h-5 text-white fill-white" />
                 </div>
               </div>
             </div>
@@ -276,16 +276,16 @@ export default function Home() {
                 className="object-cover h-full w-full transition-all duration-500"
               />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-      <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
+      <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
       <div className="absolute inset-0 flex flex-col justify-end p-3">
-        <h3 className="font-bold text-white group-hover:text-green-500 transition-colors text-sm">
+        <h3 className="font-bold text-white group-hover:text-white transition-colors text-sm">
           Ca$hback
         </h3>
         <p className="text-xs text-white/60">2025</p>
       </div>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="w-10 h-10 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_10px_rgba(34,197,94,0.5)]">
-          <Play className="w-5 h-5 text-green-500 fill-green-500" />
+        <div className="w-10 h-10 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+          <Play className="w-5 h-5 text-white fill-white" />
         </div>
       </div>
     </div>
@@ -305,16 +305,16 @@ export default function Home() {
                 className="object-cover h-full w-full transition-all duration-500"
               />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-      <div className="absolute inset-0 border border-green-500/0 group-hover:border-green-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] pointer-events-none"></div>
+      <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
       <div className="absolute inset-0 flex flex-col justify-end p-3">
-        <h3 className="font-bold text-white group-hover:text-green-500 transition-colors text-sm">
+        <h3 className="font-bold text-white group-hover:text-white transition-colors text-sm">
           White Shirt (prod. by Dexter)
         </h3>
         <p className="text-xs text-white/60">2024</p>
       </div>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="w-10 h-10 rounded-full bg-black/70 border border-green-500 flex items-center justify-center shadow-[0_0_10px_rgba(34,197,94,0.5)]">
-          <Play className="w-5 h-5 text-green-500 fill-green-500" />
+        <div className="w-10 h-10 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+          <Play className="w-5 h-5 text-white fill-white" />
         </div>
       </div>
     </div>
@@ -328,13 +328,13 @@ export default function Home() {
         {upcomingShows.length > 0 && (
           <div>
             <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-              Upcoming <span className="text-blue-500">Shows</span>
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
+              Upcoming <span className="text-white">Shows</span>
+              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent"></span>
             </h2>
             <ul className="grid gap-3">
               {upcomingShows.map((n, i) => (
-                <li key={i} className="bg-black border border-white/10 hover:border-blue-400/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start">
-                  <p className="text-blue-500 text-sm mb-2 sm:mb-0">{n.date}</p>
+                <li key={i} className="bg-black border border-white/10 hover:border-white/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start">
+                  <p className="text-white text-sm mb-2 sm:mb-0">{n.date}</p>
                   <p className="text-white/90 sm:ml-6">{n.title}</p>
                 </li>
               ))}
@@ -349,8 +349,8 @@ export default function Home() {
         {/* About Section Preview */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-            About <span className="text-orange-500">GAISMA</span>
-            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-orange-500 to-transparent"></span>
+            About <span className="text-white">GAISMA</span>
+            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent"></span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -374,7 +374,7 @@ Alisa has since traveled the world, exploring and learning diverse methods for h
               <div className="pt-4">
                 <Link
                   href="/about"
-                  className="bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(249,115,22,0.2)] inline-block"
+                  className="bg-transparent border border-white text-white hover:bg-white/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(255,255,255,0.2)] inline-block"
                 >
                   Read More
                 </Link>

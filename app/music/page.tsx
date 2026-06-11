@@ -39,12 +39,6 @@ export default function MusicPage() {
           href: "https://open.spotify.com/intl-de/album/2bOnhokrEQOnHuvl8H6oZn",
           alt: "Empathy",
         },
-        {
-          title: "Monarchy",
-          image: "/monarchy.jpg",
-          href: "https://open.spotify.com/intl-de/album/0ZLCVkecn8E0h0RXuPbgpi",
-          alt: "Monarchy",
-        },
       ],
     },
     {
@@ -62,12 +56,6 @@ export default function MusicPage() {
     {
       category: "Radio Show",
       items: [
-        {
-          title: "LAF Podcast 052 - GAISMA",
-          image: "https://i1.sndcdn.com/visuals-000043666335-IWVW8f-original.jpg",
-          href: "https://soundcloud.com/laf-musik/laf-podcast-052-gaisma",
-          alt: "LAF Podcast 052 - GAISMA",
-        },
         {
           title: "Mutant Radio 13.12.2022",
           image: "https://i1.sndcdn.com/artworks-zCmzohVQkIyQ25zK-ALphPQ-t500x500.jpg",
@@ -104,14 +92,14 @@ export default function MusicPage() {
         <div className="absolute inset-0 flex items-center z-30">
           <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
             <h1 className="text-3xl md:text-6xl font-bold text-white">
-              <span className="text-yellow-500">Music</span>
+              <span className="text-white">Music</span>
             </h1>
             <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
               {musicSections.map((section) => (
                 <a
                   key={section.category}
                   href={`#${section.category.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="hover:text-yellow-400 underline underline-offset-2"
+                  className="hover:text-white/70 underline underline-offset-2"
                 >
                   {section.category}
                 </a>
@@ -131,8 +119,8 @@ export default function MusicPage() {
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
               <span className="font-[Helvetica,Arial,sans-serif]">{section.name}</span>              
-              <span className="text-yellow-500 ml-3">{section.category}</span>
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-yellow-500 to-transparent" />
+              <span className="text-white ml-3">{section.category}</span>
+              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
