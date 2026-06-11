@@ -216,65 +216,6 @@ export default function Home() {
               </div>
             </div>
           </a>
-          <a
-              href="https://artists.landr.com/057829708549"
-              target="_blank"
-              rel="noreferrer"
-              className="group"
-            >
-            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
-              <Image
-                src="/verpissDich.jpg"
-                alt="GAISMA - Verpiss Dich"
-                width={200}
-                height={200}
-                className="object-cover h-full w-full transition-all duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
-              <div className="absolute inset-0 flex flex-col justify-end p-3">
-                <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
-                Verpiss Dich
-                </h3>
-                <p className="text-xs text-white/60">11.2025</p>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
-                  <Play className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://link.aurale.agency/cash_back"
-            target="_blank"
-            rel="noreferrer"
-            className="group"
-          >
-            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
-              <Image
-                src="/cashbackCover.webp"
-                alt="GAISMA - Ca$hback"
-                width={200}
-                height={200}
-                className="object-cover h-full w-full transition-all duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 border border-yellow-500/0 group-hover:border-yellow-500/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] pointer-events-none"></div>
-              <div className="absolute inset-0 flex flex-col justify-end p-3">
-                <h3 className="font-bold text-white group-hover:text-yellow-500 transition-colors text-sm">
-                GAISMA - Ca$hback
-                </h3>
-                <p className="text-xs text-white/60">19.09.2025</p>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-10 h-10 rounded-full bg-black/70 border border-yellow-500 flex items-center justify-center shadow-[0_0_10px_rgba(234,179,8,0.5)]">
-                  <Play className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                </div>
-              </div>
-            </div>
-          </a>
-
           {/* Album: Motherland */}
           <a
             href="https://artists.landr.com/055855682215"
@@ -305,7 +246,9 @@ export default function Home() {
               </div>
             </div>
           </a>
+          </div>
 
+          <div className="flex flex-wrap gap-4 mt-4">
           {/* Music Video: White Shirt */}
           <a
             href="https://www.youtube.com/watch?v=_nLaTRlHUqw"
