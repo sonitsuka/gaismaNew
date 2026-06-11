@@ -26,7 +26,7 @@ export default function RootLayout({
         <SideNavigation />
         
         {/* Main Content (with padding at the bottom for the footer) */}
-        <main className="ml-16 md:ml-20 pb-16">
+        <main className="ml-4 md:ml-20 pb-16">
           {children}
         </main>
         
