@@ -60,29 +60,6 @@ export default function MusicPage() {
       ],
     },
     {
-      category: "DJ Sets",
-      items: [
-        {
-          title: "Umbau/ Stuttgart21/House",
-          image: "https://i1.sndcdn.com/artworks-000634171918-fbk03p-t500x500.jpg",
-          href: "https://soundcloud.com/gaisma/umbaustuttgart21house?ref=clipboard&p=a&c=1",
-          alt: "Umbau/ Stuttgart21/House",
-        },
-        {
-          title: "House Party",
-          image: "https://i1.sndcdn.com/artworks-000678411697-sm98iw-t500x500.jpg",
-          href: "https://soundcloud.com/gaisma/house-party-2?ref=clipboard&p=a&c=1",
-          alt: "House Party",
-        },
-        {
-          title: "Fruit Salad - Brombeere",
-          image: "https://i1.sndcdn.com/artworks-000380865012-ucttl1-t500x500.jpg",
-          href: "https://soundcloud.com/gaisma/fruit-salad-brombeere?ref=clipboard&p=a&c=1",
-          alt: "Fruit Salad - Brombeere",
-        },
-      ],
-    },
-    {
       category: "Radio Show",
       items: [
         {
