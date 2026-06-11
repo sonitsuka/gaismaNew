@@ -63,12 +63,6 @@ export default function MusicPage() {
       category: "DJ Sets",
       items: [
         {
-          title: "Mutant Radio 13.12.2022",
-          image: "https://i1.sndcdn.com/artworks-zCmzohVQkIyQ25zK-ALphPQ-t500x500.jpg",
-          href: "https://soundcloud.com/mutantradio/gaisma-13122022",
-          alt: "Mutant Radio 13.12.2022",
-        },
-        {
           title: "Umbau/ Stuttgart21/House",
           image: "https://i1.sndcdn.com/artworks-000634171918-fbk03p-t500x500.jpg",
           href: "https://soundcloud.com/gaisma/umbaustuttgart21house?ref=clipboard&p=a&c=1",
@@ -91,6 +85,12 @@ export default function MusicPage() {
     {
       category: "Radio Show",
       items: [
+        {
+          title: "Mutant Radio 13.12.2022",
+          image: "https://i1.sndcdn.com/artworks-zCmzohVQkIyQ25zK-ALphPQ-t500x500.jpg",
+          href: "https://soundcloud.com/mutantradio/gaisma-13122022",
+          alt: "Mutant Radio 13.12.2022",
+        },
         {
           title: "Viola {Klang Parfüm}",
           image: "https://i1.sndcdn.com/artworks-7GTYzvqqVXi50Nqz-YhW2ag-t500x500.jpg",
