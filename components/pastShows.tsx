@@ -21,7 +21,7 @@ export default function PastShows({ shows }: PastShowsProps) {
   return (
     <div>
       <h2 className="text-3xl font-bold mb-8 text-white relative inline-block">
-        Past <span className="text-blue-500">Shows</span>
+        <span className="text-blue-500">Shows</span>
         <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-blue-500 to-transparent"></span>
       </h2>
 
