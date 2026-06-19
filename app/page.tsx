@@ -175,9 +175,9 @@ export default function Home() {
 
     <div className="bg-black text-white min-h-screen">
       <AnnouncementBar 
-        message="Latest EP Dumped in Paris"
+        message="New Music Video — Yin Yang"
         releaseDate=""
-        preSaveHref="https://artists.landr.com/057829699953"
+        preSaveHref="https://www.youtube.com/watch?v=V6izyti8L5o"
         showPreSave={true}
       />
       {/* Hero Video */}
