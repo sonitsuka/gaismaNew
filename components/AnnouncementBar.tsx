@@ -30,7 +30,7 @@ const AnnouncementBar = ({
                   rel="noreferrer"
                   className="underline underline-offset-2 hover:opacity-80 transition-opacity"
                 >
-                  listen now
+                  Watch now
                 </a>
               </>
             )}
