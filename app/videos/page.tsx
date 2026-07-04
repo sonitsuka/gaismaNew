@@ -13,11 +13,13 @@ export default function VideosPage() {
             <h1 className="text-3xl md:text-6xl font-bold text-white">
               <span className="text-white">Videos</span>
             </h1>
-            <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
+            <div className="mt-4 flex flex-col gap-2 text-white/70 text-sm md:text-base">
               <a href="#music-video-gaisma" className="hover:text-white/70 underline underline-offset-2">Music Video GAISMA</a>
               <a href="#music-video-sceti" className="hover:text-white/70 underline underline-offset-2">Music Video SCETI</a>
-              <a href="#dj-live" className="hover:text-white/70 underline underline-offset-2">DJ & Live</a>
-              <a href="#radio-live" className="hover:text-white/70 underline underline-offset-2">Radio Live</a>
+              <div className="flex flex-wrap gap-4">
+                <a href="#dj-live" className="hover:text-white/70 underline underline-offset-2">DJ & Live</a>
+                <a href="#radio-live" className="hover:text-white/70 underline underline-offset-2">Radio Live</a>
+              </div>
             </div>
           </div>
         </div>
