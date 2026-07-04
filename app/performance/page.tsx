@@ -45,7 +45,7 @@ export default function PerformancePage() {
           thumbnail: "https://img.youtube.com/vi/h98Q9zuAS54/0.jpg",
           url: "https://youtu.be/h98Q9zuAS54",
           videoId: "h98Q9zuAS54",
-          credits: "Founded by the city of Stuttgart, Pop - Büro and Kunstverein Wagenhalle",
+          credits: "Created and performed by Alisa Scetinina\nMusic - Alisa Scetinina, Simon Herody",
         },
         {
           title: "Intact - Noverre - Young Choreographers Of Stuttgart Ballet 2017",
