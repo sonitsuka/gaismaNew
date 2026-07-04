@@ -15,9 +15,9 @@ export default function VideosPage() {
             </h1>
             <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
               <a href="#music-video-gaisma" className="hover:text-white/70 underline underline-offset-2">Music Video GAISMA</a>
+              <a href="#music-video-sceti" className="hover:text-white/70 underline underline-offset-2">Music Video SCETI</a>
               <a href="#dj-live" className="hover:text-white/70 underline underline-offset-2">DJ & Live</a>
               <a href="#radio-live" className="hover:text-white/70 underline underline-offset-2">Radio Live</a>
-              <a href="#music-video-sceti" className="hover:text-white/70 underline underline-offset-2">Music Video SCETI</a>
             </div>
           </div>
         </div>
