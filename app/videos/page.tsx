@@ -15,9 +15,9 @@ export default function VideosPage() {
             </h1>
             <div className="mt-4 flex flex-wrap gap-4 text-white/70 text-sm md:text-base">
               <a href="#music-video-gaisma" className="hover:text-white/70 underline underline-offset-2">Music Video GAISMA</a>
-              <a href="#music-video-sceti" className="hover:text-white/70 underline underline-offset-2">Music Video Sceti</a>
               <a href="#dj-live" className="hover:text-white/70 underline underline-offset-2">DJ & Live</a>
               <a href="#radio-live" className="hover:text-white/70 underline underline-offset-2">Radio Live</a>
+              <a href="#music-video-sceti" className="hover:text-white/70 underline underline-offset-2">Music Video SCETI (side project)</a>
             </div>
           </div>
         </div>
@@ -217,62 +217,6 @@ export default function VideosPage() {
           </div>
         </div>
 
-        {/* Music Video Sceti */}     
-        <div className="mb-16" id="music-video-sceti">  
-          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
-            Music Video <span className="text-white">Sceti</span>
-            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent"></span>
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <a href="https://www.youtube.com/watch?v=1UKIHVtwK9M" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/1UKIHVtwK9M/0.jpg"
-                  alt="Dancing All Alone"
-                  width={320}
-                  height={180}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-white transition-colors">
-                    Dancing All Alone
-                  </h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
-                    <Play className="w-6 h-6 text-white fill-white" />
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=azjcpwy_Qfw" target="_blank" className="group" rel="noreferrer">
-              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
-                <Image
-                  src="https://img.youtube.com/vi/azjcpwy_Qfw/0.jpg"
-                  alt="Feel Alive"
-                  width={320}
-                  height={180}
-                  className="object-cover h-full w-full transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-4">
-                  <h3 className="font-bold text-white group-hover:text-white transition-colors">Feel Alive</h3>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
-                    <Play className="w-6 h-6 text-white fill-white" />
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
         {/* DJ & Live */}
         <div className="mb-16" id="dj-live">
           <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
@@ -432,6 +376,63 @@ export default function VideosPage() {
                   <h3 className="font-bold text-white group-hover:text-white transition-colors">
                     Klang Parfüm N°2
                   </h3>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-12 h-12 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                    <Play className="w-6 h-6 text-white fill-white" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* Music Video SCETI (side project) */}
+        <div className="mb-16" id="music-video-sceti">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
+            Music Video <span className="text-white">SCETI</span>
+            <span className="text-white/50 text-base sm:text-lg md:text-xl font-normal ml-3">(side project)</span>
+            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent"></span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <a href="https://www.youtube.com/watch?v=1UKIHVtwK9M" target="_blank" className="group" rel="noreferrer">
+              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
+                <Image
+                  src="https://img.youtube.com/vi/1UKIHVtwK9M/0.jpg"
+                  alt="Dancing All Alone"
+                  width={320}
+                  height={180}
+                  className="object-cover h-full w-full transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
+                <div className="absolute inset-0 flex flex-col justify-end p-4">
+                  <h3 className="font-bold text-white group-hover:text-white transition-colors">
+                    Dancing All Alone
+                  </h3>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-12 h-12 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                    <Play className="w-6 h-6 text-white fill-white" />
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=azjcpwy_Qfw" target="_blank" className="group" rel="noreferrer">
+              <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
+                <Image
+                  src="https://img.youtube.com/vi/azjcpwy_Qfw/0.jpg"
+                  alt="Feel Alive"
+                  width={320}
+                  height={180}
+                  className="object-cover h-full w-full transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
+                <div className="absolute inset-0 flex flex-col justify-end p-4">
+                  <h3 className="font-bold text-white group-hover:text-white transition-colors">Feel Alive</h3>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-12 h-12 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
