@@ -17,7 +17,7 @@ export default function VideosPage() {
               <a href="#music-video-gaisma" className="hover:text-white/70 underline underline-offset-2">Music Video GAISMA</a>
               <a href="#dj-live" className="hover:text-white/70 underline underline-offset-2">DJ & Live</a>
               <a href="#radio-live" className="hover:text-white/70 underline underline-offset-2">Radio Live</a>
-              <a href="#music-video-sceti" className="hover:text-white/70 underline underline-offset-2">Music Video SCETI (side project)</a>
+              <a href="#music-video-sceti" className="hover:text-white/70 underline underline-offset-2">Music Video SCETI</a>
             </div>
           </div>
         </div>
