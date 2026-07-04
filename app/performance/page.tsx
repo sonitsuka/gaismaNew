@@ -13,7 +13,7 @@ export default function PerformancePage() {
           thumbnail: "https://img.youtube.com/vi/Trz1IDfL4Kg/0.jpg",
           url: "https://www.youtube.com/watch?v=Trz1IDfL4Kg",
           videoId: "Trz1IDfL4Kg",
-          credits: "Performance: Alisa Scetinina\nKamera: Milo Wiersdorff\nSchnitt: Nicolas Ohnesorge",
+          credits: "Performance: Alisa Scetinina\nCamera: Milo Wiersdorff\nPost Production: Nicolas Ohnesorge",
         },
         {
           title: "Die Seele am Faden – Tanzperformance mit Friedemann Vogel nach Heinrich von Kleist",
