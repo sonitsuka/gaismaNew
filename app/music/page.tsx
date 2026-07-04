@@ -42,18 +42,6 @@ export default function MusicPage() {
       ],
     },
     {
-      category: "EP",
-      name: "Sceti",
-      items: [
-        {
-          title: "Feel Alive",
-          image: "/sceti.png",
-          href: "https://open.spotify.com/intl-de/artist/7LmgNFt2L76bFO3f27IsC4",
-          alt: "Feel Alive",
-        },
-      ],
-    },
-    {
       category: "Radio Show",
       items: [
         {
@@ -82,7 +70,21 @@ export default function MusicPage() {
         },
       ],
     },
-  ]  
+    {
+      category: "EP",
+      navLabel: "EP SCETI",
+      name: "SCETI",
+      subtitle: "(disco, synthwave side project)",
+      items: [
+        {
+          title: "Feel Alive",
+          image: "/sceti.png",
+          href: "https://open.spotify.com/intl-de/artist/7LmgNFt2L76bFO3f27IsC4",
+          alt: "Feel Alive",
+        },
+      ],
+    },
+  ]
   return (
     <div className="text-white min-h-screen relative overflow-hidden">
       <PageBackground page="music" />
@@ -101,7 +103,7 @@ export default function MusicPage() {
                   href={`#${section.category.toLowerCase().replace(/\s+/g, "-")}`}
                   className="hover:text-white/70 underline underline-offset-2"
                 >
-                  {section.category}
+                  {section.navLabel || section.category}
                 </a>
               ))}
             </div>
@@ -118,8 +120,13 @@ export default function MusicPage() {
             className="mb-16"
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white relative inline-block">
-              <span className="font-[Helvetica,Arial,sans-serif]">{section.name}</span>              
+              <span className="font-[Helvetica,Arial,sans-serif]">{section.name}</span>
               <span className="text-white ml-3">{section.category}</span>
+              {section.subtitle && (
+                <span className="text-white/50 text-sm sm:text-base md:text-lg font-normal ml-3">
+                  {section.subtitle}
+                </span>
+              )}
               <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
             </h2>
 

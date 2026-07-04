@@ -25,8 +25,8 @@ export default function CurationPage() {
           {/* Festival Header */}
           <div className="relative mb-8 md:mb-12">
             <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
-              <h2 className="text-xl sm:text-2xl font-bold text-white">Festival</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Festival</h2>
+              <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">
                 We Are The Future
               </h3>
             </div>
@@ -73,8 +73,8 @@ export default function CurationPage() {
         <div className="mb-16 md:mb-24">
           <div className="relative mb-8 md:mb-12">
             <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
-              <h2 className="text-xl sm:text-2xl font-bold text-white">Radio</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Radio</h2>
+              <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">
                 Klang Parfüm Radio Show
               </h3>
             </div>
@@ -122,8 +122,8 @@ export default function CurationPage() {
           {/* Exhibition Header */}
           <div className="relative mb-8 md:mb-12">
             <div className="flex flex-col md:flex-row md:items-end gap-2 md:gap-6">
-              <h2 className="text-xl sm:text-2xl font-bold text-white">Exhibition</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Exhibition</h2>
+              <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">
                 The Sacrifice Of Your Little Self
               </h3>
             </div>

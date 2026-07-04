@@ -13,7 +13,7 @@ export default function PerformancePage() {
           thumbnail: "https://img.youtube.com/vi/Trz1IDfL4Kg/0.jpg",
           url: "https://www.youtube.com/watch?v=Trz1IDfL4Kg",
           videoId: "Trz1IDfL4Kg",
-          credits: "Performance: Alisa Scetinina\nKamera: Milo Wiersdorff\nSchnitt: Nicolas Ohnesorge",
+          credits: "Performance: Alisa Scetinina\nCamera: Milo Wiersdorff\nPost Production: Nicolas Ohnesorge",
         },
         {
           title: "Die Seele am Faden – Tanzperformance mit Friedemann Vogel nach Heinrich von Kleist",
@@ -21,11 +21,11 @@ export default function PerformancePage() {
           url: "https://www.youtube.com/watch?v=iM1_UlsykWw",
           videoId: "iM1_UlsykWw",
           credits: `
-          Konzept und Choreografie - Thomas Lempertz und Friedemann Vogel
-          Kostüme und Raum - Thomas Lempertz
-          Komposition und Live-Musikerin - Alisa Scetinina (GAISMA)
+          Concept and Choreography - Thomas Lempertz and Friedemann Vogel
+          Costumes and Stage Design - Thomas Lempertz
+          Composition and Live Music - Alisa Scetinina (GAISMA)
           Digital Artist - Timo Kreitz
-          Licht - Henry Winter
+          Light - Henry Winter
           `,
         },
         {
@@ -38,14 +38,14 @@ export default function PerformancePage() {
             Hair - Mladen Durdevic
             Curation - Reiner Bock
             Camera - Peter Heizmann
-            Post Production / Colorgrading - Roman Brauch`,
+            Post Production - Roman Brauch`,
         },
         {
           title: "Emotional Traffic - Alisa Scetinina",
           thumbnail: "https://img.youtube.com/vi/h98Q9zuAS54/0.jpg",
           url: "https://youtu.be/h98Q9zuAS54",
           videoId: "h98Q9zuAS54",
-          credits: "Founded by the city of Stuttgart, Pop - Büro and Kunstverein Wagenhalle",
+          credits: "Created and performed by Alisa Scetinina\nMusic - Alisa Scetinina, Simon Herody",
         },
         {
           title: "Intact - Noverre - Young Choreographers Of Stuttgart Ballet 2017",
