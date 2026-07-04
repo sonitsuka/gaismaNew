@@ -21,11 +21,11 @@ export default function PerformancePage() {
           url: "https://www.youtube.com/watch?v=iM1_UlsykWw",
           videoId: "iM1_UlsykWw",
           credits: `
-          Konzept und Choreografie - Thomas Lempertz und Friedemann Vogel
-          Kostüme und Raum - Thomas Lempertz
-          Komposition und Live-Musikerin - Alisa Scetinina (GAISMA)
+          Concept and Choreography - Thomas Lempertz and Friedemann Vogel
+          Costumes and Stage Design - Thomas Lempertz
+          Composition and Live Music - Alisa Scetinina (GAISMA)
           Digital Artist - Timo Kreitz
-          Licht - Henry Winter
+          Light - Henry Winter
           `,
         },
         {
