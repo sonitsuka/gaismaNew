@@ -38,7 +38,7 @@ export default function PerformancePage() {
             Hair - Mladen Durdevic
             Curation - Reiner Bock
             Camera - Peter Heizmann
-            Post Production / Colorgrading - Roman Brauch`,
+            Post Production - Roman Brauch`,
         },
         {
           title: "Emotional Traffic - Alisa Scetinina",
