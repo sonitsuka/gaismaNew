@@ -72,6 +72,7 @@ export default function MusicPage() {
     },
     {
       category: "EP",
+      navLabel: "EP SCETI",
       name: "SCETI",
       subtitle: "(disco, synthwave side project)",
       items: [
@@ -102,7 +103,7 @@ export default function MusicPage() {
                   href={`#${section.category.toLowerCase().replace(/\s+/g, "-")}`}
                   className="hover:text-white/70 underline underline-offset-2"
                 >
-                  {section.category}
+                  {section.navLabel || section.category}
                 </a>
               ))}
             </div>
