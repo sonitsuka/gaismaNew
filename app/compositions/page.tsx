@@ -1,5 +1,18 @@
+import Link from "next/link"
 import PageBackground from "@/components/ui/pageBackground"
 import CompositionsByYear, { type Composition } from "@/components/compositions-by-year"
+
+// Swap this for the real Bandcamp "Share / Embed" <iframe> once the album is live.
+function BandcampEmbedPlaceholder({ label, height = "120px" }: { label: string; height?: string }) {
+  return (
+    <div
+      style={{ height }}
+      className="w-full border border-dashed border-white/25 rounded-lg flex items-center justify-center text-center px-4"
+    >
+      <p className="text-xs sm:text-sm text-white/40 uppercase tracking-wider">{label}</p>
+    </div>
+  )
+}
 
 export default function CompositionsPage() {
   // Compositions written for other people's projects (theatre, dance, film, etc).
@@ -52,6 +65,34 @@ export default function CompositionsPage() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
+        {/* Reel — short unreleased excerpts aimed at choreographers/collaborators deciding whether to work with you */}
+        <div className="mb-16 md:mb-24 bg-white/5 border border-white/10 rounded-lg p-5 md:p-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white relative inline-block">
+            For Choreographers & Collaborators
+            <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl">
+            Short, unreleased excerpts — a quick way to hear the range of what I write. Get in touch for full versions
+            or a custom piece for your project.
+          </p>
+          <div className="mt-6">
+            <BandcampEmbedPlaceholder label="Bandcamp reel embed goes here" height="120px" />
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/contact"
+              className="bg-transparent border border-white text-white hover:bg-white/10 px-4 py-2 text-sm uppercase tracking-wider transition-colors shadow-[0_0_10px_rgba(255,255,255,0.2)] inline-block"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+
+        {/* Full album — chronological listen-through of released/credited work */}
+        <div className="mb-12 md:mb-16">
+          <BandcampEmbedPlaceholder label="Bandcamp full album embed goes here" height="120px" />
+        </div>
+
         <CompositionsByYear compositions={compositions} />
       </div>
     </div>
