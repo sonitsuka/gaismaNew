@@ -24,6 +24,15 @@ function parseEventDate(dateStr: string): Date | null {
 
 // ------------ All events (upcoming + past combined) ------------
 const ALL_EVENTS = [
+  // September 2026
+  {
+    date: "22.09.2026",
+    title: "Performance for Fashion Designer NUBU",
+    venue: "Liszt-Institut Stuttgart",
+    tag: "performance",
+  },
+  { date: "19.09.2026", title: "Grab Your Street", venue: "Heidenheim", tag: "other" },
+
   // August 2026
   { date: "01.08.2026", title: "Marienplatz Festival - Live", venue: "Marienplatz Festival", tag: "live" },
 
