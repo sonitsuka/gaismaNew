@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, User, Music, Video, Film, Palette, Newspaper, Mail, ChevronRight, ChevronLeft } from "lucide-react"
+import { Home, User, Music, PenTool, Video, Film, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
 
 export default function SideNavigation() {
   const pathname = usePathname()
@@ -47,8 +47,10 @@ export default function SideNavigation() {
     { name: "Home", path: "/", color: "#ff3366", icon: Home },
     { name: "About", path: "/about", color: "#ff9933", icon: User },
     { name: "Music", path: "/music", color: "#ffcc33", icon: Music },
+    { name: "Compositions", path: "/compositions", color: "#99cc33", icon: PenTool }, // written compositions for other projects
     { name: "Videos", path: "/videos", color: "#33cc66", icon: Video },
     { name: "Performance", path: "/performance", color: "#3399ff", icon: Film }, // Film icon for performance art/dance/cinema
+    { name: "Modeling", path: "/modeling", color: "#6666ff", icon: Camera },
     { name: "Curation", path: "/curation", color: "#9966ff", icon: Palette },
     { name: "Press", path: "/press", color: "#cc33ff", icon: Newspaper },
     { name: "Contact", path: "/contact", color: "#00cccc", icon: Mail },
@@ -64,39 +66,35 @@ export default function SideNavigation() {
         />
       )}
 
-      {/* Mobile open zone — tapping anywhere in the left ~1cm strip slides the bar in */}
+      {/* Mobile menu button — always visible, clearly tappable */}
       {!isOpen && (
         <button
           type="button"
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
-          className="md:hidden fixed left-0 top-0 z-40 h-[calc(100vh-50px)] w-10 flex items-center justify-start"
+          className="md:hidden fixed top-4 left-4 z-40 h-11 w-11 flex items-center justify-center bg-black/90 backdrop-blur-md border border-white/20 rounded-full text-white shadow-lg"
         >
-          <span className="flex items-center justify-center h-16 w-7 bg-black/90 backdrop-blur-md border border-l-0 border-white/20 rounded-r-md text-white/70">
-            <ChevronRight size={18} />
-          </span>
+          <Menu size={20} />
         </button>
       )}
 
-      {/* Mobile close tab — sits at the open drawer's edge */}
-      {isOpen && (
+      {/* Sidebar — full labeled drawer on mobile, icon rail with hover labels on desktop */}
+      <div
+        className={`fixed top-0 left-0 h-[calc(100vh-50px)] w-64 md:w-20 bg-black/95 md:bg-black/90 backdrop-blur-md z-50 border-r border-white/20 flex flex-col py-6 md:py-8 transition-transform duration-300 ease-in-out md:translate-x-0 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {/* Mobile close button — inside the open drawer */}
         <button
           type="button"
           onClick={() => setIsOpen(false)}
           aria-label="Close menu"
-          className="md:hidden fixed top-1/2 -translate-y-1/2 left-16 z-50 h-16 w-7 flex items-center justify-center bg-black/90 backdrop-blur-md border border-l-0 border-white/20 rounded-r-md text-white/70"
+          className="md:hidden self-end mr-4 mb-4 h-9 w-9 flex items-center justify-center text-white/70 hover:text-white"
         >
-          <ChevronLeft size={18} />
+          <X size={20} />
         </button>
-      )}
 
-      {/* Sidebar — hidden off-screen on mobile, always visible on desktop */}
-      <div
-        className={`fixed top-0 left-0 h-[calc(100vh-50px)] w-16 md:w-20 bg-black/90 backdrop-blur-md z-50 border-r border-white/20 flex flex-col py-8 transition-transform duration-300 ease-in-out md:translate-x-0 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <nav className="flex flex-col items-center space-y-8 mt-4">
+        <nav className="flex flex-col items-stretch md:items-center gap-1 md:gap-8 px-2 md:px-0 md:mt-4">
           {navItems.map((item) => {
             const isActive = pathname === item.path
 
@@ -105,14 +103,17 @@ export default function SideNavigation() {
                 key={item.name}
                 href={item.path}
                 onClick={() => setIsOpen(false)}
-                className="text-white/60 transition-colors relative group"
+                className="flex items-center gap-4 md:block text-white/60 transition-colors relative group px-3 py-2.5 md:p-0 rounded-md hover:bg-white/5 md:hover:bg-transparent"
                 style={{
                   color: isActive ? item.color : "rgba(255, 255, 255, 0.6)",
                 }}
               >
-                <span className="text-xs uppercase tracking-wider block">
-                  {item.icon ? <item.icon size={16} /> : item.name[0]}
+                <span className="shrink-0 flex items-center justify-center">
+                  {item.icon ? <item.icon size={20} /> : item.name[0]}
                 </span>
+                {/* Always-visible label on mobile */}
+                <span className="text-sm md:hidden">{item.name}</span>
+                {/* Desktop hover tooltip */}
                 <span
                   className="absolute left-full ml-2 px-2 py-1 bg-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block z-50"
                   style={{ color: item.color }}
@@ -121,7 +122,13 @@ export default function SideNavigation() {
                 </span>
                 {isActive && (
                   <span
-                    className="absolute right-0 top-1/2 transform translate-x-3 -translate-y-1/2 w-6 h-px"
+                    className="absolute right-2 md:right-0 top-1/2 md:translate-x-3 -translate-y-1/2 w-6 h-px hidden md:block"
+                    style={{ backgroundColor: item.color }}
+                  ></span>
+                )}
+                {isActive && (
+                  <span
+                    className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 h-5 w-0.5 rounded-full"
                     style={{ backgroundColor: item.color }}
                   ></span>
                 )}

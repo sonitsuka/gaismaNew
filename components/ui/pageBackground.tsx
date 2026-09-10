@@ -5,8 +5,10 @@ type Page =
   | "home"
   | "about"
   | "music"
+  | "compositions"
   | "videos"
   | "performance"
+  | "modeling"
   | "curation"
   | "press"
 
@@ -18,8 +20,10 @@ const navItems: { page: Page; color: string }[] = [
   { page: "home", color: "#ff3366" },
   { page: "about", color: "#ff9933" },
   { page: "music", color: "#ffcc33" },
+  { page: "compositions", color: "#99cc33" },
   { page: "videos", color: "#33cc66" },
   { page: "performance", color: "#3399ff" },
+  { page: "modeling", color: "#6666ff" },
   { page: "curation", color: "#9966ff" },
   { page: "press", color: "#cc33ff" },
 ]
