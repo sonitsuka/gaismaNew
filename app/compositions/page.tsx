@@ -10,8 +10,8 @@ export default function CompositionsPage() {
   const compositions: Composition[] = [
     {
       title: "Intact",
-      project: "Noverre — Young Choreographers Of Stuttgart Ballet",
-      role: "Composer & Choreographer",
+      project: "Noverre: Young Choreographers — Schauspielhaus Stuttgart",
+      role: "Composition and Choreography",
       description: "Original composition for a duet performed at the Stuttgart Ballet's Noverre choreography showcase.",
       link: "https://youtu.be/GIh38PjyJnQ",
       year: 2017,
