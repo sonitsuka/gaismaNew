@@ -25,8 +25,8 @@ export default function RootLayout({
         {/* Side Navigation (ends above the footer) */}
         <SideNavigation />
         
-        {/* Main Content (with padding at the bottom for the footer) */}
-        <main className="ml-4 md:ml-20 pb-16">
+        {/* Main Content (top padding on mobile clears the fixed menu button; bottom padding clears the footer) */}
+        <main className="ml-4 md:ml-20 pt-14 md:pt-0 pb-16">
           {children}
         </main>
         
