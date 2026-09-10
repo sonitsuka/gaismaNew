@@ -47,10 +47,14 @@ export default function SideNavigation() {
     { name: "Home", path: "/", color: "#ff3366", icon: Home },
     { name: "About", path: "/about", color: "#ff9933", icon: User },
     { name: "Music", path: "/music", color: "#ffcc33", icon: Music },
-    { name: "Compositions", path: "/compositions", color: "#99cc33", icon: PenTool }, // written compositions for other projects
+    // Compositions: hidden from nav until real content (years, Bandcamp albums) is ready.
+    // Page still exists at /compositions — re-add this line to relink it:
+    // { name: "Compositions", path: "/compositions", color: "#99cc33", icon: PenTool },
     { name: "Videos", path: "/videos", color: "#33cc66", icon: Video },
     { name: "Performance", path: "/performance", color: "#3399ff", icon: Film }, // Film icon for performance art/dance/cinema
-    { name: "Modeling", path: "/modeling", color: "#6666ff", icon: Camera },
+    // Modeling: hidden from nav until real portfolio photos are ready.
+    // Page still exists at /modeling — re-add this line to relink it:
+    // { name: "Modeling", path: "/modeling", color: "#6666ff", icon: Camera },
     { name: "Curation", path: "/curation", color: "#9966ff", icon: Palette },
     { name: "Press", path: "/press", color: "#cc33ff", icon: Newspaper },
     { name: "Contact", path: "/contact", color: "#00cccc", icon: Mail },
