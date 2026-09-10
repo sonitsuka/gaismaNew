@@ -27,7 +27,7 @@ export default function CompositionsPage() {
       role: "Composition and Choreography",
       description: "Original composition for a duet performed at the Stuttgart Ballet's Noverre choreography showcase.",
       link: "https://youtu.be/GIh38PjyJnQ",
-      year: 2017,
+      year: null,
     },
     {
       title: "Die Seele am Faden",
