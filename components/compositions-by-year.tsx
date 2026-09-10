@@ -9,9 +9,10 @@ export type Composition = {
   description: string
   link?: string
   year: number | null
+  featured?: boolean
 }
 
-function CompositionCard({ piece }: { piece: Composition }) {
+export function CompositionCard({ piece }: { piece: Composition }) {
   const content = (
     <>
       <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-white">{piece.title}</h3>

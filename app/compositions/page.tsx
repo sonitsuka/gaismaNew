@@ -1,6 +1,6 @@
 import Link from "next/link"
 import PageBackground from "@/components/ui/pageBackground"
-import CompositionsByYear, { type Composition } from "@/components/compositions-by-year"
+import CompositionsByYear, { CompositionCard, type Composition } from "@/components/compositions-by-year"
 
 // Swap this for the real Bandcamp "Share / Embed" <iframe> once the album is live.
 function BandcampEmbedPlaceholder({ label, height = "120px" }: { label: string; height?: string }) {
@@ -37,6 +37,7 @@ export default function CompositionsPage() {
         "Original score composed and performed live for the touring dance-theatre production, staged in Stuttgart, Hamburg and Rome.",
       link: "https://www.youtube.com/watch?v=iM1_UlsykWw",
       year: null, // TODO: add the year this was composed/premiered
+      featured: true,
     },
     {
       title: "Emotional Traffic",
@@ -93,7 +94,24 @@ export default function CompositionsPage() {
           <BandcampEmbedPlaceholder label="Bandcamp full album embed goes here" height="120px" />
         </div>
 
-        <CompositionsByYear compositions={compositions} />
+        {/* Pinned above the year timeline — independent of date, so it stays put as new pieces get added */}
+        {compositions.some((c) => c.featured) && (
+          <div className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white relative inline-block">
+              Grateful to Be Part of This
+              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {compositions
+                .filter((c) => c.featured)
+                .map((piece) => (
+                  <CompositionCard key={piece.title} piece={piece} />
+                ))}
+            </div>
+          </div>
+        )}
+
+        <CompositionsByYear compositions={compositions.filter((c) => !c.featured)} />
       </div>
     </div>
   )
