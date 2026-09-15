@@ -38,7 +38,6 @@ export default function ContactPage() {
           alt="Contact GAISMA"
           fill
           className="object-cover"
-          style={{ objectPosition: "left center" }}
           priority
         />
         {/* Transparent link over GAISMA@POSTEO.DE on mobile */}
