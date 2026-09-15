@@ -21,6 +21,18 @@ export default function VideoHero({
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
+      {/* Logo — pinned to the top, well above where she sits in the trees so it never overlaps her */}
+      <div className="absolute top-4 sm:top-5 md:top-6 left-0 right-0 z-30 flex justify-center pointer-events-none">
+        <Image
+          src="/gaisma-logo.png"
+          alt="GAISMA"
+          width={1400}
+          height={505}
+          priority
+          className="h-8 sm:h-10 md:h-14 w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+        />
+      </div>
+
       {/* Title Overlay */}
       {showTitleOverlay && (
         <div className="hidden md:block absolute top-1/4 left-8 md:left-16 z-30 max-w-md">
