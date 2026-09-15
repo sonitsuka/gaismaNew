@@ -1,14 +1,17 @@
 import Image from "next/image"
 
 export default function ContactPage() {
+  // Fills exactly what's left after layout.tsx's chrome around <main>: the 50px
+  // fixed footer, plus main's own pb-16 (64px) and, on mobile only, pt-14 (56px)
+  // that clears the fixed menu button. Mobile: 50+64+56=170px. Desktop: 50+64=114px.
   return (
-    <div className="h-[calc(100vh-50px)] w-full bg-black flex items-center justify-center overflow-hidden">
+    <div className="h-[calc(100vh-170px)] md:h-[calc(100vh-114px)] w-full bg-black flex items-center justify-center overflow-hidden">
 
       {/* Desktop: full landscape design */}
       <div
         className="hidden md:block relative"
         style={{
-          width: "min(100%, calc((100vh - 50px) * 16 / 9))",
+          width: "min(100%, calc((100vh - 114px) * 16 / 9))",
           aspectRatio: "16 / 9",
         }}
       >
