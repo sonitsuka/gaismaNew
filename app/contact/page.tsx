@@ -31,8 +31,9 @@ export default function ContactPage() {
         />
       </div>
 
-      {/* Mobile: portrait crop — face + all text visible */}
-      <div className="md:hidden relative w-full h-full">
+      {/* Mobile: portrait crop — face + all text visible. Horizontal padding (~3mm)
+          keeps "CONTACT" from touching the screen edges. */}
+      <div className="md:hidden relative w-full h-full px-3">
         <Image
           src="/contact-page-mobile.webp"
           alt="Contact GAISMA"
