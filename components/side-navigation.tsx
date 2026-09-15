@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, User, Music, PenTool, Video, Film, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
+import { Home, User, Music, PenTool, Video, Theater, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
 
 export default function SideNavigation() {
   const pathname = usePathname()
@@ -52,7 +52,7 @@ export default function SideNavigation() {
     // Page still exists at /compositions — re-add this line to relink it:
     // { name: "Compositions", path: "/compositions", color: "#86efac", icon: PenTool }, // green (light)
     { name: "Videos", path: "/videos", color: "#4ade80", icon: Video }, // green (mid)
-    { name: "Performance", path: "/performance", color: "#a855f7", icon: Film }, // purple (deep)
+    { name: "Performance", path: "/performance", color: "#a855f7", icon: Theater }, // purple (deep)
     // Modeling: hidden from nav until real portfolio photos are ready.
     // Page still exists at /modeling — re-add this line to relink it:
     // { name: "Modeling", path: "/modeling", color: "#d8b4fe", icon: Camera }, // purple (light)
