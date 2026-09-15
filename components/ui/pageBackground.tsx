@@ -16,16 +16,17 @@ type PageBackgroundProps = {
   page: Page
 }
 
+// Matches the 4-color-family palette in components/side-navigation.tsx
 const navItems: { page: Page; color: string }[] = [
-  { page: "home", color: "#ff3366" },
-  { page: "about", color: "#ff9933" },
-  { page: "music", color: "#ffcc33" },
-  { page: "compositions", color: "#99cc33" },
-  { page: "videos", color: "#33cc66" },
-  { page: "performance", color: "#3399ff" },
-  { page: "modeling", color: "#6666ff" },
-  { page: "curation", color: "#9966ff" },
-  { page: "press", color: "#cc33ff" },
+  { page: "home", color: "#f97316" }, // orange (deep)
+  { page: "about", color: "#fb923c" }, // orange (mid)
+  { page: "music", color: "#22c55e" }, // green (deep)
+  { page: "compositions", color: "#86efac" }, // green (light)
+  { page: "videos", color: "#4ade80" }, // green (mid)
+  { page: "performance", color: "#a855f7" }, // purple (deep)
+  { page: "modeling", color: "#d8b4fe" }, // purple (light)
+  { page: "curation", color: "#c084fc" }, // purple (mid)
+  { page: "press", color: "#6366f1" }, // indigo (deep)
 ]
 
 export default function PageBackground({ page }: PageBackgroundProps) {

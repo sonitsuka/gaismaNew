@@ -42,22 +42,23 @@ export default function SideNavigation() {
     }
   }, [isOpen])
 
-  // Rainbow colors for navigation with appropriate icons
+  // Four color families (green / orange / purple / indigo), grouped by theme —
+  // each item within a family gets a different shade so they stay distinguishable.
   const navItems = [
-    { name: "Home", path: "/", color: "#ff3366", icon: Home },
-    { name: "About", path: "/about", color: "#ff9933", icon: User },
-    { name: "Music", path: "/music", color: "#ffcc33", icon: Music },
+    { name: "Home", path: "/", color: "#f97316", icon: Home }, // orange (deep)
+    { name: "About", path: "/about", color: "#fb923c", icon: User }, // orange (mid)
+    { name: "Music", path: "/music", color: "#22c55e", icon: Music }, // green (deep)
     // Compositions: hidden from nav until real content (years, Bandcamp albums) is ready.
     // Page still exists at /compositions — re-add this line to relink it:
-    // { name: "Compositions", path: "/compositions", color: "#99cc33", icon: PenTool },
-    { name: "Videos", path: "/videos", color: "#33cc66", icon: Video },
-    { name: "Performance", path: "/performance", color: "#3399ff", icon: Film }, // Film icon for performance art/dance/cinema
+    // { name: "Compositions", path: "/compositions", color: "#86efac", icon: PenTool }, // green (light)
+    { name: "Videos", path: "/videos", color: "#4ade80", icon: Video }, // green (mid)
+    { name: "Performance", path: "/performance", color: "#a855f7", icon: Film }, // purple (deep)
     // Modeling: hidden from nav until real portfolio photos are ready.
     // Page still exists at /modeling — re-add this line to relink it:
-    // { name: "Modeling", path: "/modeling", color: "#6666ff", icon: Camera },
-    { name: "Curation", path: "/curation", color: "#9966ff", icon: Palette },
-    { name: "Press", path: "/press", color: "#cc33ff", icon: Newspaper },
-    { name: "Contact", path: "/contact", color: "#00cccc", icon: Mail },
+    // { name: "Modeling", path: "/modeling", color: "#d8b4fe", icon: Camera }, // purple (light)
+    { name: "Curation", path: "/curation", color: "#c084fc", icon: Palette }, // purple (mid)
+    { name: "Press", path: "/press", color: "#6366f1", icon: Newspaper }, // indigo (deep)
+    { name: "Contact", path: "/contact", color: "#818cf8", icon: Mail }, // indigo (mid)
   ]
 
   return (
