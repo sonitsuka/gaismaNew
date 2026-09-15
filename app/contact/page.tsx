@@ -32,8 +32,8 @@ export default function ContactPage() {
       <div
         className="md:hidden relative"
         style={{
-          width: "min(100%, calc((100vh - 50px) * 1080 / 1920))",
-          aspectRatio: "1080 / 1920",
+          width: "min(100%, calc((100vh - 50px) * 1114 / 1920))",
+          aspectRatio: "1114 / 1920",
         }}
       >
         <Image
@@ -47,7 +47,7 @@ export default function ContactPage() {
         <a
           href="mailto:gaisma@posteo.de"
           className="absolute cursor-pointer"
-          style={{ left: "29%", top: "63%", width: "38%", height: "6%" }}
+          style={{ left: "31%", top: "63%", width: "36%", height: "7%" }}
           aria-label="Email GAISMA"
         />
       </div>
