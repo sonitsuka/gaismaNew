@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Home, User, Music, PenTool, Video, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
 
-// Stage curtains only — the lucide Theater icon minus the two chair/seat shapes at the bottom.
+// Stage curtains only — two draped sides, no bottom line and no chairs.
 function CurtainsIcon({ size = 24 }: { size?: number }) {
   return (
     <svg
@@ -23,7 +23,6 @@ function CurtainsIcon({ size = 24 }: { size?: number }) {
       <path d="M14 2c0 4.4 3.6 8 8 8" />
       <path d="M2 10s2 2 2 5" />
       <path d="M22 10s-2 2-2 5" />
-      <path d="M8 15h8" />
     </svg>
   )
 }
@@ -66,23 +65,23 @@ export default function SideNavigation() {
     }
   }, [isOpen])
 
-  // Four color families (green / orange / purple / indigo), grouped by theme —
-  // each item within a family gets a different shade so they stay distinguishable.
+  // Four color families (green / purple / red-orange / blue), spaced far apart in hue
+  // so items don't blend together — each pair differs mainly by light vs. dark shade.
   const navItems = [
-    { name: "Home", path: "/", color: "#f97316", icon: Home }, // orange (deep)
-    { name: "About", path: "/about", color: "#fb923c", icon: User }, // orange (mid)
-    { name: "Music", path: "/music", color: "#22c55e", icon: Music }, // green (deep)
+    { name: "Home", path: "/", color: "#a2bf69", icon: Home }, // green (light, matches the site's natural forest tones)
+    { name: "About", path: "/about", color: "#67863c", icon: User }, // green (dark)
+    { name: "Music", path: "/music", color: "#b890df", icon: Music }, // purple (light)
     // Compositions: hidden from nav until real content (years, Bandcamp albums) is ready.
     // Page still exists at /compositions — re-add this line to relink it:
-    // { name: "Compositions", path: "/compositions", color: "#86efac", icon: PenTool }, // green (light)
-    { name: "Videos", path: "/videos", color: "#4ade80", icon: Video }, // green (mid)
-    { name: "Performance", path: "/performance", color: "#a855f7", icon: CurtainsIcon }, // purple (deep)
+    // { name: "Compositions", path: "/compositions", color: "#9155ce", icon: PenTool }, // purple (mid)
+    { name: "Videos", path: "/videos", color: "#6b30a6", icon: Video }, // purple (dark)
+    { name: "Performance", path: "/performance", color: "#bb401b", icon: CurtainsIcon }, // red-orange (dark)
     // Modeling: hidden from nav until real portfolio photos are ready.
     // Page still exists at /modeling — re-add this line to relink it:
-    // { name: "Modeling", path: "/modeling", color: "#d8b4fe", icon: Camera }, // purple (light)
-    { name: "Curation", path: "/curation", color: "#c084fc", icon: Palette }, // purple (mid)
-    { name: "Press", path: "/press", color: "#6366f1", icon: Newspaper }, // indigo (deep)
-    { name: "Contact", path: "/contact", color: "#818cf8", icon: Mail }, // indigo (mid)
+    // { name: "Modeling", path: "/modeling", color: "#e36f2b", icon: Camera }, // red-orange (mid)
+    { name: "Curation", path: "/curation", color: "#eda65e", icon: Palette }, // orange (light)
+    { name: "Press", path: "/press", color: "#2450a8", icon: Newspaper }, // blue (dark)
+    { name: "Contact", path: "/contact", color: "#66ccc4", icon: Mail }, // green-blue / teal (light)
   ]
 
   return (
