@@ -2,7 +2,31 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, User, Music, PenTool, Video, Theater, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
+import { Home, User, Music, PenTool, Video, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
+
+// Stage curtains only — the lucide Theater icon minus the two chair/seat shapes at the bottom.
+function CurtainsIcon({ size = 24 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M2 10s3-3 3-8" />
+      <path d="M22 10s-3-3-3-8" />
+      <path d="M10 2c0 4.4-3.6 8-8 8" />
+      <path d="M14 2c0 4.4 3.6 8 8 8" />
+      <path d="M2 10s2 2 2 5" />
+      <path d="M22 10s-2 2-2 5" />
+      <path d="M8 15h8" />
+    </svg>
+  )
+}
 
 export default function SideNavigation() {
   const pathname = usePathname()
@@ -52,7 +76,7 @@ export default function SideNavigation() {
     // Page still exists at /compositions — re-add this line to relink it:
     // { name: "Compositions", path: "/compositions", color: "#86efac", icon: PenTool }, // green (light)
     { name: "Videos", path: "/videos", color: "#4ade80", icon: Video }, // green (mid)
-    { name: "Performance", path: "/performance", color: "#a855f7", icon: Theater }, // purple (deep)
+    { name: "Performance", path: "/performance", color: "#a855f7", icon: CurtainsIcon }, // purple (deep)
     // Modeling: hidden from nav until real portfolio photos are ready.
     // Page still exists at /modeling — re-add this line to relink it:
     // { name: "Modeling", path: "/modeling", color: "#d8b4fe", icon: Camera }, // purple (light)
