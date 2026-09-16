@@ -18,7 +18,7 @@ export default function VideoHero({
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       {/* Logo — pinned to the top, well above where she sits in the trees so it never overlaps her.
