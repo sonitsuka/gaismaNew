@@ -21,17 +21,24 @@ export default function VideoHero({
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
-      {/* Logo — pinned to the top, well above where she sits in the trees so it never overlaps her.
-          Offset clears the fixed AnnouncementBar (~36px tall) on every breakpoint. */}
-      <div className="absolute top-10 sm:top-12 md:top-16 left-0 right-0 z-30 flex justify-center pointer-events-none">
-        <Image
-          src="/gaisma-logo.png"
-          alt="GAISMA"
-          width={1400}
-          height={505}
-          priority
-          className="h-12 sm:h-14 md:h-14 w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
-        />
+      {/* Balloon. The photo is cropped by object-cover, so her position shifts with the viewport.
+          This box reproduces the covered image's geometry, letting the balloon be placed in photo
+          coordinates and stay over her knee at every screen size. */}
+      <div className="absolute inset-0 z-30 overflow-hidden pointer-events-none">
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          style={{
+            width: "max(100%, calc(90vh * 2000 / 1126))",
+            aspectRatio: "2000 / 1126",
+          }}
+        >
+          <img
+            src="/balloon-gaisma.webp"
+            alt="GAISMA x Sweetback Sessions"
+            className="absolute animate-balloon-float drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)]"
+            style={{ left: "43.68%", top: "42.62%", width: "10.0%" }}
+          />
+        </div>
       </div>
 
       {/* Title Overlay */}

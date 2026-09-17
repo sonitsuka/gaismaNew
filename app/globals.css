@@ -99,3 +99,29 @@ video {
   user-select: none;
 }
 
+
+/* Balloon in the hero. The clip it came from was a slow rise plus its own reverse;
+   reproducing that as a transform keeps the asset a single 16KB still instead of a
+   1.4MB animation, since an animated image cannot motion-compensate a translation.
+   Rotation pivots at the bottom, where the thread would be tethered. */
+@keyframes balloon-float {
+  from {
+    transform: translateY(0) rotate(0.7deg);
+  }
+  to {
+    transform: translateY(-10.4%) rotate(-0.7deg);
+  }
+}
+
+.animate-balloon-float {
+  transform-origin: 50% 100%;
+  animation: balloon-float 3.9s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-balloon-float {
+    animation: none;
+    transform: translateY(-5.2%);
+  }
+}
