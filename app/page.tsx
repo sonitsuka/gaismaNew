@@ -197,8 +197,7 @@ export default function Home() {
         buttonText="Explore"
         buttonLink="#latestReleases"
         showTitleOverlay
-        /* Paste the video URL here to make the balloon clickable. */
-        balloonHref=""
+        balloonHref="https://www.instagram.com/reel/DdW4cffNco-/"
       />
 
       {/* Content Preview */}
