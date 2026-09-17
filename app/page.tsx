@@ -197,6 +197,7 @@ export default function Home() {
         buttonText="Explore"
         buttonLink="#latestReleases"
         showTitleOverlay
+        balloonHref="https://www.instagram.com/reel/DdW4cffNco-/"
       />
 
       {/* Content Preview */}
