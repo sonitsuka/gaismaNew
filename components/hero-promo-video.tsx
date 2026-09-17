@@ -21,22 +21,23 @@ export default function VideoHero({
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
-      {/* Balloon. The photo is cropped by object-cover, so her position shifts with the viewport.
-          This box reproduces the covered image's geometry, letting the balloon be placed in photo
-          coordinates and stay over her knee at every screen size. */}
+      {/* Balloon. Horizontally it tracks her: object-cover crops the photo differently per
+          viewport, so this box reproduces the covered image's width and the balloon is placed in
+          photo coordinates within it, keeping it on her knee line at every screen size.
+          Vertically it is measured from the hero instead, so the top of the float clears the
+          frame by a fixed 2mm — the keyframes run from the low point to translateY(0), which is
+          what makes that clearance exact. The extra 1px offsets the sway: rotating about the
+          bottom grows the bounding box upward by about that much. */}
       <div className="absolute inset-0 z-30 overflow-hidden pointer-events-none">
         <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-          style={{
-            width: "max(100%, calc(90vh * 2000 / 1126))",
-            aspectRatio: "2000 / 1126",
-          }}
+          className="absolute left-1/2 top-0 -translate-x-1/2 h-full"
+          style={{ width: "max(100%, calc(90vh * 2000 / 1126))" }}
         >
           <img
             src="/balloon-gaisma.webp"
             alt="GAISMA x Sweetback Sessions"
             className="absolute animate-balloon-float drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)]"
-            style={{ left: "43.68%", top: "42.62%", width: "10.0%" }}
+            style={{ left: "43.68%", top: "calc(2mm + 1px)", width: "10.0%" }}
           />
         </div>
       </div>

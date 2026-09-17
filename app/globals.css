@@ -106,10 +106,10 @@ video {
    Rotation pivots at the bottom, where the thread would be tethered. */
 @keyframes balloon-float {
   from {
-    transform: translateY(0) rotate(0.7deg);
+    transform: translateY(10.4%) rotate(0.7deg);
   }
   to {
-    transform: translateY(-10.4%) rotate(-0.7deg);
+    transform: translateY(0) rotate(-0.7deg);
   }
 }
 
@@ -122,6 +122,6 @@ video {
 @media (prefers-reduced-motion: reduce) {
   .animate-balloon-float {
     animation: none;
-    transform: translateY(-5.2%);
+    transform: translateY(5.2%);
   }
 }
