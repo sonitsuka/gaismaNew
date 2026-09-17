@@ -27,7 +27,9 @@ export default function VideoHero({
           Vertically it is measured from the hero instead, so the top of the float clears the
           frame by a fixed 2mm — the keyframes run from the low point to translateY(0), which is
           what makes that clearance exact. The extra 1px offsets the sway: rotating about the
-          bottom grows the bounding box upward by about that much. */}
+          bottom grows the bounding box upward by about that much.
+          From md up the layout drops its pt-14, so the hero runs underneath the fixed
+          AnnouncementBar (33px) and the clearance is measured from the bar instead. */}
       <div className="absolute inset-0 z-30 overflow-hidden pointer-events-none">
         <div
           className="absolute left-1/2 top-0 -translate-x-1/2 h-full"
@@ -36,8 +38,8 @@ export default function VideoHero({
           <img
             src="/balloon-gaisma.webp"
             alt="GAISMA x Sweetback Sessions"
-            className="absolute animate-balloon-float drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)]"
-            style={{ left: "43.68%", top: "calc(2mm + 1px)", width: "10.0%" }}
+            className="absolute animate-balloon-float drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)] top-[calc(2mm_+_1px)] md:top-[calc(33px_+_2mm_+_1px)]"
+            style={{ left: "43.68%", width: "10.0%" }}
           />
         </div>
       </div>
