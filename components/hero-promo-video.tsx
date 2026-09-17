@@ -5,7 +5,8 @@ export default function VideoHero({
   description = "In times of unpredictability and chaos one thing that we can always be certain of is that the power and growth behind our personality lies in our own hands.",
   buttonText = "Explore",
   buttonLink = "#latestReleases",
-  showTitleOverlay = true
+  showTitleOverlay = true,
+  balloonHref = ""
 }) {
   return (
     <div className="relative w-full h-[90vh] overflow-hidden">
@@ -35,12 +36,27 @@ export default function VideoHero({
           className="absolute left-1/2 top-0 -translate-x-1/2 h-full"
           style={{ width: "max(100%, calc(90vh * 2000 / 1126))" }}
         >
-          <img
-            src="/balloon-gaisma.webp"
-            alt="GAISMA x Sweetback Sessions"
-            className="absolute animate-balloon-float drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)] top-[calc(2mm_+_1px)] md:top-[calc(33px_+_2mm_+_1px)]"
+          <div
+            className="absolute animate-balloon-float top-[calc(2mm_+_1px)] md:top-[calc(33px_+_2mm_+_1px)]"
             style={{ left: "43.68%", width: "10.0%" }}
-          />
+          >
+            {/* Hit area over the balloon body only — the rest of the asset is the thread's
+                transparent strip, which would otherwise be an invisible click target. */}
+            {balloonHref && (
+              <a
+                href={balloonHref}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Watch the video"
+                className="balloon-hit absolute inset-x-0 top-0 h-[47%] rounded-[50%] z-10 cursor-pointer pointer-events-auto"
+              />
+            )}
+            <img
+              src="/balloon-gaisma.webp"
+              alt="GAISMA x Sweetback Sessions"
+              className="balloon-img w-full block"
+            />
+          </div>
         </div>
       </div>
 

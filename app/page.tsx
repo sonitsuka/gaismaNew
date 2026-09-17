@@ -197,6 +197,8 @@ export default function Home() {
         buttonText="Explore"
         buttonLink="#latestReleases"
         showTitleOverlay
+        /* Paste the video URL here to make the balloon clickable. */
+        balloonHref=""
       />
 
       {/* Content Preview */}
