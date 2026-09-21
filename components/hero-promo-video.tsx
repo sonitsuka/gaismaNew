@@ -56,6 +56,28 @@ export default function VideoHero({
               alt="GAISMA x Sweetback Sessions"
               className="balloon-img w-full block"
             />
+
+            {/* Old-style mouse pointer aimed at the balloon. It lives inside the float wrapper so
+                it drifts with the balloon and scales with it, rather than needing its own
+                placement per breakpoint. It sits to the right because the intro paragraph runs
+                along the balloon's left between md and about 1100px, where a pointer there lands
+                on the words. Decorative: the balloon itself is the link. */}
+            {balloonHref && (
+              <svg
+                viewBox="0 0 12 20"
+                aria-hidden="true"
+                className="balloon-cursor absolute"
+                style={{ width: "40%", left: "104%", top: "31%" }}
+              >
+                <path
+                  d="M0 0 L0 16.5 L4.2 12.8 L6.9 19.3 L9.4 18.2 L6.7 11.9 L11.4 11.9 Z"
+                  fill="#fff"
+                  stroke="rgba(0,0,0,0.55)"
+                  strokeWidth="0.7"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            )}
           </div>
         </div>
       </div>
