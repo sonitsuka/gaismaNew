@@ -197,7 +197,7 @@ export default function Home() {
         buttonText="Explore"
         buttonLink="#latestReleases"
         showTitleOverlay
-        balloonHref="https://www.instagram.com/reel/DdW4cffNco-/"
+        balloonHref="https://www.youtube.com/watch?v=0UyPsbE58y8"
       />
 
       {/* Content Preview */}
