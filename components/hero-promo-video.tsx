@@ -59,18 +59,19 @@ export default function VideoHero({
 
             {/* Old-style mouse pointer aimed at the balloon. It lives inside the float wrapper so
                 it drifts with the balloon and scales with it, rather than needing its own
-                placement per breakpoint. It sits to the right because the intro paragraph runs
-                along the balloon's left between md and about 1100px, where a pointer there lands
-                on the words. Decorative: the balloon itself is the link. */}
+                placement per breakpoint. It sits high on the balloon's left flank: the intro
+                paragraph runs along that side between md and about 1100px, and staying above its
+                first line is what clears it — placing the pointer lower there lands it on the
+                words. Decorative: the balloon itself is the link. */}
             {balloonHref && (
               <svg
                 viewBox="0 0 12 20"
                 aria-hidden="true"
                 className="balloon-cursor absolute"
-                style={{ width: "40%", left: "104%", top: "31%" }}
+                style={{ width: "40%", left: "-45%", top: "2%" }}
               >
                 <path
-                  d="M0 0 L0 16.5 L4.2 12.8 L6.9 19.3 L9.4 18.2 L6.7 11.9 L11.4 11.9 Z"
+                  d="M12 0 L12 16.5 L7.8 12.8 L5.1 19.3 L2.6 18.2 L5.3 11.9 L0.6 11.9 Z"
                   fill="#fff"
                   stroke="rgba(0,0,0,0.55)"
                   strokeWidth="0.7"

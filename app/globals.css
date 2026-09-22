@@ -155,7 +155,7 @@ video {
     transform: translate(0, 0);
   }
   84% {
-    transform: translate(-6%, -7%);
+    transform: translate(6%, -7%);
   }
 }
 
