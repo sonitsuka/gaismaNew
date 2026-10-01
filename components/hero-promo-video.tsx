@@ -57,18 +57,20 @@ export default function VideoHero({
               className="balloon-img w-full block"
             />
 
-            {/* Old-style mouse pointer aimed at the balloon. It lives inside the float wrapper so
-                it drifts with the balloon and scales with it, rather than needing its own
-                placement per breakpoint. It sits high on the balloon's left flank: the intro
-                paragraph runs along that side between md and about 1100px, and staying above its
-                first line is what clears it — placing the pointer lower there lands it on the
-                words. Decorative: the balloon itself is the link. */}
+            {/* Old-style mouse pointer aimed at the balloon, sitting below it. It lives inside
+                the float wrapper so it drifts with the balloon and scales with it.
+                Between md and xl the intro paragraph occupies that spot, so there it drops far
+                enough to clear the paragraph's last line. The offset is vertical only: the
+                paragraph spans the balloon's whole horizontal range at those widths, so moving
+                sideways cannot clear it, and moving left runs into the Explore button.
+                Position comes from left/top rather than a translate, which the nudge animation
+                would override. Decorative: the balloon itself is the link. */}
             {balloonHref && (
               <svg
                 viewBox="0 0 12 20"
                 aria-hidden="true"
-                className="balloon-cursor absolute"
-                style={{ width: "40%", left: "-45%", top: "2%" }}
+                className="balloon-cursor absolute left-[-16.5%] top-[56.5%] md:top-[calc(56.5%_+_2.1cm)] xl:top-[56.5%]"
+                style={{ width: "40%" }}
               >
                 <path
                   d="M12 0 L12 16.5 L7.8 12.8 L5.1 19.3 L2.6 18.2 L5.3 11.9 L0.6 11.9 Z"
