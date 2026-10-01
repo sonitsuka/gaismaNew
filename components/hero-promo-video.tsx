@@ -68,7 +68,7 @@ export default function VideoHero({
                 viewBox="0 0 12 20"
                 aria-hidden="true"
                 className="balloon-cursor absolute"
-                style={{ width: "40%", left: "-45%", top: "2%" }}
+                style={{ width: "40%", left: "-16.5%", top: "56.5%" }}
               >
                 <path
                   d="M12 0 L12 16.5 L7.8 12.8 L5.1 19.3 L2.6 18.2 L5.3 11.9 L0.6 11.9 Z"
