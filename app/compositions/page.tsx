@@ -83,7 +83,7 @@ export default function CompositionsPage() {
             I have been composing for choreographers, dancers and events since 2017. The biggest milestone so far is
             Soul Threads (Die Seele am Faden), created with Friedemann Vogel and performed at the Hamburger Staatsoper
             and on stages in Rome, Salzburg and many others. If you are making something that needs its own sound, and
-            you resonate with my aesthetics, get in touch.
+            you resonate with my musical language, get in touch.
           </p>
           <div className="mt-6 max-w-2xl space-y-3">
             {/* Same video (and credits) as the Die Seele am Faden entry on /performance — the
