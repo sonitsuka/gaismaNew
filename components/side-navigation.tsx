@@ -2,9 +2,27 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, User, Music, PenTool, Video, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
+import { Home, User, Music, Video, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
 
 // Stage curtains only — two draped sides, no bottom line and no chairs.
+function ClefIcon({ size = 24 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M14.08 2.5c-3.38 2.4-5.07 4.9-5.07 7.6 0 2.6 1.82 4.5 3.64 6.2 1.69 1.6 2.6 2.7 2.6 3.8 0 1.4-1.3 2.4-3.12 2.4-1.56 0-2.6-.8-2.6-1.8" />
+      <path d="M12.65 16.3C9.66 14.8 7.84 12.9 7.84 10.8c0-2 1.95-3.5 4.29-3.5 2.08 0 3.64 1.2 3.64 2.7 0 1.6-1.69 2.8-3.77 2.8" />
+    </svg>
+  )
+}
+
 function CurtainsIcon({ size = 24 }: { size?: number }) {
   return (
     <svg
@@ -71,9 +89,7 @@ export default function SideNavigation() {
     { name: "Home", path: "/", color: "#a2bf69", icon: Home }, // green (light, matches the site's natural forest tones)
     { name: "About", path: "/about", color: "#67863c", icon: User }, // green (dark)
     { name: "Music", path: "/music", color: "#b890df", icon: Music }, // purple (light)
-    // Compositions: hidden from nav until real content (years, Bandcamp albums) is ready.
-    // Page still exists at /compositions — re-add this line to relink it:
-    // { name: "Compositions", path: "/compositions", color: "#9155ce", icon: PenTool }, // purple (mid)
+    { name: "Compositions", path: "/compositions", color: "#9155ce", icon: ClefIcon }, // purple (mid)
     { name: "Videos", path: "/videos", color: "#6b30a6", icon: Video }, // purple (dark)
     { name: "Performance", path: "/performance", color: "#bb401b", icon: CurtainsIcon }, // red-orange (dark)
     // Modeling: hidden from nav until real portfolio photos are ready.
