@@ -9,7 +9,6 @@ export type Composition = {
   description: string
   link?: string
   year: number | null
-  featured?: boolean
 }
 
 export function CompositionCard({ piece }: { piece: Composition }) {

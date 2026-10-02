@@ -2,7 +2,7 @@ import Link from "next/link"
 import PageBackground from "@/components/ui/pageBackground"
 import BandcampEmbed from "@/components/bandcamp-embed"
 import VideoPreviewCard from "@/components/video-preview-card"
-import CompositionsByYear, { CompositionCard, type Composition } from "@/components/compositions-by-year"
+import CompositionsByYear, { type Composition } from "@/components/compositions-by-year"
 
 // The two Bandcamp releases this page can show. Each one needs `albumId` — the digits
 // after `album=` in the album's "Share / Embed" code on Bandcamp — to show a player.
@@ -35,16 +35,6 @@ export default function CompositionsPage() {
       description: "Original composition for a duet performed at the Stuttgart Ballet's Noverre choreography showcase.",
       link: "https://youtu.be/GIh38PjyJnQ",
       year: null,
-    },
-    {
-      title: "Die Seele am Faden",
-      project: "Dance theatre piece with Friedemann Vogel, after Heinrich von Kleist",
-      role: "Composition and Live Music",
-      description:
-        "Original score composed and performed live for the touring dance-theatre production, staged in Stuttgart, Hamburg and Rome.",
-      link: "https://www.youtube.com/watch?v=iM1_UlsykWw",
-      year: null, // TODO: add the year this was composed/premiered
-      featured: true,
     },
     {
       title: "Emotional Traffic",
@@ -121,24 +111,7 @@ Light - Henry Winter`}
           </div>
         )}
 
-        {/* Pinned above the year timeline — independent of date, so it stays put as new pieces get added */}
-        {compositions.some((c) => c.featured) && (
-          <div className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white relative inline-block">
-              Grateful to Be Part of This
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {compositions
-                .filter((c) => c.featured)
-                .map((piece) => (
-                  <CompositionCard key={piece.title} piece={piece} />
-                ))}
-            </div>
-          </div>
-        )}
-
-        <CompositionsByYear compositions={compositions.filter((c) => !c.featured)} />
+        <CompositionsByYear compositions={compositions} />
       </div>
     </div>
   )
