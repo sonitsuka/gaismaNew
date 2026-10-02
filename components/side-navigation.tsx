@@ -18,9 +18,9 @@ function ClefIcon({ size = 24 }: { size?: number }) {
       strokeLinejoin="round"
     >
       {/* Stem, continuing into the descender hook below the staff */}
-      <path d="M12.35 2.2c-.2 5.6-.3 11-.3 16.2 0 2.4-1 3.8-2.8 3.8-1.3 0-2.2-.9-2.2-2.1" />
-      {/* The loop sweeping down from the top, crossing the stem into the eye */}
-      <path d="M12.35 2.2C9.55 4.8 7.85 7.5 7.85 10.2c0 2.9 2.2 5 5 5 2.3 0 4.1-1.7 4.1-3.9 0-2.1-1.7-3.7-3.8-3.7-2.8 0-5.1 2.2-5.1 5.3 0 2.8 1.9 5.2 4.7 6.4" />
+      <path d="M13.25 2.65v15c0 2.3-1.1 3.7-2.8 3.7-1.3 0-2.1-.9-2.1-1.9" />
+      {/* One open sweep from the top into the eye — a second crossing turns to mush at 20px */}
+      <path d="M13.25 2.65C9.45 6.05 7.65 9.25 7.65 12.05c0 2.7 2.1 4.6 4.7 4.6 2.3 0 4-1.7 4-3.8 0-2-1.6-3.5-3.6-3.5" />
     </svg>
   )
 }
