@@ -72,7 +72,7 @@ export default function CompositionsPage() {
         {/* Reel — excerpts for anyone weighing up using the music, or commissioning something new */}
         <div className="mb-16 md:mb-24 bg-white/5 border border-white/10 rounded-lg p-5 md:p-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white relative inline-block">
-            Music for Your Work
+            Music for Your Vision
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
           </h2>
           <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl">
