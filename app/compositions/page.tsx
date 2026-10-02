@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 import PageBackground from "@/components/ui/pageBackground"
 import BandcampEmbed from "@/components/bandcamp-embed"
 import CompositionsByYear, { CompositionCard, type Composition } from "@/components/compositions-by-year"
@@ -71,15 +72,32 @@ export default function CompositionsPage() {
         {/* Reel — excerpts for anyone weighing up using the music, or commissioning something new */}
         <div className="mb-16 md:mb-24 bg-white/5 border border-white/10 rounded-lg p-5 md:p-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white relative inline-block">
-            Music for Your Project
+            Music for Your Work
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
           </h2>
           <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl">
-            A quick listen through the range of what I write. If you're making something — a film, a performance, a
-            piece of theatre, anything that needs its own sound — get in touch about using one of these, or about a
-            score written for your project.
+            I have been composing for choreographers, dancers and events since 2017. The biggest milestone so far is
+            Soul Threads (Die Seele am Faden), created with Friedemann Vogel and performed at the Hamburger Staatsoper
+            and on stages in Rome, Salzburg and many others. If you are making something that needs its own sound, get
+            in touch — about using one of these pieces, or about a score written for you.
           </p>
-          <div className="mt-6 max-w-2xl">
+          <div className="mt-6 max-w-2xl space-y-3">
+            {/* Same video as the Die Seele am Faden entry on /performance — the milestone
+                named in the text above, so people can watch it without hunting for it. */}
+            <a
+              href="https://www.youtube.com/watch?v=iM1_UlsykWw"
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center justify-between gap-4 bg-white/5 border border-white/10 hover:border-white/40 rounded-lg px-5 py-4 transition-colors duration-300"
+            >
+              <span className="min-w-0">
+                <span className="block text-sm sm:text-base font-semibold text-white">
+                  Soul Threads (Die Seele am Faden)
+                </span>
+                <span className="block mt-1 text-xs uppercase tracking-wider text-white/50">Watch on YouTube</span>
+              </span>
+              <ExternalLink size={18} className="shrink-0 text-white/50 group-hover:text-white transition-colors" />
+            </a>
             <BandcampEmbed {...REEL} />
           </div>
           <div className="mt-6">
