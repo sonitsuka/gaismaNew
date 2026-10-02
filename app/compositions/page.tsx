@@ -5,14 +5,13 @@ import CompositionsByYear, { CompositionCard, type Composition } from "@/compone
 
 // The two Bandcamp releases this page can show. Each one needs `albumId` — the digits
 // after `album=` in the album's "Share / Embed" code on Bandcamp — to show a player.
-// While `albumId` is null the section shows a "Listen on Bandcamp" link card instead,
-// because a private release won't play for visitors inside an embed.
+// While `albumId` is null the section shows a "Listen on Bandcamp" link card instead.
 // Set a release to null entirely to hide its section until there's something to put there.
 const REEL = {
   title: "Compositions",
   url: "https://gaisma.bandcamp.com/album/compositions",
   albumId: null as string | null,
-  note: "Private link — excerpts from scores written for theatre, dance and film.",
+  note: "Excerpts from scores written for theatre, dance and film.",
 }
 
 const FULL_ALBUM: { title: string; url: string; albumId: string | null } | null = null
@@ -69,15 +68,16 @@ export default function CompositionsPage() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
-        {/* Reel — short unreleased excerpts aimed at choreographers/collaborators deciding whether to work with you */}
+        {/* Reel — excerpts for anyone weighing up using the music, or commissioning something new */}
         <div className="mb-16 md:mb-24 bg-white/5 border border-white/10 rounded-lg p-5 md:p-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white relative inline-block">
-            For Choreographers & Collaborators
+            Music for Your Project
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
           </h2>
           <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl">
-            Short, unreleased excerpts — a quick way to hear the range of what I write. Get in touch for full versions
-            or a custom piece for your project.
+            A quick listen through the range of what I write. If you're making something — a film, a performance, a
+            piece of theatre, anything that needs its own sound — get in touch about using one of these, or about a
+            score written for your project.
           </p>
           <div className="mt-6 max-w-2xl">
             <BandcampEmbed {...REEL} />

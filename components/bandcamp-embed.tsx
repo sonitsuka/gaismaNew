@@ -7,9 +7,9 @@ export type BandcampEmbedProps = {
    *                                             ^^^^^^^^^^
    * Get it from the album page on Bandcamp → "Share / Embed" → "Embed this album".
    *
-   * Leave this out while the album is still private: a private release can't be
-   * played by visitors inside an embed, so the component falls back to a
-   * "Listen on Bandcamp" card pointing at `url` instead of a dead player.
+   * Leave this out if there's no embed code yet (a private release doesn't get one):
+   * the component then falls back to a "Listen on Bandcamp" card pointing at `url`
+   * instead of a player visitors can't play.
    */
   albumId?: string | null
   /** Optional: the digits after `track=` in the embed code, to feature one piece instead of the whole album. */
