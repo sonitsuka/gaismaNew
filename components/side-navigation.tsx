@@ -2,9 +2,29 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, User, Music, PenTool, Video, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
+import { Home, User, Music, Video, Camera, Palette, Newspaper, Mail, Menu, X } from "lucide-react"
 
 // Stage curtains only — two draped sides, no bottom line and no chairs.
+function ClefIcon({ size = 24 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {/* Stem, continuing into the descender hook below the staff */}
+      <path d="M13.25 2.65v15c0 2.3-1.1 3.7-2.8 3.7-1.3 0-2.1-.9-2.1-1.9" />
+      {/* One open sweep from the top into the eye — a second crossing turns to mush at 20px */}
+      <path d="M13.25 2.65C9.45 6.05 7.65 9.25 7.65 12.05c0 2.7 2.1 4.6 4.7 4.6 2.3 0 4-1.7 4-3.8 0-2-1.6-3.5-3.6-3.5" />
+    </svg>
+  )
+}
+
 function CurtainsIcon({ size = 24 }: { size?: number }) {
   return (
     <svg
@@ -71,9 +91,7 @@ export default function SideNavigation() {
     { name: "Home", path: "/", color: "#a2bf69", icon: Home }, // green (light, matches the site's natural forest tones)
     { name: "About", path: "/about", color: "#67863c", icon: User }, // green (dark)
     { name: "Music", path: "/music", color: "#b890df", icon: Music }, // purple (light)
-    // Compositions: hidden from nav until real content (years, Bandcamp albums) is ready.
-    // Page still exists at /compositions — re-add this line to relink it:
-    // { name: "Compositions", path: "/compositions", color: "#9155ce", icon: PenTool }, // purple (mid)
+    { name: "Compositions", path: "/compositions", color: "#9155ce", icon: ClefIcon }, // purple (mid)
     { name: "Videos", path: "/videos", color: "#6b30a6", icon: Video }, // purple (dark)
     { name: "Performance", path: "/performance", color: "#bb401b", icon: CurtainsIcon }, // red-orange (dark)
     // Modeling: hidden from nav until real portfolio photos are ready.

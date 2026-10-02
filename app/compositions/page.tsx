@@ -1,18 +1,25 @@
 import Link from "next/link"
 import PageBackground from "@/components/ui/pageBackground"
-import CompositionsByYear, { CompositionCard, type Composition } from "@/components/compositions-by-year"
+import BandcampEmbed from "@/components/bandcamp-embed"
+import VideoPreviewCard from "@/components/video-preview-card"
+import CompositionsByYear, { type Composition } from "@/components/compositions-by-year"
 
-// Swap this for the real Bandcamp "Share / Embed" <iframe> once the album is live.
-function BandcampEmbedPlaceholder({ label, height = "120px" }: { label: string; height?: string }) {
-  return (
-    <div
-      style={{ height }}
-      className="w-full border border-dashed border-white/25 rounded-lg flex items-center justify-center text-center px-4"
-    >
-      <p className="text-xs sm:text-sm text-white/40 uppercase tracking-wider">{label}</p>
-    </div>
-  )
+// The two Bandcamp releases this page can show. Each one needs `albumId` — the digits
+// after `album=` in the album's "Share / Embed" code on Bandcamp — to show a player.
+// While `albumId` is null the section shows a "Listen on Bandcamp" link card instead.
+// Set a release to null entirely to hide its section until there's something to put there.
+const REEL = {
+  title: "Compositions",
+  url: "https://gaisma.bandcamp.com/album/compositions",
+  albumId: "3749092135" as string | null,
+  // Compact player, matching the options picked in Bandcamp's Share / Embed dialog.
+  // Flip tracklist to true (and height to 472) to list the pieces inside the player.
+  tracklist: false,
+  height: 120,
+  note: "Excerpts from scores written for theatre, dance and film.",
 }
+
+const FULL_ALBUM: { title: string; url: string; albumId: string | null } | null = null
 
 export default function CompositionsPage() {
   // Compositions written for other people's projects (theatre, dance, film, etc).
@@ -28,16 +35,6 @@ export default function CompositionsPage() {
       description: "Original composition for a duet performed at the Stuttgart Ballet's Noverre choreography showcase.",
       link: "https://youtu.be/GIh38PjyJnQ",
       year: null,
-    },
-    {
-      title: "Die Seele am Faden",
-      project: "Dance theatre piece with Friedemann Vogel, after Heinrich von Kleist",
-      role: "Composition and Live Music",
-      description:
-        "Original score composed and performed live for the touring dance-theatre production, staged in Stuttgart, Hamburg and Rome.",
-      link: "https://www.youtube.com/watch?v=iM1_UlsykWw",
-      year: null, // TODO: add the year this was composed/premiered
-      featured: true,
     },
     {
       title: "Emotional Traffic",
@@ -66,18 +63,36 @@ export default function CompositionsPage() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12">
-        {/* Reel — short unreleased excerpts aimed at choreographers/collaborators deciding whether to work with you */}
+        {/* Reel — excerpts for anyone weighing up using the music, or commissioning something new */}
         <div className="mb-16 md:mb-24 bg-white/5 border border-white/10 rounded-lg p-5 md:p-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white relative inline-block">
-            For Choreographers & Collaborators
+            Music for Your Vision
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
           </h2>
           <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl">
-            Short, unreleased excerpts — a quick way to hear the range of what I write. Get in touch for full versions
-            or a custom piece for your project.
+            I have been composing for choreographers, dancers and events since 2017. The biggest milestone so far is
+            Soul Threads (Die Seele am Faden), created with Friedemann Vogel and performed at the Hamburger Staatsoper
+            and on stages in Rome, Salzburg and many others. If you are making something that needs its own sound, and
+            you resonate with my musical language, get in touch.
           </p>
-          <div className="mt-6">
-            <BandcampEmbedPlaceholder label="Bandcamp reel embed goes here" height="120px" />
+          <div className="mt-6 max-w-2xl space-y-3">
+            {/* Same video (and credits) as the Die Seele am Faden entry on /performance — the
+                milestone named in the text above, so people can watch it without hunting for it.
+                The max-w-md wrapper cancels the card's own mx-auto so it stays left-aligned here. */}
+            <div className="max-w-md">
+              <VideoPreviewCard
+                title="Soul Threads (Die Seele am Faden)"
+                thumbnail="https://img.youtube.com/vi/iM1_UlsykWw/0.jpg"
+                url="https://www.youtube.com/watch?v=iM1_UlsykWw"
+                videoId="iM1_UlsykWw"
+                credits={`Concept and Choreography - Thomas Lempertz and Friedemann Vogel
+Costumes and Stage Design - Thomas Lempertz
+Composition and Live Music - Alisa Scetinina (GAISMA)
+Digital Artist - Timo Kreitz
+Light - Henry Winter`}
+              />
+            </div>
+            <BandcampEmbed {...REEL} />
           </div>
           <div className="mt-6">
             <Link
@@ -90,28 +105,13 @@ export default function CompositionsPage() {
         </div>
 
         {/* Full album — chronological listen-through of released/credited work */}
-        <div className="mb-12 md:mb-16">
-          <BandcampEmbedPlaceholder label="Bandcamp full album embed goes here" height="120px" />
-        </div>
-
-        {/* Pinned above the year timeline — independent of date, so it stays put as new pieces get added */}
-        {compositions.some((c) => c.featured) && (
-          <div className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white relative inline-block">
-              Grateful to Be Part of This
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent" />
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {compositions
-                .filter((c) => c.featured)
-                .map((piece) => (
-                  <CompositionCard key={piece.title} piece={piece} />
-                ))}
-            </div>
+        {FULL_ALBUM && (
+          <div className="mb-12 md:mb-16 max-w-2xl">
+            <BandcampEmbed {...FULL_ALBUM} />
           </div>
         )}
 
-        <CompositionsByYear compositions={compositions.filter((c) => !c.featured)} />
+        <CompositionsByYear compositions={compositions} />
       </div>
     </div>
   )
