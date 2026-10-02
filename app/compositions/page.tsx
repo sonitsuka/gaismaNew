@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { ExternalLink } from "lucide-react"
 import PageBackground from "@/components/ui/pageBackground"
 import BandcampEmbed from "@/components/bandcamp-embed"
+import VideoPreviewCard from "@/components/video-preview-card"
 import CompositionsByYear, { CompositionCard, type Composition } from "@/components/compositions-by-year"
 
 // The two Bandcamp releases this page can show. Each one needs `albumId` — the digits
@@ -11,7 +11,11 @@ import CompositionsByYear, { CompositionCard, type Composition } from "@/compone
 const REEL = {
   title: "Compositions",
   url: "https://gaisma.bandcamp.com/album/compositions",
-  albumId: null as string | null,
+  albumId: "3749092135" as string | null,
+  // Compact player, matching the options picked in Bandcamp's Share / Embed dialog.
+  // Flip tracklist to true (and height to 472) to list the pieces inside the player.
+  tracklist: false,
+  height: 120,
   note: "Excerpts from scores written for theatre, dance and film.",
 }
 
@@ -78,26 +82,26 @@ export default function CompositionsPage() {
           <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl">
             I have been composing for choreographers, dancers and events since 2017. The biggest milestone so far is
             Soul Threads (Die Seele am Faden), created with Friedemann Vogel and performed at the Hamburger Staatsoper
-            and on stages in Rome, Salzburg and many others. If you are making something that needs its own sound, get
-            in touch — about using one of these pieces, or about a score written for you.
+            and on stages in Rome, Salzburg and many others. If you are making something that needs its own sound, and
+            you resonate with my aesthetics, get in touch.
           </p>
           <div className="mt-6 max-w-2xl space-y-3">
-            {/* Same video as the Die Seele am Faden entry on /performance — the milestone
-                named in the text above, so people can watch it without hunting for it. */}
-            <a
-              href="https://www.youtube.com/watch?v=iM1_UlsykWw"
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center justify-between gap-4 bg-white/5 border border-white/10 hover:border-white/40 rounded-lg px-5 py-4 transition-colors duration-300"
-            >
-              <span className="min-w-0">
-                <span className="block text-sm sm:text-base font-semibold text-white">
-                  Soul Threads (Die Seele am Faden)
-                </span>
-                <span className="block mt-1 text-xs uppercase tracking-wider text-white/50">Watch on YouTube</span>
-              </span>
-              <ExternalLink size={18} className="shrink-0 text-white/50 group-hover:text-white transition-colors" />
-            </a>
+            {/* Same video (and credits) as the Die Seele am Faden entry on /performance — the
+                milestone named in the text above, so people can watch it without hunting for it.
+                The max-w-md wrapper cancels the card's own mx-auto so it stays left-aligned here. */}
+            <div className="max-w-md">
+              <VideoPreviewCard
+                title="Soul Threads (Die Seele am Faden)"
+                thumbnail="https://img.youtube.com/vi/iM1_UlsykWw/0.jpg"
+                url="https://www.youtube.com/watch?v=iM1_UlsykWw"
+                videoId="iM1_UlsykWw"
+                credits={`Concept and Choreography - Thomas Lempertz and Friedemann Vogel
+Costumes and Stage Design - Thomas Lempertz
+Composition and Live Music - Alisa Scetinina (GAISMA)
+Digital Artist - Timo Kreitz
+Light - Henry Winter`}
+              />
+            </div>
             <BandcampEmbed {...REEL} />
           </div>
           <div className="mt-6">
