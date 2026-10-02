@@ -56,7 +56,7 @@ export default function CompositionsPage() {
               <span className="text-white">Compositions</span>
             </h1>
             <p className="mt-3 max-w-xl text-sm sm:text-base text-white/70">
-              Original music written for other artists' and companies' projects — theatre, dance and film.
+              Original music written for other artists, theatre pieces, dance and film.
             </p>
           </div>
         </div>
