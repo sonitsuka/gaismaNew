@@ -1,18 +1,21 @@
 import Link from "next/link"
 import PageBackground from "@/components/ui/pageBackground"
+import BandcampEmbed from "@/components/bandcamp-embed"
 import CompositionsByYear, { CompositionCard, type Composition } from "@/components/compositions-by-year"
 
-// Swap this for the real Bandcamp "Share / Embed" <iframe> once the album is live.
-function BandcampEmbedPlaceholder({ label, height = "120px" }: { label: string; height?: string }) {
-  return (
-    <div
-      style={{ height }}
-      className="w-full border border-dashed border-white/25 rounded-lg flex items-center justify-center text-center px-4"
-    >
-      <p className="text-xs sm:text-sm text-white/40 uppercase tracking-wider">{label}</p>
-    </div>
-  )
+// The two Bandcamp releases this page can show. Each one needs `albumId` — the digits
+// after `album=` in the album's "Share / Embed" code on Bandcamp — to show a player.
+// While `albumId` is null the section shows a "Listen on Bandcamp" link card instead,
+// because a private release won't play for visitors inside an embed.
+// Set a release to null entirely to hide its section until there's something to put there.
+const REEL = {
+  title: "Compositions",
+  url: "https://gaisma.bandcamp.com/album/compositions",
+  albumId: null as string | null,
+  note: "Private link — excerpts from scores written for theatre, dance and film.",
 }
+
+const FULL_ALBUM: { title: string; url: string; albumId: string | null } | null = null
 
 export default function CompositionsPage() {
   // Compositions written for other people's projects (theatre, dance, film, etc).
@@ -76,8 +79,8 @@ export default function CompositionsPage() {
             Short, unreleased excerpts — a quick way to hear the range of what I write. Get in touch for full versions
             or a custom piece for your project.
           </p>
-          <div className="mt-6">
-            <BandcampEmbedPlaceholder label="Bandcamp reel embed goes here" height="120px" />
+          <div className="mt-6 max-w-2xl">
+            <BandcampEmbed {...REEL} />
           </div>
           <div className="mt-6">
             <Link
@@ -90,9 +93,11 @@ export default function CompositionsPage() {
         </div>
 
         {/* Full album — chronological listen-through of released/credited work */}
-        <div className="mb-12 md:mb-16">
-          <BandcampEmbedPlaceholder label="Bandcamp full album embed goes here" height="120px" />
-        </div>
+        {FULL_ALBUM && (
+          <div className="mb-12 md:mb-16 max-w-2xl">
+            <BandcampEmbed {...FULL_ALBUM} />
+          </div>
+        )}
 
         {/* Pinned above the year timeline — independent of date, so it stays put as new pieces get added */}
         {compositions.some((c) => c.featured) && (
