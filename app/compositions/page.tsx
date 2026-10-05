@@ -12,10 +12,13 @@ const REEL = {
   title: "Compositions",
   url: "https://gaisma.bandcamp.com/album/compositions",
   albumId: "3749092135" as string | null,
-  // Compact player, matching the options picked in Bandcamp's Share / Embed dialog.
-  // Flip tracklist to true (and height to 472) to list the pieces inside the player.
-  tracklist: false,
-  height: 120,
+  // Tracklist on: the compact player shows one title and a play button, which reads
+  // as a single track rather than a collection. The list inside the player is the
+  // clearest signal that there are several pieces. Bandcamp scrolls it internally,
+  // so this height holds however many tracks the album grows to.
+  tracklist: true,
+  height: 470,
+  label: "Selected pieces — play through, or pick a track",
   note: "Excerpts from scores written for theatre, dance and film.",
 }
 

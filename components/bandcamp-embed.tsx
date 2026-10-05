@@ -20,6 +20,9 @@ export type BandcampEmbedProps = {
   title: string
   /** One line of context for the fallback card (ignored once the player is live). */
   note?: string
+  /** Small line above the player. Use it to say what the player holds, since the
+   *  iframe takes a moment to load and an album can otherwise read as one track. */
+  label?: string
   /** Show the track list inside the player. Off gives the short artwork-only player. */
   tracklist?: boolean
   /**
@@ -36,6 +39,7 @@ export default function BandcampEmbed({
   url,
   title,
   note,
+  label,
   tracklist = true,
   height,
 }: BandcampEmbedProps) {
@@ -74,6 +78,7 @@ export default function BandcampEmbed({
 
   return (
     <div>
+      {label && <p className="mb-2 text-xs uppercase tracking-wider text-white/50">{label}</p>}
       {/* The dark wrapper + `colorScheme` keep the player's slot from flashing white
           on a slow load — a bare iframe paints the browser's white default first. */}
       <div
@@ -95,7 +100,7 @@ export default function BandcampEmbed({
         rel="noreferrer"
         className="mt-3 inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/50 hover:text-white transition-colors"
       >
-        Open on Bandcamp
+        All tracks on Bandcamp
         <ExternalLink size={13} />
       </a>
     </div>
