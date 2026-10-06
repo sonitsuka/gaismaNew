@@ -4,13 +4,14 @@ import { Play } from "lucide-react"
 type MusicCardProps = {
   title: string
   image: string
-  href: string
+  /** Where the release streams. Omit it for a release with nowhere to point yet —
+   *  the card then shows the cover without being a link that goes nowhere. */
+  href?: string
   alt: string
 }
 
 export default function MusicCard({ title, image, href, alt }: MusicCardProps) {
-  return (
-    <a href={href} target="_blank" className="group" rel="noreferrer">
+  const card = (
       <div className="relative aspect-square bg-black border border-white/10 overflow-hidden">
         <Image
           src={image}
@@ -26,12 +27,21 @@ export default function MusicCard({ title, image, href, alt }: MusicCardProps) {
             {title}
           </h3>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="w-12 h-12 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
-            <Play className="w-6 h-6 text-white fill-white" />
+        {href && (
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="w-12 h-12 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+              <Play className="w-6 h-6 text-white fill-white" />
+            </div>
           </div>
-        </div>
+        )}
       </div>
+  )
+
+  return href ? (
+    <a href={href} target="_blank" className="group" rel="noreferrer">
+      {card}
     </a>
+  ) : (
+    <div className="group">{card}</div>
   )
 }
