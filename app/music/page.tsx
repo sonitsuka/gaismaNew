@@ -42,7 +42,7 @@ export default function MusicPage() {
       ],
     },
     {
-      category: "Radio Show",
+      category: "DJ Sets",
       items: [
         {
           title: "Mutant Radio 13.12.2022",
