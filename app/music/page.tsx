@@ -10,6 +10,21 @@ export default function MusicPage() {
       name: "GAISMA",
       items: [
         {
+          title: "Empathy 2.0",
+          // Web version of "Empathy 2.0 - Album Cover - Final V3.png": that original is
+          // 3000x3000 / 5.4MB, and next.config sets images.unoptimized, so it would be
+          // served at full size for a 300px card.
+          image: "/empathy-2-0.webp",
+          alt: "Empathy 2.0",
+          // TODO: add href once the release has a streaming link.
+        },
+        {
+          title: "Empathy",
+          image: "/empathy.jpg",
+          href: "https://open.spotify.com/intl-de/album/2bOnhokrEQOnHuvl8H6oZn",
+          alt: "Empathy",
+        },
+        {
           title: "Dumped In Paris",
           image: "/dumpedInParis.webp",
           href: "https://artists.landr.com/057829699953",
@@ -32,21 +47,6 @@ export default function MusicPage() {
           image: "notMyCupOfTea.jpeg",
           href: "https://open.spotify.com/intl-de/album/0c3Bd93SHLw5vlVhrHN26P",
           alt: "Not My Cup Of Tea",
-        },
-        {
-          title: "Empathy",
-          image: "/empathy.jpg",
-          href: "https://open.spotify.com/intl-de/album/2bOnhokrEQOnHuvl8H6oZn",
-          alt: "Empathy",
-        },
-        {
-          title: "Empathy 2.0",
-          // Web version of "Empathy 2.0 - Album Cover - Final V3.png": that original is
-          // 3000x3000 / 5.4MB, and next.config sets images.unoptimized, so it would be
-          // served at full size for a 300px card.
-          image: "/empathy-2-0.webp",
-          alt: "Empathy 2.0",
-          // TODO: add href once the release has a streaming link.
         },
       ],
     },
