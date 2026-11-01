@@ -2,9 +2,32 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, User, Music, Video, Camera, Palette, Newspaper, Mail, Menu, X, ChevronDown } from "lucide-react"
+import { Home, User, Music, Video, Palette, Newspaper, Mail, Menu, X, ChevronDown } from "lucide-react"
 
 // Stage curtains only — two draped sides, no bottom line and no chairs.
+function CameraIcon({ size = 24 }: { size?: number }) {
+  // A 1920s box camera: upright body, small viewfinder nub, lens low on the face.
+  // Corners are rounded well past lucide's default so it sits with the clef and
+  // curtains rather than against them. Centred on the 24-box (bbox 5.4-18.6, 3-21).
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M8 5.2h8c1.6 0 2.6 1.2 2.6 3v9.8c0 1.8-1 3-2.6 3H8c-1.6 0-2.6-1.2-2.6-3V8.2c0-1.8 1-3 2.6-3Z" />
+      <circle cx="12" cy="14.2" r="3" />
+      <path d="M10.4 5.2V4a1 1 0 0 1 1-1h1.2a1 1 0 0 1 1 1v1.2" />
+      <path d="M5.6 9.9h12.8" />
+    </svg>
+  )
+}
+
 function ClefIcon({ size = 24 }: { size?: number }) {
   return (
     <svg
@@ -109,28 +132,30 @@ export default function SideNavigation() {
     }
   }, [openMenu])
 
-  // Four color families (green / purple / red-orange / blue), spaced far apart in hue
-  // so items don't blend together — each pair differs mainly by light vs. dark shade.
+  // Each family is separated by hue, not only by lightness. The two greens used to
+  // sit 5 degrees apart and the two purples 1 degree, so within a pair they read as
+  // one colour at two brightnesses. Hue angles, in list order: 68, 144, 251, 291,
+  // 8, 22, 42, 220, 175 — closest neighbours are the three warm ones, ~15 degrees.
   const navItems = [
-    { name: "Home", path: "/", color: "#a2bf69", icon: Home }, // green (light, matches the site's natural forest tones)
-    { name: "About", path: "/about", color: "#67863c", icon: User }, // green (dark)
+    { name: "Home", path: "/", color: "#b8c94e", icon: Home }, // lime 68
+    { name: "About", path: "/about", color: "#3f8f5f", icon: User }, // emerald 144
     // Music opens a submenu rather than navigating: /music and the videos page sit
     // under it, which frees a top-level slot (Videos used to take one of its own).
     {
       name: "Music",
-      color: "#b890df", // purple (light)
+      color: "#9b8ae6", // periwinkle 251
       icon: Music,
       children: [
         { name: "Music", path: "/music", icon: Music },
         { name: "Video", path: "/videos", icon: Video },
       ],
     },
-    { name: "Compositions", path: "/compositions", color: "#9155ce", icon: ClefIcon }, // purple (mid)
-    { name: "Performance", path: "/performance", color: "#bb401b", icon: CurtainsIcon }, // red-orange (dark)
-    { name: "Modeling", path: "/modeling", color: "#e36f2b", icon: Camera }, // red-orange (mid)
-    { name: "Curation", path: "/curation", color: "#eda65e", icon: Palette }, // orange (light)
-    { name: "Press", path: "/press", color: "#2450a8", icon: Newspaper }, // blue (dark)
-    { name: "Contact", path: "/contact", color: "#66ccc4", icon: Mail }, // green-blue / teal (light)
+    { name: "Compositions", path: "/compositions", color: "#b547c9", icon: ClefIcon }, // magenta-purple 291
+    { name: "Performance", path: "/performance", color: "#b83a28", icon: CurtainsIcon }, // deep red 8
+    { name: "Modeling", path: "/modeling", color: "#e36f2b", icon: CameraIcon }, // orange 22
+    { name: "Curation", path: "/curation", color: "#e8b84a", icon: Palette }, // warm yellow 42
+    { name: "Press", path: "/press", color: "#2450a8", icon: Newspaper }, // blue 220
+    { name: "Contact", path: "/contact", color: "#66ccc4", icon: Mail }, // teal 175
   ]
 
   return (
