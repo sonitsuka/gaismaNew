@@ -127,9 +127,7 @@ export default function SideNavigation() {
     },
     { name: "Compositions", path: "/compositions", color: "#9155ce", icon: ClefIcon }, // purple (mid)
     { name: "Performance", path: "/performance", color: "#bb401b", icon: CurtainsIcon }, // red-orange (dark)
-    // Modeling: hidden from nav until real portfolio photos are ready.
-    // Page still exists at /modeling — re-add this line to relink it:
-    // { name: "Modeling", path: "/modeling", color: "#e36f2b", icon: Camera }, // red-orange (mid)
+    { name: "Modeling", path: "/modeling", color: "#e36f2b", icon: Camera }, // red-orange (mid)
     { name: "Curation", path: "/curation", color: "#eda65e", icon: Palette }, // orange (light)
     { name: "Press", path: "/press", color: "#2450a8", icon: Newspaper }, // blue (dark)
     { name: "Contact", path: "/contact", color: "#66ccc4", icon: Mail }, // green-blue / teal (light)
