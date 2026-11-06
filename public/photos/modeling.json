@@ -79,27 +79,48 @@
   {
     "src": "/photos/modeling-12.webp",
     "full": "/photos/modeling-12-full.webp",
+    "width": 667,
+    "height": 1000,
+    "alt": "ISRA, silver costume"
+  },
+  {
+    "src": "/photos/modeling-13.webp",
+    "full": "/photos/modeling-13-full.webp",
+    "width": 667,
+    "height": 1000,
+    "alt": "ISRA, silver costume in cyan light"
+  },
+  {
+    "src": "/photos/modeling-14.webp",
+    "full": "/photos/modeling-14-full.webp",
+    "width": 782,
+    "height": 1000,
+    "alt": "ISRA, silver costume, full length"
+  },
+  {
+    "src": "/photos/modeling-15.webp",
+    "full": "/photos/modeling-15-full.webp",
     "width": 966,
     "height": 1000,
     "alt": "Black and white, cupped hands"
   },
   {
-    "src": "/photos/modeling-13.webp",
-    "full": "/photos/modeling-13-full.webp",
+    "src": "/photos/modeling-16.webp",
+    "full": "/photos/modeling-16-full.webp",
     "width": 750,
     "height": 1000,
     "alt": "Lookbook, full length"
   },
   {
-    "src": "/photos/modeling-14.webp",
-    "full": "/photos/modeling-14-full.webp",
+    "src": "/photos/modeling-17.webp",
+    "full": "/photos/modeling-17-full.webp",
     "width": 750,
     "height": 1000,
     "alt": "Lookbook, full length"
   },
   {
-    "src": "/photos/modeling-15.webp",
-    "full": "/photos/modeling-15-full.webp",
+    "src": "/photos/modeling-18.webp",
+    "full": "/photos/modeling-18-full.webp",
     "width": 820,
     "height": 1000,
     "alt": "Lookbook, portrait"
