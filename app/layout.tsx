@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import SideNavigation from "@/components/side-navigation"
 import Footer from "@/components/footer"
+import VideoLightbox from "@/components/video-lightbox"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -32,6 +33,10 @@ export default function RootLayout({
         
         {/* Footer (full width) */}
         <Footer />
+
+        {/* Plays YouTube links in an overlay instead of navigating away. Costs nothing
+            until a link is clicked, and the links still work with JavaScript off. */}
+        <VideoLightbox />
       </body>
     </html>
   )
