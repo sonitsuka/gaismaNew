@@ -104,6 +104,25 @@ export default function PerformancePage() {
         },
       ],
     },
+    {
+      category: "Through My Lens",
+      videos: [
+        {
+          title: "Levin Goes Lightly - Music Video",
+          thumbnail: "https://img.youtube.com/vi/UvA22F5to8k/0.jpg",
+          url: "https://www.youtube.com/watch?v=UvA22F5to8k",
+          videoId: "UvA22F5to8k",
+          credits: "Music - Levin Goes Lightly\nDirected, Filmed & Edited by Alisa Scetinina",
+        },
+        {
+          title: "Levin Goes Lightly - Blog Video",
+          thumbnail: "https://img.youtube.com/vi/X3P31VfGpuc/0.jpg",
+          url: "https://www.youtube.com/watch?v=X3P31VfGpuc",
+          videoId: "X3P31VfGpuc",
+          credits: "Music - Levin Goes Lightly\nDirected, Filmed & Edited by Alisa Scetinina",
+        },
+      ],
+    },
   ]
 
   return (
