@@ -208,7 +208,6 @@ export default function Home() {
         buttonText="Explore"
         buttonLink="#latestReleases"
         showTitleOverlay
-        balloonHref="https://www.youtube.com/watch?v=-mvbfSkJUMw&list=PLNrrJwfEnUHw&index=2"
       />
 
       {/* Content Preview */}
@@ -219,6 +218,23 @@ export default function Home() {
             <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/50 to-transparent"></span>
           </h2>
           <div className="flex flex-wrap gap-4">
+            {/* Empathy 2.0 — newest, so it leads. Not a link yet: there is no
+                streaming URL for it, and a card that goes nowhere is worse than one
+                that plainly does not click. Wrap it in the same <a> as the others,
+                with href and a date line, once the release is out. */}
+            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
+              <Image
+                src="/empathy-2-0.webp"
+                alt="Empathy 2.0"
+                width={200}
+                height={200}
+                className="object-cover h-full w-full"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+              <div className="absolute inset-0 flex flex-col justify-end p-3">
+                <h3 className="font-bold text-white text-sm">Empathy 2.0</h3>
+              </div>
+            </div>
           <a
               href="https://artists.landr.com/057829699953"
               target="_blank"

@@ -6,7 +6,6 @@ export default function VideoHero({
   buttonText = "Explore",
   buttonLink = "#latestReleases",
   showTitleOverlay = true,
-  balloonHref = ""
 }) {
   return (
     <div className="relative w-full h-[90vh] overflow-hidden">
@@ -20,69 +19,6 @@ export default function VideoHero({
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/20"></div>
-      </div>
-
-      {/* Balloon. Horizontally it tracks her: object-cover crops the photo differently per
-          viewport, so this box reproduces the covered image's width and the balloon is placed in
-          photo coordinates within it, keeping it on her knee line at every screen size.
-          Vertically it is measured from the hero instead, so the top of the float clears the
-          frame by a fixed 2mm — the keyframes run from the low point to translateY(0), which is
-          what makes that clearance exact. The extra 1px offsets the sway: rotating about the
-          bottom grows the bounding box upward by about that much.
-          From md up the layout drops its pt-14, so the hero runs underneath the fixed
-          AnnouncementBar (33px) and the clearance is measured from the bar instead. */}
-      <div className="absolute inset-0 z-30 overflow-hidden pointer-events-none">
-        <div
-          className="absolute left-1/2 top-0 -translate-x-1/2 h-full"
-          style={{ width: "max(100%, calc(90vh * 2000 / 1126))" }}
-        >
-          <div
-            className="absolute animate-balloon-float top-[calc(2mm_+_1px)] md:top-[calc(33px_+_2mm_+_1px)]"
-            style={{ left: "43.68%", width: "10.0%" }}
-          >
-            {/* Hit area over the balloon body only — the rest of the asset is the thread's
-                transparent strip, which would otherwise be an invisible click target. */}
-            {balloonHref && (
-              <a
-                href={balloonHref}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Watch the video"
-                className="balloon-hit absolute inset-x-0 top-0 h-[47%] rounded-[50%] z-10 cursor-pointer pointer-events-auto"
-              />
-            )}
-            <img
-              src="/balloon-gaisma.webp"
-              alt="GAISMA x Sweetback Sessions"
-              className="balloon-img w-full block"
-            />
-
-            {/* Old-style mouse pointer aimed at the balloon, sitting below it. It lives inside
-                the float wrapper so it drifts with the balloon and scales with it.
-                Between md and xl the intro paragraph occupies that spot, so there it drops far
-                enough to clear the paragraph's last line. The offset is vertical only: the
-                paragraph spans the balloon's whole horizontal range at those widths, so moving
-                sideways cannot clear it, and moving left runs into the Explore button.
-                Position comes from left/top rather than a translate, which the nudge animation
-                would override. Decorative: the balloon itself is the link. */}
-            {balloonHref && (
-              <svg
-                viewBox="0 0 12 20"
-                aria-hidden="true"
-                className="balloon-cursor absolute left-[-16.5%] top-[56.5%] md:top-[calc(56.5%_+_2.1cm)] xl:top-[56.5%]"
-                style={{ width: "40%" }}
-              >
-                <path
-                  d="M12 0 L12 16.5 L7.8 12.8 L5.1 19.3 L2.6 18.2 L5.3 11.9 L0.6 11.9 Z"
-                  fill="#fff"
-                  stroke="rgba(0,0,0,0.55)"
-                  strokeWidth="0.7"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
-          </div>
-        </div>
       </div>
 
       {/* Title Overlay */}
