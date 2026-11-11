@@ -3,13 +3,16 @@ interface AnnouncementBarProps {
   releaseDate: string;
   preSaveHref?: string;
   showPreSave?: boolean;
+  /** Wording of the link. "Watch now" suits a video, "Listen now" a release. */
+  ctaText?: string;
 }
 
 const AnnouncementBar = ({ 
   message,
   releaseDate,
   preSaveHref,
-  showPreSave = true
+  showPreSave = true,
+  ctaText = "Watch now"
 }: AnnouncementBarProps) => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10">
@@ -30,7 +33,7 @@ const AnnouncementBar = ({
                   rel="noreferrer"
                   className="underline underline-offset-2 hover:opacity-80 transition-opacity"
                 >
-                  Watch now
+                  {ctaText}
                 </a>
               </>
             )}

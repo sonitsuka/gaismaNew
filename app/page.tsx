@@ -195,10 +195,11 @@ export default function Home() {
 
     <div className="bg-black text-white min-h-screen">
       <AnnouncementBar 
-        message="New Music Video — Yin Yang"
+        message="New Single — Truth"
         releaseDate=""
-        preSaveHref="https://www.youtube.com/watch?v=V6izyti8L5o"
+        preSaveHref="https://lnk.to/GaismaAndHounah_Truth_EP"
         showPreSave={true}
+        ctaText="Listen now"
       />
       {/* Hero. A still, not a video: VideoHero takes no video props, so the two
           that were passed here were silently ignored and TypeScript flagged them. */}
