@@ -37,6 +37,23 @@ const PRECONNECT: Record<Video["kind"], string[]> = {
 // If the embed never reports back, show it anyway rather than spin for ever.
 const READY_TIMEOUT_MS = 4000
 
+// How long a mouse must rest on a card before its player is loaded off-screen.
+const PRERENDER_DWELL_MS = 200
+
+/**
+ * The exact document the overlay will load. The warm-up fetches this same URL,
+ * so the click can be served from cache - a different URL (the card's muted
+ * hover preview, say) shares the player's scripts but not the page itself.
+ * playsinline keeps iOS from taking the video fullscreen on its own.
+ */
+function embedSrc(video: Video): string {
+  if (video.kind === "vimeo") return `https://player.vimeo.com/video/${video.id}?autoplay=1`
+  return (
+    `https://www.youtube-nocookie.com/embed/${video.id}` +
+    `?autoplay=1&rel=0&playsinline=1${video.start ? `&start=${video.start}` : ""}`
+  )
+}
+
 function parseVideo(href: string): Video | null {
   let url: URL
   try {
@@ -71,6 +88,18 @@ export default function VideoLightbox() {
   const [video, setVideo] = useState<Video | null>(null)
   const [ready, setReady] = useState(false)
   const warmed = useRef<Set<string>>(new Set())
+  const prerendered = useRef<{ id: string; el: HTMLIFrameElement } | null>(null)
+  const dwellTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const cancelDwell = useCallback(() => {
+    if (dwellTimer.current) clearTimeout(dwellTimer.current)
+    dwellTimer.current = null
+  }, [])
+
+  const dropPrerender = useCallback(() => {
+    prerendered.current?.el.remove()
+    prerendered.current = null
+  }, [])
 
   useEffect(() => {
     const videoLinkFrom = (target: EventTarget | null) => {
@@ -83,19 +112,78 @@ export default function VideoLightbox() {
       return parseVideo(link.getAttribute("href") || "")
     }
 
+    const hint = (rel: string, href: string, as?: string) => {
+      if (warmed.current.has(rel + href)) return
+      warmed.current.add(rel + href)
+      const el = document.createElement("link")
+      el.rel = rel
+      el.href = href
+      if (as) el.as = as
+      else el.crossOrigin = ""
+      document.head.appendChild(el)
+    }
+
+    // Open the sockets the player will need. Cheap, so it runs as soon as a
+    // video card is anywhere near the screen - which is the only warning a
+    // phone gives, since there is no hover to wait for.
+    const preconnect = (kind: Video["kind"]) => PRECONNECT[kind].forEach((h) => hint("preconnect", h))
+
     const warm = (e: Event) => {
       const parsed = videoLinkFrom(e.target)
-      if (!parsed) return
-      for (const href of PRECONNECT[parsed.kind]) {
-        if (warmed.current.has(href)) continue
-        warmed.current.add(href)
-        const el = document.createElement("link")
-        el.rel = "preconnect"
-        el.href = href
-        el.crossOrigin = ""
-        document.head.appendChild(el)
-      }
+      if (parsed) preconnect(parsed.kind)
     }
+
+    // Dwelling on a card with a mouse means the click is probably coming, so
+    // the player is loaded off-screen in advance. It has to be an iframe:
+    // Chrome partitions its cache by frame origin, so neither a prefetch link
+    // nor a fetch from the page itself can serve a cross-origin iframe - only
+    // another iframe to the same origin can. The overlay's own iframe then
+    // finds the player's scripts already cached and starts far sooner.
+    //
+    // It is muted and granted no permissions at all, so nothing can make a
+    // sound off-screen. Only one exists at a time, and it is thrown away as
+    // soon as the overlay opens or the pointer leaves.
+    const startPrerender = (v: Video) => {
+      if (prerendered.current?.id === v.id) return
+      dropPrerender()
+      const el = document.createElement("iframe")
+      el.src = `${embedSrc(v)}&mute=1`
+      el.setAttribute("allow", "")
+      el.setAttribute("aria-hidden", "true")
+      el.setAttribute("tabindex", "-1")
+      el.setAttribute("data-prerender", "")
+      el.style.cssText =
+        "position:fixed;left:-9999px;top:0;width:640px;height:360px;opacity:0;pointer-events:none;border:0"
+      document.body.appendChild(el)
+      prerendered.current = { id: v.id, el }
+    }
+
+    const onOver = (e: PointerEvent) => {
+      const parsed = videoLinkFrom(e.target)
+      if (!parsed) return
+      preconnect(parsed.kind)
+      // Touch has no hover, and a phone should not spend a megabyte on a guess.
+      if (e.pointerType !== "mouse") return
+      cancelDwell()
+      dwellTimer.current = setTimeout(() => startPrerender(parsed), PRERENDER_DWELL_MS)
+    }
+
+    const onOut = () => cancelDwell()
+
+    const seen = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue
+          seen.unobserve(entry.target)
+          const parsed = videoLinkFrom(entry.target)
+          if (parsed) preconnect(parsed.kind)
+        }
+      },
+      { rootMargin: "300px" },
+    )
+    document.querySelectorAll("a[href]").forEach((a) => {
+      if (videoLinkFrom(a)) seen.observe(a)
+    })
 
     const onClick = (e: MouseEvent) => {
       // Leave cmd/ctrl/shift-click and middle-click alone so "open in new tab" still works.
@@ -103,20 +191,27 @@ export default function VideoLightbox() {
       const parsed = videoLinkFrom(e.target)
       if (!parsed) return
       e.preventDefault()
+      cancelDwell()
+      dropPrerender()
       setReady(false)
       setVideo(parsed)
     }
 
-    // pointerover covers a mouse, pointerdown the first touch on a phone.
-    document.addEventListener("pointerover", warm, { passive: true })
+    document.addEventListener("pointerover", onOver, { passive: true })
+    document.addEventListener("pointerout", onOut, { passive: true })
+    // pointerdown is the only warning a touch screen gives before the tap.
     document.addEventListener("pointerdown", warm, { passive: true })
     document.addEventListener("click", onClick)
     return () => {
-      document.removeEventListener("pointerover", warm)
+      document.removeEventListener("pointerover", onOver)
+      document.removeEventListener("pointerout", onOut)
       document.removeEventListener("pointerdown", warm)
       document.removeEventListener("click", onClick)
+      seen.disconnect()
+      cancelDwell()
+      dropPrerender()
     }
-  }, [])
+  }, [cancelDwell, dropPrerender])
 
   const close = useCallback(() => setVideo(null), [])
 
@@ -140,11 +235,7 @@ export default function VideoLightbox() {
 
   const poster = video.kind === "youtube" ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : null
 
-  const src =
-    video.kind === "vimeo"
-      ? `https://player.vimeo.com/video/${video.id}?autoplay=1`
-      : `https://www.youtube-nocookie.com/embed/${video.id}` +
-        `?autoplay=1&rel=0&modestbranding=1${video.start ? `&start=${video.start}` : ""}`
+  const src = embedSrc(video)
 
   return (
     <div
