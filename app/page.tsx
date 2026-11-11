@@ -233,6 +233,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
               <div className="absolute inset-0 flex flex-col justify-end p-3">
                 <h3 className="font-bold text-white text-sm">Empathy 2.0</h3>
+                <p className="text-xs text-white/60">2026</p>
               </div>
             </div>
           <a
@@ -255,7 +256,7 @@ export default function Home() {
                 <h3 className="font-bold text-white group-hover:text-white transition-colors text-sm">
                   Dumped in Paris
                 </h3>
-                <p className="text-xs text-white/60">21.11.2025</p>
+                <p className="text-xs text-white/60">2025</p>
               </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-10 h-10 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.5)]">
