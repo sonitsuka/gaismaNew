@@ -9,9 +9,19 @@ interface VideoPreviewCardProps {
   url: string
   credits: string
   videoId?: string
+  /** Send clicks to YouTube/Vimeo instead of the in-page overlay. */
+  external?: boolean
 }
 
-export default function VideoPreviewCard({ title, thumbnail, url, credits, videoId }: VideoPreviewCardProps) {
+export default function VideoPreviewCard({
+  title,
+  thumbnail,
+  url,
+  credits,
+  videoId,
+  external,
+}: VideoPreviewCardProps) {
+  const externalAttr = external ? { "data-external-video": "" } : {}
   const [isHovering, setIsHovering] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -64,7 +74,7 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <a href={url} target="_blank" rel="noopener noreferrer" className="block group">
+      <a href={url} target="_blank" rel="noopener noreferrer" className="block group" {...externalAttr}>
         <div className="relative aspect-video">
           {/* Thumbnail image (shown when not hovering) */}
           {!isHovering && (
@@ -79,7 +89,7 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
           {/* Video preview (shown when hovering) */}
           {isHovering && isYouTube && youtubeId && (
             <iframe
-              src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${youtubeId}`}
+              src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${youtubeId}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               className="absolute inset-0 w-full h-full border-0"
               title={title}
@@ -114,7 +124,7 @@ export default function VideoPreviewCard({ title, thumbnail, url, credits, video
       </a>
 
       <div className="p-4">
-        <a href={url} target="_blank" rel="noopener noreferrer" className="group/title">
+        <a href={url} target="_blank" rel="noopener noreferrer" className="group/title" {...externalAttr}>
           <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover/title:text-white/70 flex items-center">
             {title}
             <ExternalLink className="ml-2 h-4 w-4 text-white/70 opacity-70" />

@@ -2,9 +2,24 @@ import Image from "next/image"
 import VideoPreviewCard from "@/components/video-preview-card"
 import PageBackground from "@/components/ui/pageBackground"
 
+type PerformanceVideo = {
+  title: string
+  thumbnail: string
+  url: string
+  credits: string
+  videoId?: string
+  /** Send clicks straight to YouTube instead of the in-page overlay. */
+  external?: boolean
+}
+
+type PerformanceCategory = {
+  category: string
+  videos: PerformanceVideo[]
+}
+
 export default function PerformancePage() {
   // Performance videos data
-  const performanceVideos = [
+  const performanceVideos: PerformanceCategory[] = [
     {
       category: "Performance",
       videos: [
@@ -108,17 +123,19 @@ export default function PerformancePage() {
       category: "Through My Lens",
       videos: [
         {
-          title: "Levin Goes Lightly - Music Video",
+          title: 'Levin Goes Lightly "New York Tour-Blog"',
           thumbnail: "https://img.youtube.com/vi/UvA22F5to8k/0.jpg",
           url: "https://www.youtube.com/watch?v=UvA22F5to8k",
           videoId: "UvA22F5to8k",
+          external: true,
           credits: "Music - Levin Goes Lightly\nDirected, Filmed & Edited by Alisa Scetinina",
         },
         {
-          title: "Levin Goes Lightly - Blog Video",
+          title: "Levin Goes Lightly - Sterne (Official Video)",
           thumbnail: "https://img.youtube.com/vi/X3P31VfGpuc/0.jpg",
           url: "https://www.youtube.com/watch?v=X3P31VfGpuc",
           videoId: "X3P31VfGpuc",
+          external: true,
           credits: "Music - Levin Goes Lightly\nDirected, Filmed & Edited by Alisa Scetinina",
         },
       ],
@@ -171,6 +188,7 @@ export default function PerformancePage() {
                   url={video.url}
                   credits={video.credits}
                   videoId={video.videoId}
+                  external={video.external}
                 />
               ))}
             </div>
