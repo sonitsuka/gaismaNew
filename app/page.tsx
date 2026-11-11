@@ -249,24 +249,35 @@ export default function Home() {
                 </div>
               </div>
             </a>
-            {/* Empathy 2.0 — newest, so it leads. Not a link yet: there is no
-                streaming URL for it, and a card that goes nowhere is worse than one
-                that plainly does not click. Wrap it in the same <a> as the others,
-                with href and a date line, once the release is out. */}
-            <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
-              <Image
-                src="/empathy-2-0.webp"
-                alt="Empathy 2.0"
-                width={200}
-                height={200}
-                className="object-cover h-full w-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-              <div className="absolute inset-0 flex flex-col justify-end p-3">
-                <h3 className="font-bold text-white text-sm">Empathy 2.0</h3>
-                <p className="text-xs text-white/60">2026</p>
+            <a
+              href="https://release.landr.com/991061203564"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+            >
+              <div className="relative aspect-square w-[200px] bg-black border border-white/10 overflow-hidden">
+                <Image
+                  src="/empathy-2-0.webp"
+                  alt="Empathy 2.0"
+                  width={200}
+                  height={200}
+                  className="object-cover h-full w-full transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
+                <div className="absolute inset-0 flex flex-col justify-end p-3">
+                  <h3 className="font-bold text-white group-hover:text-white transition-colors text-sm">
+                    Empathy 2.0
+                  </h3>
+                  <p className="text-xs text-white/60">2026</p>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-10 h-10 rounded-full bg-black/70 border border-white flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+                    <Play className="w-5 h-5 text-white fill-white" />
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           <a
               href="https://artists.landr.com/057829699953"
               target="_blank"

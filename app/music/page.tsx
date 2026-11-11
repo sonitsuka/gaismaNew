@@ -15,8 +15,8 @@ export default function MusicPage() {
           // 3000x3000 / 5.4MB, and next.config sets images.unoptimized, so it would be
           // served at full size for a 300px card.
           image: "/empathy-2-0.webp",
+          href: "https://release.landr.com/991061203564",
           alt: "Empathy 2.0",
-          // TODO: add href once the release has a streaming link.
         },
         {
           title: "Empathy",
