@@ -24,6 +24,17 @@ function parseEventDate(dateStr: string): Date | null {
 
 // ------------ All events (upcoming + past combined) ------------
 const ALL_EVENTS = [
+  // April 2027
+  {
+    // Written "24. - 25." rather than "24 - 25": parseEventDate only matches a range
+    // with the dot after the first day, and anything it cannot parse falls through
+    // to Past Shows.
+    date: "24. - 25.04.2027",
+    title: "Soul Threads",
+    venue: "Taipei Performing Arts Center",
+    tag: "live",
+  },
+
   // September 2026
   {
     date: "22.09.2026",
@@ -374,7 +385,12 @@ export default function Home() {
               {upcomingShows.map((n, i) => (
                 <li key={i} className="bg-black border border-white/10 hover:border-white/50 transition-all duration-300 flex flex-col sm:flex-row sm:items-start">
                   <p className="text-white text-sm mb-2 sm:mb-0">{n.date}</p>
-                  <p className="text-white/90 sm:ml-6">{n.title}</p>
+                  {/* Venue shown the same way PastShows does it — upcoming rows were
+                      dropping it, so the where of a show never appeared until it was over. */}
+                  <p className="text-white/90 sm:ml-6">
+                    {n.title}
+                    {n.venue ? ` — ${n.venue}` : ""}
+                  </p>
                 </li>
               ))}
             </ul>
