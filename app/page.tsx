@@ -200,10 +200,9 @@ export default function Home() {
         preSaveHref="https://www.youtube.com/watch?v=V6izyti8L5o"
         showPreSave={true}
       />
-      {/* Hero Video */}
+      {/* Hero. A still, not a video: VideoHero takes no video props, so the two
+          that were passed here were silently ignored and TypeScript flagged them. */}
       <VideoHero
-        backgroundVideoSrc="/gaisma-Matze-short.mp4"
-        mainVideoSrc="/gaisma-Matze-short.mp4"
         description="In times of unpredictability and chaos one thing that we can always be certain of is that the power and growth behind our personality lies in our own hands."
         buttonText="Explore"
         buttonLink="#latestReleases"
