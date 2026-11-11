@@ -228,7 +228,7 @@ export default function VideosPage() {
               <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                 <Image
                   src="https://img.youtube.com/vi/TFIPiJUq244/0.jpg"
-                  alt="GAISMA live"
+                  alt="Gaisma Empathy 2.0 Live + Interview"
                   width={640}
                   height={360}
                   className="object-cover h-full w-full transition-all duration-500"
@@ -237,7 +237,7 @@ export default function VideosPage() {
                 <div className="absolute inset-0 border border-white/0 group-hover:border-white/100 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] pointer-events-none"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-4">
                   <h3 className="font-bold text-white group-hover:text-white transition-colors">
-                    GAISMA live
+                    Gaisma Empathy 2.0 Live + Interview
                   </h3>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
