@@ -133,5 +133,13 @@
     "height": 1000,
     "alt": "Runway, red tulle dress",
     "section": "Runway"
+  },
+  {
+    "src": "/photos/modeling-20.webp",
+    "full": "/photos/modeling-20-full.webp",
+    "width": 750,
+    "height": 1000,
+    "alt": "Runway, black leather coat",
+    "section": "Runway"
   }
 ]
