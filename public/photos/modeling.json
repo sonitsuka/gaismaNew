@@ -125,5 +125,13 @@
     "width": 820,
     "height": 1000,
     "alt": "Lookbook, portrait"
+  },
+  {
+    "src": "/photos/modeling-19.webp",
+    "full": "/photos/modeling-19-full.webp",
+    "width": 664,
+    "height": 1000,
+    "alt": "Runway, red tulle dress",
+    "section": "Runway"
   }
 ]
