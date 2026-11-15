@@ -10,6 +10,8 @@ export type GalleryPhoto = {
   width: number
   height: number
   alt: string
+  /** Groups the photo under a heading on the page; ungrouped ones come first. */
+  section?: string
 }
 
 /**
@@ -53,14 +55,21 @@ export default function MasonryGallery({ photos }: { photos: GalleryPhoto[] }) {
     }
   }, [lightbox, step])
 
-  const columns: GalleryPhoto[][] = Array.from({ length: cols }, () => [])
-  photos.forEach((p, i) => columns[i % cols].push(p))
+  // Never open more columns than there are photos: a one-photo section would
+  // otherwise sit in the first third of the row with two empty columns beside
+  // it. Narrowing the whole row to match keeps the photo a sensible size
+  // rather than blowing it up to the full width of the page.
+  const used = Math.max(1, Math.min(cols, photos.length))
+  const rowWidth = used === 1 ? "max-w-sm" : used === 2 ? "max-w-3xl" : ""
+
+  const columns: GalleryPhoto[][] = Array.from({ length: used }, () => [])
+  photos.forEach((p, i) => columns[i % used].push(p))
 
   const open = lightbox !== null ? photos[lightbox] : null
 
   return (
     <>
-      <div className="flex gap-3 md:gap-4 items-start">
+      <div className={`flex gap-3 md:gap-4 items-start ${rowWidth}`}>
         {columns.map((col, c) => (
           <div key={c} className="flex-1 flex flex-col gap-3 md:gap-4 min-w-0">
             {col.map((photo) => {
