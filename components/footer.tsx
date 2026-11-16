@@ -189,7 +189,9 @@ export default function Footer() {
 
           {/* Copyright, Links and Logo */}
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-2 gap-y-1 text-xs text-white/60 w-full md:w-auto">
-          <p>GAISMA &copy; 2025</p>    
+          {/* Taken from the build, so a deploy keeps it current instead of it
+              quietly going stale the way the hardcoded 2025 did. */}
+          <p>GAISMA &copy; {new Date().getFullYear()}</p>
             <span className="text-white/40">|</span>
             <Link href="/imprint" className="hover:text-white transition-colors">
             Impressum

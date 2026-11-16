@@ -177,7 +177,7 @@ export default function CurationPage() {
               <div className="relative aspect-[3/4] sm:aspect-auto sm:h-auto mt-4 md:mt-6 group">
                 <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
                 <Image
-                  src="/nectar127_poster.png"
+                  src="/nectar127_poster.webp"
                   alt="Event Poster"
                   width={500}
                   height={700}
@@ -193,7 +193,7 @@ export default function CurationPage() {
                 {/* Large image */}
                 <div className="col-span-12 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/SacrificeOfourLittleSelf.jpg"
+                    src="/SacrificeOfourLittleSelf.webp"
                     alt="Main Theme Art"
                     width={800}
                     height={400}
@@ -205,7 +205,7 @@ export default function CurationPage() {
                 {/* 2x2 grid of smaller images */}
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/simulation.jpg"
+                    src="/simulation.webp"
                     alt="Simulation Art"
                     width={400}
                     height={400}
@@ -215,7 +215,7 @@ export default function CurationPage() {
                 </div>
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/stimulation1-left.jpg"
+                    src="/stimulation1-left.webp"
                     alt="Simulation Left Art"
                     width={400}
                     height={400}
@@ -225,7 +225,7 @@ export default function CurationPage() {
                 </div>
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/stimulation1-right.jpg"
+                    src="/stimulation1-right.webp"
                     alt="Simulation Right Art"
                     width={400}
                     height={400}
@@ -235,7 +235,7 @@ export default function CurationPage() {
                 </div>
                 <div className="col-span-6 sm:col-span-6 group relative overflow-hidden rounded-lg">
                   <Image
-                    src="/simulation2.jpg"
+                    src="/simulation2.webp"
                     alt="Simulation Art 2"
                     width={400}
                     height={400}

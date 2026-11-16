@@ -12,7 +12,7 @@ export default function VideoHero({
       {/* Background Image */}
       <div className="absolute inset-0 z-10">
         <Image
-          src="/hero-tree.jpg"
+          src="/hero-tree.webp"
           alt="GAISMA"
           fill
           priority

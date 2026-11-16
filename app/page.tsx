@@ -470,7 +470,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative aspect-[3/4] max-w-[320px] md:max-w-[400px] bg-black border border-white/10 overflow-hidden mx-auto md:mx-0">
               <Image
-                src="/profile-new.jpg"
+                src="/profile-new.webp"
                 alt="GAISMA profile pic"
                 fill
                 className="object-cover  hover:grayscale-0 transition-all duration-500"

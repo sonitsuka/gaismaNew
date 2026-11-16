@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: "GAISMA | Alisa Scetinina: Music and Performance Art Portfolio",
   description:
     "GAISMA Music Artist Page: Art resembles symbiosis of technology and human energy, that unifies in lucid dance.",
-  generator: 'v0.dev'
 }
 
 export default function RootLayout({

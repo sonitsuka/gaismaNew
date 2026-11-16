@@ -85,7 +85,7 @@ export default function PerformancePage() {
         },
         {
           title: "Alisa - filmed by Simon Pfister in Bavarian State Opera",
-          thumbnail: "/alisa-perfomance.png",
+          thumbnail: "/alisa-perfomance.webp",
           url: "https://vimeo.com/216516573",
           videoId: "216516573",
           credits: "Director - Donna Mae Burrows\nCamera - Simon Pfister\nDancer - Alisa Scetinina",
