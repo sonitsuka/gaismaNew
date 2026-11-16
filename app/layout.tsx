@@ -8,10 +8,38 @@ import VideoLightbox from "@/components/video-lightbox"
 
 const inter = Inter({ subsets: ["latin"] })
 
+const TITLE = "GAISMA | Alisa Scetinina: Music and Performance Art Portfolio"
+const DESCRIPTION =
+  "GAISMA Music Artist Page: Art resembles symbiosis of technology and human energy, that unifies in lucid dance."
+
 export const metadata: Metadata = {
-  title: "GAISMA | Alisa Scetinina: Music and Performance Art Portfolio",
-  description:
-    "GAISMA Music Artist Page: Art resembles symbiosis of technology and human energy, that unifies in lucid dance.",
+  // Needed for the share image below to resolve to an absolute URL - the
+  // scrapers behind link previews cannot follow a relative path.
+  metadataBase: new URL("https://gaisma.space"),
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "website",
+    siteName: "GAISMA",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "GAISMA - Alisa Scetinina",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/og-image.jpg"],
+  },
 }
 
 export default function RootLayout({

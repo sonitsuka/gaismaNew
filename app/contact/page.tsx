@@ -17,7 +17,7 @@ export default function ContactPage() {
           alt="Contact GAISMA"
           fill
           className="object-cover"
-          priority
+          loading="lazy"
         />
         {/* Transparent link over GAISMA@POSTEO.DE */}
         <a
@@ -41,7 +41,7 @@ export default function ContactPage() {
           alt="Contact GAISMA"
           fill
           className="object-contain"
-          priority
+          loading="lazy"
         />
         {/* Transparent link over GAISMA@POSTEO.DE on mobile */}
         <a
