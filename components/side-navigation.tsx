@@ -6,9 +6,12 @@ import { Home, User, Music, Video, Palette, Newspaper, Mail, Menu, X, ChevronDow
 
 // Stage curtains only — two draped sides, no bottom line and no chairs.
 function CameraIcon({ size = 24 }: { size?: number }) {
-  // A 1920s box camera: upright body, small viewfinder nub, lens low on the face.
+  // A rangefinder: wide body, lens offset left, viewfinder window top right and
+  // the film-advance nub on the top plate. The upright box camera it replaces
+  // read as a plain rectangle at the 20px the nav draws it at - a camera is
+  // recognised by its wide silhouette, not by its lens alone.
   // Corners are rounded well past lucide's default so it sits with the clef and
-  // curtains rather than against them. Centred on the 24-box (bbox 5.4-18.6, 3-21).
+  // curtains rather than against them.
   return (
     <svg
       width={size}
@@ -20,10 +23,10 @@ function CameraIcon({ size = 24 }: { size?: number }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M8 5.2h8c1.6 0 2.6 1.2 2.6 3v9.8c0 1.8-1 3-2.6 3H8c-1.6 0-2.6-1.2-2.6-3V8.2c0-1.8 1-3 2.6-3Z" />
-      <circle cx="12" cy="14.2" r="3" />
-      <path d="M10.4 5.2V4a1 1 0 0 1 1-1h1.2a1 1 0 0 1 1 1v1.2" />
-      <path d="M5.6 9.9h12.8" />
+      <path d="M4.2 7.4h15.6c1.1 0 1.9.9 1.9 2v8c0 1.1-.8 2-1.9 2H4.2c-1.1 0-1.9-.9-1.9-2v-8c0-1.1.8-2 1.9-2Z" />
+      <path d="M6.8 7.4V5.6c0-.6.5-1.1 1.1-1.1h2.3c.6 0 1.1.5 1.1 1.1v1.8" />
+      <circle cx="9.4" cy="13.4" r="3.1" />
+      <circle cx="17.3" cy="10.8" r="1.1" />
     </svg>
   )
 }
