@@ -59,6 +59,11 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
+  // Proves to Google Search Console that we control this domain. It is meant to
+  // be public - it appears in the page source by design - and can be removed
+  // once Search Console reports the site as verified, though leaving it costs
+  // nothing and avoids losing verification later.
+  verification: { google: "ozI8_qSmiuwe-Mc79kjgosqR3RSwRjNFfaGqpVD0QQE" },
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
