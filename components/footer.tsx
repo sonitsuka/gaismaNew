@@ -54,9 +54,10 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* SoundCloud (Orange) */}
+            {/* SoundCloud - goes to the Klang Parfuem lobby radio set, which used
+                to have its own radio icon beside this one */}
             <a
-              href="https://soundcloud.com/gaisma"
+              href="https://soundcloud.com/gaisma/sets/klang-parfuem-lobby-radio"
               target="_blank"
               rel="noreferrer"
               className="text-white hover:text-white/70 transition-colors"
@@ -67,32 +68,6 @@ export default function Footer() {
                 className="w-4 h-4 md:w-5 md:h-5 fill-current"
               >
                 <path d="M17.3 10.4c-.5 0-1 .1-1.5.3-.2-2.4-2.2-4.3-4.6-4.3-.5 0-1 .1-1.5.2-.2 0-.3.2-.3.4v8.4c0 .2.1.3.3.4.5.1 1 .2 1.5.2h6.1c1.8 0 3.2-1.4 3.2-3.2-.1-1.8-1.5-3.2-3.2-3.2zM3.7 11.3c-.2 0-.3.1-.3.3v3.6c0 .2.1.3.3.3s.3-.1.3-.3v-3.6c0-.1-.1-.3-.3-.3zm1.6-.7c-.2 0-.3.1-.3.3v4.9c0 .2.1.3.3.3s.3-.1.3-.3v-4.9c0-.2-.1-.3-.3-.3zm1.6-.7c-.2 0-.3.1-.3.3v6.3c0 .2.1.3.3.3s.3-.1.3-.3v-6.3c0-.2-.1-.3-.3-.3zm1.6-.7c-.2 0-.3.1-.3.3v7.8c0 .2.1.3.3.3s.3-.1.3-.3V9.5c0-.2-.1-.3-.3-.3z" />
-              </svg>
-            </a>
-
-            {/* Radio (Amber) */}
-            <a
-              href="https://soundcloud.com/gaisma/sets/klang-parfuem-lobby-radio?si=83873f0cdb5e473db623ddd8f9a89203&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white hover:text-white/70 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-                className="w-4 h-4 md:w-5 md:h-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="6" y="16" width="52" height="32" rx="4" ry="4" />
-                <circle cx="22" cy="32" r="6" />
-                <line x1="42" y1="26" x2="42" y2="30" />
-                <line x1="42" y1="34" x2="42" y2="38" />
-                <line x1="42" y1="42" x2="42" y2="46" />
-                <line x1="10" y1="10" x2="50" y2="2" />
               </svg>
             </a>
 
@@ -125,27 +100,6 @@ export default function Footer() {
                 className="w-4 h-4 md:w-5 md:h-5 fill-current"
               >
                 <path d="M0 384h192l128-256H128zM320 128h192v256H320z" />
-              </svg>
-            </a>
-
-            {/* Facebook (Dark Blue) */}
-            <a
-              href="https://www.facebook.com/gaisma.lovin"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white hover:text-white/70 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 md:w-5 md:h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
 
