@@ -5,7 +5,10 @@
  * links it points at. Keeping the profile URLs here means the JSON-LD in the
  * layout, the sitemap and the footer can never drift apart.
  */
-export const SITE_URL = "https://gaisma.space"
+// The www host is the one that actually serves the site: Google reports that
+// https://gaisma.space redirects here, and a canonical URL must name the page
+// that answers, not the one that forwards.
+export const SITE_URL = "https://www.gaisma.space"
 
 export const SITE_NAME = "GAISMA"
 
