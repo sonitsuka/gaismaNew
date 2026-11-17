@@ -1,4 +1,13 @@
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Alisa Scetinina",
+  description:
+    "Born in Latvia and trained in classical ballet, Alisa Scetinina now writes and performs music as GAISMA.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About Alisa Scetinina | GAISMA", description: "Born in Latvia and trained in classical ballet, Alisa Scetinina now writes and performs music as GAISMA.", url: "/about" },
+}
 
 export default function AboutPage() {
   return (

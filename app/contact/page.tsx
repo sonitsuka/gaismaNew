@@ -1,8 +1,25 @@
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with GAISMA — Alisa Scetinina — for bookings, collaborations and commissions.",
+  alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact | GAISMA", description: "Get in touch with GAISMA — Alisa Scetinina — for bookings, collaborations and commissions.", url: "/contact" },
+}
 
 export default function ContactPage() {
   return (
     <div className="h-[calc(100vh-50px)] w-full bg-black flex items-center justify-center overflow-hidden">
+      {/* The address is painted into the artwork, so it is invisible to a search
+          engine and to a screen reader. This states it as real text without
+          altering the design. */}
+      <h1 className="sr-only">Contact GAISMA - Alisa Scetinina</h1>
+      <p className="sr-only">
+        Email <a href="mailto:gaisma@posteo.de">gaisma@posteo.de</a> for bookings,
+        collaborations and commissions.
+      </p>
 
       {/* Desktop: full landscape design */}
       <div

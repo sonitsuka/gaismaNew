@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Impressum",
+  description: "Legal notice for gaisma.space.",
+  alternates: { canonical: "/imprint" },
+}
+
 export default function ImprintPage() {
     return (
       <main className="min-h-screen bg-black text-white pt-24 pb-16">

@@ -1,6 +1,15 @@
 import Link from "next/link"
 import { ExternalLink, ChevronRight } from "lucide-react"
 import { pressItems, badgeLabel, badgeColor } from "@/lib/press-data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Interviews and Press",
+  description:
+    "Interviews, features and press coverage of GAISMA — Alisa Scetinina — in Stuttgarter Zeitung, LIFT Stuttgartmagazin, STUGGI.TV and more.",
+  alternates: { canonical: "/press" },
+  openGraph: { title: "Interviews and Press | GAISMA", description: "Interviews, features and press coverage of GAISMA — Alisa Scetinina — in Stuttgarter Zeitung, LIFT Stuttgartmagazin, STUGGI.TV and more.", url: "/press" },
+}
 
 export default function PressPage() {
   return (

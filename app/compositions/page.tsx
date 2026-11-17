@@ -3,6 +3,7 @@ import PageBackground from "@/components/ui/pageBackground"
 import BandcampEmbed from "@/components/bandcamp-embed"
 import VideoPreviewCard from "@/components/video-preview-card"
 import CompositionsByYear, { type Composition } from "@/components/compositions-by-year"
+import type { Metadata } from "next"
 
 // The two Bandcamp releases this page can show. Each one needs `albumId` — the digits
 // after `album=` in the album's "Share / Embed" code on Bandcamp — to show a player.
@@ -23,6 +24,14 @@ const REEL = {
 }
 
 const FULL_ALBUM: { title: string; url: string; albumId: string | null } | null = null
+
+export const metadata: Metadata = {
+  title: "Compositions — Music for Dance, Theatre and Film",
+  description:
+    "Original music written for other artists, theatre pieces, dance and film. Composed by GAISMA — Alisa Scetinina — since 2017.",
+  alternates: { canonical: "/compositions" },
+  openGraph: { title: "Compositions — Music for Dance, Theatre and Film | GAISMA", description: "Original music written for other artists, theatre pieces, dance and film. Composed by GAISMA — Alisa Scetinina — since 2017.", url: "/compositions" },
+}
 
 export default function CompositionsPage() {
   // Compositions written for other people's projects (theatre, dance, film, etc).

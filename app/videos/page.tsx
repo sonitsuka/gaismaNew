@@ -1,6 +1,15 @@
 import Image from "next/image"
 import { Play } from "lucide-react"
 import PageBackground from "@/components/ui/pageBackground"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Videos",
+  description:
+    "Music videos, live footage and interviews from GAISMA — Alisa Scetinina.",
+  alternates: { canonical: "/videos" },
+  openGraph: { title: "Videos | GAISMA", description: "Music videos, live footage and interviews from GAISMA — Alisa Scetinina.", url: "/videos" },
+}
 
 export default function VideosPage() {
   return (

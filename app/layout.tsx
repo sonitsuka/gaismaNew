@@ -5,24 +5,65 @@ import "./globals.css"
 import SideNavigation from "@/components/side-navigation"
 import Footer from "@/components/footer"
 import VideoLightbox from "@/components/video-lightbox"
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  ARTIST_NAME,
+  PROFILES,
+} from "@/lib/site"
 
 const inter = Inter({ subsets: ["latin"] })
 
-const TITLE = "GAISMA | Alisa Scetinina: Music and Performance Art Portfolio"
-const DESCRIPTION =
-  "GAISMA Music Artist Page: Art resembles symbiosis of technology and human energy, that unifies in lucid dance."
+/**
+ * Tells Google this site belongs to the artist GAISMA, and that the same artist
+ * is behind the Spotify, Bandcamp, SoundCloud, YouTube and Instagram profiles.
+ * Without this a search engine has only the word "gaisma" to go on, which is an
+ * ordinary word in several languages.
+ */
+const STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      description: SITE_DESCRIPTION,
+      inLanguage: "en",
+      publisher: { "@id": `${SITE_URL}/#artist` },
+    },
+    {
+      "@type": "MusicGroup",
+      "@id": `${SITE_URL}/#artist`,
+      name: SITE_NAME,
+      alternateName: ARTIST_NAME,
+      url: SITE_URL,
+      image: `${SITE_URL}/og-image.jpg`,
+      description: SITE_DESCRIPTION,
+      sameAs: PROFILES,
+    },
+  ],
+}
 
 export const metadata: Metadata = {
-  // Needed for the share image below to resolve to an absolute URL - the
-  // scrapers behind link previews cannot follow a relative path.
-  metadataBase: new URL("https://gaisma.space"),
-  title: TITLE,
-  description: DESCRIPTION,
+  // Needed for the share image and the canonical links to resolve to absolute
+  // URLs - the scrapers behind link previews cannot follow a relative path.
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    // Every other page sets its own title and gets " | GAISMA" appended, so no
+    // two pages claim to be the same thing in a search result.
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "GAISMA",
-    title: TITLE,
-    description: DESCRIPTION,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     url: "/",
     locale: "en_US",
     images: [
@@ -30,14 +71,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "GAISMA - Alisa Scetinina",
+        alt: `${SITE_NAME} - ${ARTIST_NAME}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: TITLE,
-    description: DESCRIPTION,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
   },
 }
@@ -64,6 +105,11 @@ export default function RootLayout({
         {/* Plays YouTube links in an overlay instead of navigating away. Costs nothing
             until a link is clicked, and the links still work with JavaScript off. */}
         <VideoLightbox />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+        />
       </body>
     </html>
   )

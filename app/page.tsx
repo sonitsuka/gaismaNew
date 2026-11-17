@@ -194,6 +194,12 @@ export default function Home() {
   return (
 
     <div className="bg-black text-white min-h-screen">
+      {/* The page had no h1 at all, and the hero is a photograph with no words
+          on it, so nothing told a search engine whose site this is. Visually
+          hidden rather than printed, to leave the hero design as it is. */}
+      <h1 className="sr-only">
+        GAISMA - Alisa Scetinina, musician, composer and performer
+      </h1>
       <AnnouncementBar 
         message="New Single — Truth"
         releaseDate=""

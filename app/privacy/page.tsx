@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "How gaisma.space handles your data.",
+  alternates: { canonical: "/privacy" },
+}
+
 export default function PrivacyPage() {
     return (
       <main className="min-h-screen bg-black text-white pt-24 pb-16">

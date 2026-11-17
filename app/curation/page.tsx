@@ -1,5 +1,14 @@
 import PageBackground from "@/components/ui/pageBackground"
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Curation — Festivals and Radio",
+  description:
+    "Projects curated by GAISMA, including the We Are The Future family festival in Waiblingen and the Klang Parfüm radio show.",
+  alternates: { canonical: "/curation" },
+  openGraph: { title: "Curation — Festivals and Radio | GAISMA", description: "Projects curated by GAISMA, including the We Are The Future family festival in Waiblingen and the Klang Parfüm radio show.", url: "/curation" },
+}
 
 export default function CurationPage() {
   return (

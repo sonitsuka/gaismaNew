@@ -1,6 +1,7 @@
 import Image from "next/image"
 import VideoPreviewCard from "@/components/video-preview-card"
 import PageBackground from "@/components/ui/pageBackground"
+import type { Metadata } from "next"
 
 type PerformanceVideo = {
   title: string
@@ -15,6 +16,14 @@ type PerformanceVideo = {
 type PerformanceCategory = {
   category: string
   videos: PerformanceVideo[]
+}
+
+export const metadata: Metadata = {
+  title: "Performance",
+  description:
+    "Live performance, dance and film work by Alisa Scetinina — stage pieces, art films and commercial roles.",
+  alternates: { canonical: "/performance" },
+  openGraph: { title: "Performance | GAISMA", description: "Live performance, dance and film work by Alisa Scetinina — stage pieces, art films and commercial roles.", url: "/performance" },
 }
 
 export default function PerformancePage() {

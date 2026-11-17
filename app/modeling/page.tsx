@@ -1,10 +1,19 @@
 import PageBackground from "@/components/ui/pageBackground"
 import MasonryGallery, { type GalleryPhoto } from "@/components/masonry-gallery"
 import photos from "@/public/photos/modeling.json"
+import type { Metadata } from "next"
 
 // What the photos without a "section" of their own are filed under. They are
 // the bulk of the page, so they come last; named sections lead.
 const REST = "Editorial & Campaign"
+
+export const metadata: Metadata = {
+  title: "Modeling — Runway, Editorial and Campaign",
+  description:
+    "Runway, editorial and campaign modelling work by Alisa Scetinina.",
+  alternates: { canonical: "/modeling" },
+  openGraph: { title: "Modeling — Runway, Editorial and Campaign | GAISMA", description: "Runway, editorial and campaign modelling work by Alisa Scetinina.", url: "/modeling" },
+}
 
 export default function ModelingPage() {
   // Order matters: the gallery deals photos across the columns in turn, so this

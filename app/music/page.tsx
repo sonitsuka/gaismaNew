@@ -2,6 +2,15 @@ import Image from "next/image"
 import { Play } from "lucide-react"
 import PageBackground from "@/components/ui/pageBackground"
 import MusicCard from "@/components/music-card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Music — Albums, EPs and DJ Sets",
+  description:
+    "Albums, EPs and DJ sets by GAISMA — Alisa Scetinina. Empathy 2.0, Dumped In Paris, Motherland, Mirrors Of The Cosmic Cinema and the SCETI side project.",
+  alternates: { canonical: "/music" },
+  openGraph: { title: "Music — Albums, EPs and DJ Sets | GAISMA", description: "Albums, EPs and DJ sets by GAISMA — Alisa Scetinina. Empathy 2.0, Dumped In Paris, Motherland, Mirrors Of The Cosmic Cinema and the SCETI side project.", url: "/music" },
+}
 
 export default function MusicPage() {
   const musicSections = [
